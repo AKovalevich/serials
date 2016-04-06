@@ -11,6 +11,15 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
+//$app->get('/', function () use ($app) {
+//    return $app->version();
+//});
+
+
+$app->group(['prefix' => 'api/1.0', 'middleware' => 'jwt.auth'], function($app) {
+    $app->get('/', 'App\Http\Controllers\Controller@index');
+});
+
+$app->group(['prefix' => 'api/1.0'], function($app) {
+    $app->post('auth/login', 'App\Http\Controllers\Auth\AuthController@postLogin');
 });
