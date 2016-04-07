@@ -7,14 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpDocumentor' => array($vendorDir . '/phpdocumentor/reflection-docblock/src'),
-    'System' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
-    'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'Namshi\\JOSE' => array($vendorDir . '/namshi/jose/src'),
-    'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'File' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
-    'Crypt' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
     'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
 );

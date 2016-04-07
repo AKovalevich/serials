@@ -23,19 +23,12 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-
-$app->alias('cache', 'Illuminate\Cache\CacheManager');
-$app->alias('auth', 'Illuminate\Auth\AuthManager');
-
-// $app->withEloquent();
-
-/**
- * Adding facades for APP.
- */
 $app->withFacades();
+
+$app->configure('auth');
 $app->configure('jwt');
-class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
-class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
+
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -69,14 +62,6 @@ $app->singleton(
 |
 */
 
-/**
- * JWT configuration.
- */
-$app->routeMiddleware([
-    'jwt.auth'    => Tymon\JWTAuth\Middleware\GetUserFromToken::class,
-    'jwt.refresh' => Tymon\JWTAuth\Middleware\RefreshToken::class,
-]);
-
 // $app->middleware([
 //    App\Http\Middleware\ExampleMiddleware::class
 // ]);
@@ -95,8 +80,17 @@ $app->routeMiddleware([
 | totally optional, so you are not required to uncomment this line.
 |
 */
-$app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(Dingo\Api\Provider\LumenServiceProvider::class);
+$app->register(Wn\Generators\CommandsServiceProvider::class);
+$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+$app->register(Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+
+app('Dingo\Api\Auth\Auth')->extend('jwt', function ($app) {
+    return new Dingo\Api\Auth\Provider\JWT($app['Tymon\JWTAuth\JWTAuth']);
+});
+
+
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
@@ -111,8 +105,9 @@ $app->register('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
 |
 */
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
-    require __DIR__.'/../app/Http/routes.php';
+$app->group(['namespace' => 'App\Api\V1\Controllers'], function ($app) {
+    $api = app('Dingo\Api\Routing\Router');
+    require __DIR__.'/../app/Api/routes.php';
 });
 
 return $app;
