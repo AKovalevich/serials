@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\Role;
 
 class UserTableSeeder extends Seeder
 {
@@ -11,13 +13,21 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
-        \App\Api\V1\Models\User::create(array(
-            'name'     => 'Esteban',
-            'last_name' => 'Garcia',
-            'company_name' => 'Shema App',
-            'email'    => 'logs@shemapp.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('logspassword'),
-        ));
+        $role_admin = Role::where('name', 'admin')->first();
+        $role_user = Role::where('name', 'user')->first();
+
+        $user = new User();
+        $user->name = 'admin';
+        $user->email = 'admimail@mail.com';
+        $user->password = bcrypt('admin');
+        $user->save();
+        $user->roles()->attach($role_admin);
+
+        $user = new User();
+        $user->name = 'User1';
+        $user->email = 'user1@mail.com';
+        $user->password = bcrypt('user1');
+        $user->save();
+        $user->roles()->attach($role_user);
     }
 }
