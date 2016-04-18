@@ -15,4 +15,10 @@ class Asset extends Model
     {
         return $this->belongsToMany('App\Genre', 'asset_genre', 'asset_id', 'genre_id');
     }
+
+    public function images()
+    {
+        return $this->hasOne('App\Image', 'id');
+    }
+
 }
