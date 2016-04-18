@@ -1,0 +1,47 @@
+{
+  "name": "andrew-mikhailov.github.io",
+  "homepage": "https://github.com/andrew-mikhailov/andrew-mikhailov.github.io",
+  "authors": [
+    "Andrew Mikhailov <andrew.mikhailov.18.01@gmail.com>",
+    "Artem Kovalevich <artemkovalevich00@gmail.com>"
+  ],
+  "description": "VideoPortal",
+  "main": "index.html",
+  "keywords": [
+    "app"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-ui": "^1.11.4",
+    "jquery-gridder": "^1.4.2",
+    "angular-material": "^1.0.7",
+    "angular-ui-router": "^0.2.18",
+    "angular-carousel-3d": "*",
+    "angular-sanitize": "^1.5.3",
+    "angular-slick": "^0.2.1",
+    "slick-carousel": "^1.5.9",
+    "videogular": "^1.4.3",
+    "angular-route": "^1.5.3",
+    "videogular-controls": "^1.4.3",
+    "videogular-buffering": "^1.4.3",
+    "videogular-overlay-play": "^1.4.3",
+    "videogular-poster": "^1.4.3",
+    "videogular-ima-ads": "^1.4.3",
+    "videogular-angulartics": "^1.4.3",
+    "videogular-themes-default": "^1.4.3",
+    "angular-animate": "^1.5.3",
+    "angular-preload-image": "*"
+  },
+  "resolutions": {
+    "angular": "1.5.5",
+    "slick-carousel": "^1.5.9"
+  }
+}
