@@ -52,6 +52,14 @@
                     <div class="sub-title">End date</div>
                     {{ Form::text('end_date', Input::old('end_date'), array('class' => 'form-control')) }}
                 </div>
+                <div class="">
+                    <div class="sub-title">Tags</div>
+                    {{ Form::select('tags', $tags, null, array('multiple'=>'multiple', 'name'=>'tags[]')) }}
+                </div>
+                <div class="">
+                    <div class="sub-title">Genres</div>
+                    {{ Form::select('genres', $genres, null, array('multiple'=>'multiple', 'name'=>'genres[]')) }}
+                </div>
                 <div class="login-button text-center">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
                 </div>

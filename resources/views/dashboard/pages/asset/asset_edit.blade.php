@@ -52,17 +52,18 @@
                         <div class="sub-title">End date</div>
                         {{ Form::text('end_date', $asset->end_date, array('class' => 'form-control')) }}
                     </div>
-
+                    <div class="control">
+                        <div class="sub-title">Tags</div>
+                        {{ Form::text('end_date', $asset->end_date, array('class' => 'form-control')) }}
+                    </div>
                     <div class="">
                         <div class="sub-title">Tags</div>
-                        @if (!empty($tags))
-                            @foreach($tags as $tag)
-                                {{ Form::checkbox('tag-' . $tag->id, $tag->id, ['id' => 'tag-' . $tag->id]) }}
-                                {{ Form::label('tag-' . $tag->id, $tag->name) }}
-                            @endforeach;
-                        @endif
+                        {{ Form::select('tags', $tags_list, $selected_tags, array('multiple'=>'multiple', 'name'=>'tags[]')) }}
                     </div>
-
+                    <div class="">
+                        <div class="sub-title">Genres</div>
+                        {{ Form::select('genres', $genres_list, $selected_genres, array('multiple'=>'multiple', 'name'=>'genres[]')) }}
+                    </div>
                     <div class="login-button text-center">
                         {{ Form::submit('Create', array('class' => 'btn btn-primary')) }}
                     </div>

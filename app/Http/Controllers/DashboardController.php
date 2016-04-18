@@ -64,7 +64,12 @@ class DashboardController extends BaseController
         if (isset($input['user_id'])) {
             $asset->user_id = $request->user()->id;
         }
-
+        if (isset($input['tags'])) {
+            $asset->tags()->attach($input['tags']);
+        }
+        if (isset($input['genres'])) {
+            $asset->genre()->attach($input['genres']);
+        }
         $asset->save();
 
         return redirect('/admin/dashboard/assets');
@@ -150,14 +155,55 @@ class DashboardController extends BaseController
     }
 
     public function showAssetCreate() {
-        return view('dashboard.pages.asset.asset_create');
+        $tags = Tag::orderBy('id', 'desc')->get();
+        $genres = Genre::orderBy('id', 'desc')->get();
+
+        foreach ($tags as $tag) {
+            $tags_options[$tag->id] = $tag->name;
+        }
+
+        foreach ($genres as $genre) {
+            $genre_options[$genre->id] = $genre->name;
+        }
+
+        return view('dashboard.pages.asset.asset_create', ['tags' => $tags_options, 'genres' => $genre_options]);
     }
 
     public function showAssetEdit(Request $request, $id) {
         $asset = Asset::find($id);
+        $current_tags = $asset->tags()->get();
         $tags = Tag::all();
+        $selected_tags = [];
+        $tags_list = [];
+        $current_genres = $asset->genre()->get();
+        $genres = Genre::all();
+        $selected_genres = [];
+        $genre_list = [];
 
-        return view('dashboard.pages.asset.asset_edit', ['asset' => $asset, 'tags' => $tags]);
+        foreach ($current_tags as $current_tag) {
+            $selected_tags[$current_tag->id] = $current_tag->id;
+        }
+
+        foreach ($tags as $tag) {
+            $tags_list[$tag->id] = $tag->name;
+        }
+
+        foreach ($current_genres as $current_genre) {
+            $selected_genres[$current_genre->id] = $current_genre->id;
+        }
+
+        foreach ($genres as $genre) {
+            $genre_list[$genre->id] = $genre->name;
+        }
+
+        return view('dashboard.pages.asset.asset_edit', [
+                'asset' => $asset,
+                'tags_list' => $tags_list,
+                'selected_tags' => $selected_tags,
+                'genres_list' => $genre_list,
+                'selected_genres' => $selected_genres
+            ]
+        );
     }
 
     public function assetEdit(Request $request, $id)
@@ -195,6 +241,14 @@ class DashboardController extends BaseController
         }
         if (isset($input['user_id'])) {
             $asset->user_id = $request->user()->id;
+        }
+        if (isset($input['tags'])) {
+            $asset->tags()->detach();
+            $asset->tags()->attach($input['tags']);
+        }
+        if (isset($input['genres'])) {
+            $asset->genre()->detach();
+            $asset->genre()->attach($input['genres']);
         }
 
         $asset->save();
