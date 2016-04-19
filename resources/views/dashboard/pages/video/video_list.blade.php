@@ -4,7 +4,7 @@
 
 @section('dashboard_content')
 <div class="page-title">
-    <span class="title">Asset list</span>
+    <span class="title">Video list</span>
 </div>
 <div class="row">
     <div class="col-xs-12">
@@ -12,9 +12,9 @@
             <div class="card-header">
 
                 <div class="card-title">
-                    <div class="title">Assets</div>
+                    <div class="title">Videos</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/assets/create">Create Asset</a>
+                        <a class="btn btn-primary" href="/admin/dashboard/videos/create">Add Video</a>
                     </div>
                 </div>
             </div>
@@ -22,33 +22,24 @@
                 <table class="datatable table table-striped" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Seasons</th>
-                        <th>Episodes</th>
-                        <th>Start date</th>
-                        <th>End date</th>
+                        <th>ID</th>
+                        <th>Quality</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
-                        <th>Title</th>
-                        <th>Seasons</th>
-                        <th>Episodes</th>
-                        <th>Start date</th>
-                        <th>End date</th>
+                        <th>ID</th>
+                        <th>Quality</th>
                         <th>Actions</th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    @foreach ($assets as $asset)
+                    @foreach ($videos as $video)
                     <tr>
-                        <td>{{ $asset->title }}</td>
-                        <td>{{ 'Count seasons' }}</td>
-                        <td>{{ 'Count episodes' }}</td>
-                        <td>{{ $asset->start_date }}</td>
-                        <td>{{ $asset->end_date }}</td>
-                        <td><a href="/admin/dashboard/assets/{{ $asset->id }}/edit">Edit</a></td>
+                        <td>{{ $video->id }}</td>
+                        <td>{{ $video->quality }}</td>
+                        <td><a href="/admin/dashboard/videos/{{ $video->id }}/edit">Edit</a></td>
                     </tr>
                     @endforeach
                     </tbody>

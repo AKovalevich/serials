@@ -18,8 +18,6 @@ class CreateVideosTable extends Migration
             $table->string('extension');
             $table->timestamps();
         });
-
-
     }
 
     /**

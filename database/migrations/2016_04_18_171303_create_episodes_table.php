@@ -14,6 +14,7 @@ class CreateEpisodesTable extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('episode_number');
             $table->integer('season_number');
             $table->integer('asset_id');
             $table->string('title');

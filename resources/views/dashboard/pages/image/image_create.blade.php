@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 
-@section('title', 'Edit genre')
+@section('title', 'Add image')
 
 @section('dashboard_content')
 <div class="row">
@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-title">
-                    <div class="title">Create genre</div>
+                    <div class="title">Add image</div>
                 </div>
             </div>
             <div class="card-body">
@@ -22,16 +22,17 @@
                     </ul>
                 </div>
                 @endif
-                {{ Form::open(array('url' => '/admin/dashboard/genres/' . $genre->id . '/edit')) }}
-                    {!! csrf_field() !!}
-                    <div class="control">
-                        <div class="sub-title">Name</div>
-                        {{ Form::text('name', $genre->name, array('class' => 'form-control')) }}
-                    </div>
-                    
-                    <div class="login-button text-center">
-                        {{ Form::submit('Create', array('class' => 'btn btn-primary')) }}
-                    </div>
+                {{ Form::open(array('url' => '/admin/dashboard/images/create')) }}
+                {!! csrf_field() !!}
+                <div class="control">
+                    <div class="sub-title">Url</div>
+                    {{ Form::image(Input::old('path'), 'path', array('class' => 'form-control')) }}
+                </div>
+
+                <div class="login-button text-center">
+                    {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+                </div>
+
                 {{ Form::close() }}
             </div>
         </div>

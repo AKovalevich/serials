@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 
-@section('title', 'Create asset')
+@section('title', 'Edit asset')
 
 @section('dashboard_content')
 <div class="row">

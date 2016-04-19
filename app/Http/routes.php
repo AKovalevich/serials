@@ -51,3 +51,30 @@ Route::get('/admin/dashboard/genres/create', ['middleware' => ['role'], 'uses' =
 Route::get('/admin/dashboard/genres/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@showGenreEdit', 'roles' => ['admin']]);
 Route::post('/admin/dashboard/genres/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@genreEdit', 'roles' => ['admin']]);
 Route::post('/admin/dashboard/genres/create', ['middleware' => ['role'], 'uses' => 'DashboardController@genreCreate', 'roles' => ['admin']]);
+
+/**
+ * Image routes.
+ */
+Route::get('/admin/dashboard/images', ['middleware' => ['role'], 'uses' => 'DashboardController@imageList', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/images/create', ['middleware' => ['role'], 'uses' => 'DashboardController@showImageCreate', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/images/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@showImageEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/images/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@imageEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/images/create', ['middleware' => ['role'], 'uses' => 'DashboardController@imageCreate', 'roles' => ['admin']]);
+
+/**
+ * Video routes.
+ */
+Route::get('/admin/dashboard/videos', ['middleware' => ['role'], 'uses' => 'DashboardController@videoList', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/videos/create', ['middleware' => ['role'], 'uses' => 'DashboardController@showVideoCreate', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/videos/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@showVideoEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/videos/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@videoEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/videos/create', ['middleware' => ['role'], 'uses' => 'DashboardController@videoCreate', 'roles' => ['admin']]);
+
+/**
+ * Video routes.
+ */
+Route::get('/admin/dashboard/episodes', ['middleware' => ['role'], 'uses' => 'DashboardController@episodeList', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/episodes/create', ['middleware' => ['role'], 'uses' => 'DashboardController@showEpisodeCreate', 'roles' => ['admin']]);
+Route::get('/admin/dashboard/episodes/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@showEpisodeEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/episodes/{id}/edit', ['middleware' => ['role'], 'uses' => 'DashboardController@episodeEdit', 'roles' => ['admin']]);
+Route::post('/admin/dashboard/episodes/create', ['middleware' => ['role'], 'uses' => 'DashboardController@episodeCreate', 'roles' => ['admin']]);

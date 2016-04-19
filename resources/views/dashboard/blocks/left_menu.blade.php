@@ -24,7 +24,10 @@
                     <div class="panel-body">
                         <ul class="nav navbar-nav">
                             <li><a href="/admin/dashboard/assets">Assets</a></li>
+                            <li><a href="/admin/dashboard/episodes">Episodes</a></li>
                             <li><a href="/admin/dashboard/users">Users</a></li>
+                            <li><a href="/admin/dashboard/videos">Videos</a></li>
+                            <li><a href="/admin/dashboard/images">Images</a></li>
                             <li><a href="/admin/dashboard/tags">Tags</a></li>
                             <li><a href="/admin/dashboard/genres">Genres</a></li>
                         </ul>

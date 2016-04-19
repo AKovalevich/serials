@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Episode;
+use App\Image;
+use App\Video;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -22,6 +25,7 @@ class DashboardController extends BaseController
     {
         return view('dashboard.pages.index');
     }
+
 
     public function assetList()
     {
@@ -74,6 +78,109 @@ class DashboardController extends BaseController
 
         return redirect('/admin/dashboard/assets');
     }
+
+    public function showAssetCreate() {
+        $tags = Tag::orderBy('id', 'desc')->get();
+        $genres = Genre::orderBy('id', 'desc')->get();
+
+        $tags_options = [];
+        foreach ($tags as $tag) {
+            $tags_options[$tag->id] = $tag->name;
+        }
+        $genre_options = [];
+        foreach ($genres as $genre) {
+            $genre_options[$genre->id] = $genre->name;
+        }
+
+        return view('dashboard.pages.asset.asset_create', ['tags' => $tags_options, 'genres' => $genre_options]);
+    }
+
+    public function showAssetEdit(Request $request, $id) {
+        $asset = Asset::find($id);
+        $current_tags = $asset->tags()->get();
+        $tags = Tag::all();
+        $selected_tags = [];
+        $tags_list = [];
+        $current_genres = $asset->genre()->get();
+        $genres = Genre::all();
+        $selected_genres = [];
+        $genre_list = [];
+
+        foreach ($current_tags as $current_tag) {
+            $selected_tags[$current_tag->id] = $current_tag->id;
+        }
+
+        foreach ($tags as $tag) {
+            $tags_list[$tag->id] = $tag->name;
+        }
+
+        foreach ($current_genres as $current_genre) {
+            $selected_genres[$current_genre->id] = $current_genre->id;
+        }
+
+        foreach ($genres as $genre) {
+            $genre_list[$genre->id] = $genre->name;
+        }
+
+        return view('dashboard.pages.asset.asset_edit', [
+            'asset' => $asset,
+            'tags_list' => $tags_list,
+            'selected_tags' => $selected_tags,
+            'genres_list' => $genre_list,
+            'selected_genres' => $selected_genres
+          ]
+        );
+    }
+
+    public function assetEdit(Request $request, $id)
+    {
+        $input = $request->all();
+        $validator = Validator::make($request->all(), [
+          'title' => 'required|max:255',
+          'original_title' => 'max:255',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/admin/dashboard/assets/create')
+              ->withErrors($validator)
+              ->withInput();
+        }
+
+        $asset = Asset::find($id);
+        if (isset($input['title'])) {
+            $asset->title = $input['title'];
+        }
+        if (isset($input['original_title'])) {
+            $asset->original_title = $input['original_title'];
+        }
+        if (isset($input['plot'])) {
+            $asset->plot = $input['plot'];
+        }
+        if (isset($input['start_date'])) {
+            $asset->start_date = $input['start_date'];
+        }
+        if (isset($input['end_date'])) {
+            $asset->end_date = $input['end_date'];
+        }
+        if (isset($input['body'])) {
+            $asset->body = $input['body'];
+        }
+        if (isset($input['user_id'])) {
+            $asset->user_id = $request->user()->id;
+        }
+        if (isset($input['tags'])) {
+            $asset->tags()->detach();
+            $asset->tags()->attach($input['tags']);
+        }
+        if (isset($input['genres'])) {
+            $asset->genre()->detach();
+            $asset->genre()->attach($input['genres']);
+        }
+
+        $asset->save();
+        return redirect('/admin/dashboard/assets');
+    }
+
 
     public function userList()
     {
@@ -154,107 +261,6 @@ class DashboardController extends BaseController
         return redirect('/admin/dashboard/users');
     }
 
-    public function showAssetCreate() {
-        $tags = Tag::orderBy('id', 'desc')->get();
-        $genres = Genre::orderBy('id', 'desc')->get();
-
-        $tags_options = [];
-        foreach ($tags as $tag) {
-            $tags_options[$tag->id] = $tag->name;
-        }
-        $genre_options = [];
-        foreach ($genres as $genre) {
-            $genre_options[$genre->id] = $genre->name;
-        }
-
-        return view('dashboard.pages.asset.asset_create', ['tags' => $tags_options, 'genres' => $genre_options]);
-    }
-
-    public function showAssetEdit(Request $request, $id) {
-        $asset = Asset::find($id);
-        $current_tags = $asset->tags()->get();
-        $tags = Tag::all();
-        $selected_tags = [];
-        $tags_list = [];
-        $current_genres = $asset->genre()->get();
-        $genres = Genre::all();
-        $selected_genres = [];
-        $genre_list = [];
-
-        foreach ($current_tags as $current_tag) {
-            $selected_tags[$current_tag->id] = $current_tag->id;
-        }
-
-        foreach ($tags as $tag) {
-            $tags_list[$tag->id] = $tag->name;
-        }
-
-        foreach ($current_genres as $current_genre) {
-            $selected_genres[$current_genre->id] = $current_genre->id;
-        }
-
-        foreach ($genres as $genre) {
-            $genre_list[$genre->id] = $genre->name;
-        }
-
-        return view('dashboard.pages.asset.asset_edit', [
-                'asset' => $asset,
-                'tags_list' => $tags_list,
-                'selected_tags' => $selected_tags,
-                'genres_list' => $genre_list,
-                'selected_genres' => $selected_genres
-            ]
-        );
-    }
-
-    public function assetEdit(Request $request, $id)
-    {
-        $input = $request->all();
-        $validator = Validator::make($request->all(), [
-            'title' => 'required|max:255',
-            'original_title' => 'max:255',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect('/admin/dashboard/assets/create')
-                ->withErrors($validator)
-                ->withInput();
-        }
-
-        $asset = Asset::find($id);
-        if (isset($input['title'])) {
-            $asset->title = $input['title'];
-        }
-        if (isset($input['original_title'])) {
-            $asset->original_title = $input['original_title'];
-        }
-        if (isset($input['plot'])) {
-            $asset->plot = $input['plot'];
-        }
-        if (isset($input['start_date'])) {
-            $asset->start_date = $input['start_date'];
-        }
-        if (isset($input['end_date'])) {
-            $asset->end_date = $input['end_date'];
-        }
-        if (isset($input['body'])) {
-            $asset->body = $input['body'];
-        }
-        if (isset($input['user_id'])) {
-            $asset->user_id = $request->user()->id;
-        }
-        if (isset($input['tags'])) {
-            $asset->tags()->detach();
-            $asset->tags()->attach($input['tags']);
-        }
-        if (isset($input['genres'])) {
-            $asset->genre()->detach();
-            $asset->genre()->attach($input['genres']);
-        }
-
-        $asset->save();
-        return redirect('/admin/dashboard/assets');
-    }
 
     public function tagsList()
     {
@@ -319,6 +325,7 @@ class DashboardController extends BaseController
         return redirect('/admin/dashboard/tags');
     }
 
+
     public function genreList(Request $request)
     {
         $genres = Genre::orderBy('id', 'desc')->get();
@@ -381,4 +388,60 @@ class DashboardController extends BaseController
         $genre = Genre::find($id);
         return view('dashboard.pages.genre.genre_edit', ['genre' => $genre]);
     }
+
+
+    public function imageList() {
+        $images = Image::orderBy('id', 'desc')->get();
+        return view('dashboard.pages.image.image_list', ['images' => $images]);
+    }
+    public function showImageCreate() {
+        return view('dashboard.pages.image.image_create');
+    }
+    public function showImageEdit(Request $request, $id) {
+        $image = Image::find($id);
+        return view('dashboard.pages.image.image_edit', ['image' => $image]);
+    }
+    public function imageEdit(Request $request, $id) {
+
+    }
+    public function imageCreate(Request $request) {
+
+    }
+
+    public function videoList() {
+        $videos = Video::orderBy('id', 'desc')->get();
+        return view('dashboard.pages.video.video_list', ['videos' => $videos]);
+    }
+    public function showVideoCreate() {
+        return view('dashboard.pages.video.video_create');
+    }
+    public function showVideoEdit(Request $request, $id) {
+        $video = Video::find($id);
+        return view('dashboard.pages.video.video_edit', ['video' => $video]);
+    }
+    public function videoEdit(Request $request, $id) {
+
+    }
+    public function videoCreate(Request $request, $id) {
+
+    }
+
+    public function episodeList(Request $request) {
+        $episodes = Episode::orderBy('id', 'desc')->get();
+        return view('dashboard.pages.episode.episode_list', ['episodes' => $episodes]);
+    }
+    public function showEpisodeCreate() {
+        return view('dashboard.pages.episode.episode_create');
+    }
+    public function showEpisodeEdit(Request $request, $id) {
+        $episode = Episode::find($id);
+        return view('dashboard.pages.episode.episode_edit', ['episode' => $episode]);
+    }
+    public function episodeEdit(Request $request, $id) {
+
+    }
+    public function episodeCreate(Request $request, $id) {
+
+    }
+
 }
