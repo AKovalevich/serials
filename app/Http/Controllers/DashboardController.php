@@ -158,10 +158,11 @@ class DashboardController extends BaseController
         $tags = Tag::orderBy('id', 'desc')->get();
         $genres = Genre::orderBy('id', 'desc')->get();
 
+        $tags_options = [];
         foreach ($tags as $tag) {
             $tags_options[$tag->id] = $tag->name;
         }
-
+        $genre_options = [];
         foreach ($genres as $genre) {
             $genre_options[$genre->id] = $genre->name;
         }

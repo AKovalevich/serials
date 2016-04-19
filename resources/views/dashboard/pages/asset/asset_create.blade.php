@@ -54,11 +54,20 @@
                 </div>
                 <div class="">
                     <div class="sub-title">Tags</div>
-                    {{ Form::select('tags', $tags, null, array('multiple'=>'multiple', 'name'=>'tags[]')) }}
+                    @if ($tags)
+                        {{ Form::select('tags', $tags, null, array('multiple'=>'multiple', 'name'=>'tags[]')) }}
+                    @else
+                        <a href="/admin/dashboard/tags/create">You need to create some tags</a>
+                    @endif
                 </div>
                 <div class="">
                     <div class="sub-title">Genres</div>
-                    {{ Form::select('genres', $genres, null, array('multiple'=>'multiple', 'name'=>'genres[]')) }}
+                    @if ($genres)
+                        {{ Form::select('genres', $genres, null, array('multiple'=>'multiple', 'name'=>'genres[]')) }}
+                    @else
+                        <a href="/admin/dashboard/genres/create">You need to create some genres</a>
+                    @endif
+
                 </div>
                 <div class="login-button text-center">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
