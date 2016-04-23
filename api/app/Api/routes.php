@@ -17,6 +17,7 @@
 
 $api->version('v1', ['middleware' => 'api.auth', 'providers' => 'jwt'], function ($api) {
     $api->get('users/{id}', 'App\Api\V1\Controllers\UserController@show');
+    $api->get('assets/{id}', 'App\Api\V1\Controllers\AssetController@show');
 });
 
 
