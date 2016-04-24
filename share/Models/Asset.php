@@ -2,6 +2,7 @@
 
 namespace Share;
 
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Asset extends Model
@@ -24,6 +25,27 @@ class Asset extends Model
     public function slider()
     {
         return $this->hasOne('Share\Slider', 'id');
+    }
+
+    public function episodesCount()
+    {
+        $episodes = DB::table('episodes')
+          ->select('id')
+          ->where('asset_id', '=', $this->id)
+          ->count();
+
+        return $episodes;
+    }
+
+    public function seasonsCount()
+    {
+        $seasons = DB::table('episodes')
+          ->select('season_number')
+          ->where('asset_id', '=', $this->id)
+          ->distinct()
+          ->get();
+
+        return count($seasons);
     }
 
 }

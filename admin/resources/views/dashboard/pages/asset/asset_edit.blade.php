@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 
-@section('title', 'Edit asset')
+@section('title', 'Edit TV Show')
 
 @section('dashboard_content')
 <div class="row">
@@ -46,11 +46,11 @@
                     </div>
                     <div class="control">
                         <div class="sub-title">Start date</div>
-                        {{ Form::date('start_date', strtotime($asset->start_date), ['class' => 'form-control']) }}
+                        {{ Form::date('start_date', $start_date, ['class' => 'form-control']) }}
                     </div>
                     <div class="control">
                         <div class="sub-title">End date</div>
-                        {{ Form::date('end_date', strtotime($asset->end_date), ['class' => 'form-control']) }}
+                        {{ Form::date('end_date', $end_date, ['class' => 'form-control']) }}
                     </div>
                     <div class="">
                         <div class="sub-title">Preview</div>

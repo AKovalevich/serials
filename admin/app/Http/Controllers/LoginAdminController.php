@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
-class LoginAdminController extends BaseController
+class LoginAdminController extends Controller
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
@@ -27,8 +27,8 @@ class LoginAdminController extends BaseController
     {
         // validate the info, create rules for the inputs
         $rules = [
-            'email'    => 'required|email', // make sure the email is an actual email
-            'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+            'email'    => 'required|email|unique:users', // make sure the email is an actual email
+            'password' => 'required|alphaNum|min:8' // password can only be alphanumeric and has to be greater than 3 characters
         ];
 
         // run the validation rules on the inputs from the form
@@ -53,11 +53,11 @@ class LoginAdminController extends BaseController
                 // redirect them to the secure section or whatever
                 // return Redirect::to('secure');
                 // for now we'll just echo success (even though echoing in a controller is bad)
-                return Redirect::to('admin/dashboard');
+                return Redirect::to(route('admin.dashboard'));
 
             } else {
                 // validation not successful, send back to form
-                return Redirect::to('admin/login');
+                return Redirect::to(route('admin.login'));
             }
         }
     }

@@ -20,4 +20,10 @@ class Episode extends Model
     {
         return $this->belongsTo('Share\Asset', 'asset_id', 'id');
     }
+
+    public function asstetTitle()
+    {
+        $asset = Asset::find($this->asset_id);
+        return ucfirst($asset->title);
+    }
 }

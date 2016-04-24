@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Videos</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/videos/create">Add Video</a>
+                        <a class="btn btn-primary" href="{{ route('video.create') }}">Add Video</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,9 @@
                         <td>{{ $video->id }}</td>
                         <td>{{ $video->title }}</td>
                         <td>{{ $video->quality }}</td>
-                        <td><a href="/admin/dashboard/videos/{{ $video->id }}/edit">Edit</a></td>
+                        <td>
+                            <a href="{{ route('video.edit', ['id' => $video->id]) }}">Edit</a>
+                        </td>
                     </tr>
                     @endforeach
                     </tbody>

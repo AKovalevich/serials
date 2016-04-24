@@ -17,20 +17,20 @@
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                            <li>{{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>
                 @endif
-                {{ Form::open(array('url' => '/admin/dashboard/genres/' . $genre->id . '/edit')) }}
+                {{ Form::open(['url' => '/admin/dashboard/genres/' . $genre->id . '/edit']) }}
                     {!! csrf_field() !!}
                     <div class="control">
                         <div class="sub-title">Name</div>
-                        {{ Form::text('name', $genre->name, array('class' => 'form-control')) }}
+                        {{ Form::text('name', $genre->name, ['class' => 'form-control']) }}
                     </div>
-                    
+
                     <div class="login-button text-center">
-                        {{ Form::submit('Create', array('class' => 'btn btn-primary')) }}
+                        {{ Form::submit('Create', ['class' => 'btn btn-primary']) }}
                     </div>
                 {{ Form::close() }}
             </div>

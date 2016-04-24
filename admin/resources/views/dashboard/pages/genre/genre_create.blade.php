@@ -22,14 +22,14 @@
                     </ul>
                 </div>
                 @endif
-                {{ Form::open(array('url' => '/admin/dashboard/genres/create')) }}
+                {{ Form::open(['url' => '/admin/dashboard/genres/create']) }}
                 {!! csrf_field() !!}
                 <div class="control">
                     <div class="sub-title">Name</div>
-                    {{ Form::text('name', Input::old('name'), array('class' => 'form-control')) }}
+                    {{ Form::text('name', Input::old('name'), ['class' => 'form-control']) }}
                 </div>
                 <div class="login-button text-center">
-                    {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
+                    {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
                 </div>
 
                 {{ Form::close() }}

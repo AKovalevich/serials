@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Episodes</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/episodes/create">Add episode</a>
+                        <a class="btn btn-primary" href="{{ route('episode.create') }}">Add Episode</a>
                     </div>
                 </div>
             </div>
@@ -44,10 +44,10 @@
                             <td>{{ $episode->title }}</td>
                             <td>{{ $episode->episode_number }}</td>
                             <td>{{ $episode->season_number }}</td>
-                            <td>{{ $episode->asset_id }}</td>
+                            <td>{{ $episode->asstetTitle() }}</td>
                             <td>
-                                <a href="/admin/dashboard/episodes/{{ $episode->id }}/edit">Edit</a>
-                                <a href="/admin/dashboard/episodes/{{ $episode->id }}/delete">Delete</a>
+                                <a href="{{ route('episode.edit', ['id' => $episode->id]) }}">Edit</a>
+                                <a href="{{ route('episode.delete', ['id' => $episode->id]) }}">Delete</a>
                             </td>
                         </tr>
                     @endforeach

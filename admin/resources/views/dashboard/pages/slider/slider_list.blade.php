@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Sliders</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/sliders/create">Add slider</a>
+                        <a class="btn btn-primary" href="{{ route('slider.create') }}">Add slider</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,9 @@
                         <tr>
                             <td>{{ $slider->title }}</td>
                             <td>{{ $slider->type }}</td>
-                            <td><a href="/admin/dashboard/sliders/{{ $slider->id }}/edit">Edit</a></td>
+                            <td>
+                                <a href="{{ route('slider.edit', ['id' => $slider->id]) }}">Edit</a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

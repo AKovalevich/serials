@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">TV Show</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/assets/create">Add TV Show</a>
+                        <a class="btn btn-primary" href="{{ route('asset.create') }}">Add TV Show</a>
                     </div>
                 </div>
             </div>
@@ -42,22 +42,21 @@
                     </tfoot>
                     <tbody>
                     @foreach ($assets as $asset)
-                    <tr>
-                        <td>{{ $asset->title }}</td>
-                        <td>{{ 'Count seasons' }}</td>
-                        <td>{{ 'Count episodes' }}</td>
-                        <td>{{ $asset->start_date }}</td>
-                        <td>{{ $asset->end_date }}</td>
-                        <td>
-                            <a href="/admin/dashboard/assets/{{ $asset->id }}/edit">Edit</a>
-                            <a href="/admin/dashboard/assets/{{ $asset->id }}/delete">Delete</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>{{ $asset->title }}</td>
+                            <td>{{ $asset->seasonsCount() }}</td>
+                            <td>{{ $asset->episodesCount() }}</td>
+                            <td>{{ $asset->start_date }}</td>
+                            <td>{{ $asset->end_date }}</td>
+                            <td>
+                                <a href="{{ route('asset.edit', ['id' => $asset->id]) }}">Edit</a>
+                                <a href="{{ route('asset.delete', ['id' => $asset->id]) }}">Delete</a>
+                            </td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-</div>
 @stop

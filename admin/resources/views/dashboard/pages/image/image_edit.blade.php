@@ -17,7 +17,7 @@
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                            <li>{{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>
@@ -38,12 +38,11 @@
                     </div>
                     <div class="control">
                         <div class="sub-title">Url</div>
-                        <img src="{{ $image->src }}"/>
-                        {{ Form::file('path', array('class' => 'form-control')) }}
+                        <img width="200" height="130" src="{{ route($image->type . '.image', ['filename' => $image->path ]) }}"/>
+                        {{ Form::file('path', ['class' => 'form-control']) }}
                     </div>
-                    
                     <div class="login-button text-center">
-                        {{ Form::submit('Update', array('class' => 'btn btn-primary')) }}
+                        {{ Form::submit('Update', ['class' => 'btn btn-primary']) }}
                     </div>
                 {{ Form::close() }}
             </div>
