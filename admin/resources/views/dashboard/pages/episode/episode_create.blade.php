@@ -45,7 +45,7 @@
                     @if ($assets)
                         {{ Form::select('asset_id', $assets, null, ['name'=>'asset_id']) }}
                     @else
-                        <a href="{{ route('assets.create') }}">You need to create some assets</a>
+                        <a href="{{ route('asset.create') }}">You need to create some assets</a>
                     @endif
                 </div>
                 <div class="">
@@ -53,7 +53,7 @@
                     @if ($images)
                         {{ Form::select('image_id', $images, null, ['name'=>'image_id']) }}
                     @else
-                        <a href="{{ route('images.create') }}">You need to add images</a>
+                        <a href="{{ route('image.create') }}">You need to add images</a>
                     @endif
                 </div>
                 <div class="">
@@ -61,7 +61,7 @@
                     @if ($videos)
                         {{ Form::select('video_id', $videos, null, ['name'=>'video_id']) }}
                     @else
-                        <a href="{{ route('videos.create') }}">You need to add videos</a>
+                        <a href="{{ route('video.create') }}">You need to add videos</a>
                     @endif
 
                 </div>
