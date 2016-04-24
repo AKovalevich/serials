@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Redirect;
 
 class RoleAccess
 {
@@ -16,7 +17,8 @@ class RoleAccess
     public function handle($request, Closure $next)
     {
         if ($request->user() === null) {
-            return response('Insufficient permissions', 401);
+            // validation not successful, send back to form
+            return Redirect::to(route('admin.login'));
         }
 
         $actions = $request->route()->getAction();
@@ -25,7 +27,7 @@ class RoleAccess
         if ($request->user()->hasAnyRole($roles)) {
             return $next($request);
         }
-
-        return response('Insufficient permissions', 401);
+        // validation not successful, send back to form
+        return Redirect::to(route('admin.login'));
     }
 }
