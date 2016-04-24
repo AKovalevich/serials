@@ -27,8 +27,8 @@ class LoginAdminController extends Controller
     {
         // validate the info, create rules for the inputs
         $rules = [
-            'email'    => 'required|email|unique:users', // make sure the email is an actual email
-            'password' => 'required|alphaNum|min:8' // password can only be alphanumeric and has to be greater than 3 characters
+            'email'    => 'required|email', // make sure the email is an actual email
+            'password' => 'required|alphaNum|min:5' // password can only be alphanumeric and has to be greater than 3 characters
         ];
 
         // run the validation rules on the inputs from the form
