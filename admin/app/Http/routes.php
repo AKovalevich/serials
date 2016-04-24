@@ -12,12 +12,13 @@
 */
 
 Route::post('/auth/login', 'Auth\AuthController@postLogin');
-Route::get('/admin/login', array('uses' => 'LoginAdminController@showLogin'));
-Route::post('/admin/login', array('uses' => 'LoginAdminController@adminLogin'));
+Route::get('/admin/login', ['uses' => 'LoginAdminController@showLogin', 'as' => 'admin.login']);
+Route::post('/admin/login', ['uses' => 'LoginAdminController@adminLogin']);
 Route::get('/admin/dashboard', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@index',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'admin.dashboard'
 ]);
 
 /**
@@ -26,17 +27,20 @@ Route::get('/admin/dashboard', [
 Route::get('/admin/dashboard/assets', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@assetList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'asset.list'
 ]);
 Route::get('/admin/dashboard/assets/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showAssetCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'asset.create'
 ]);
 Route::get('/admin/dashboard/assets/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@assetDelete',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'asset.delete'
 ]);
 Route::post('/admin/dashboard/assets/create', [
   'middleware' => ['role'],
@@ -46,7 +50,8 @@ Route::post('/admin/dashboard/assets/create', [
 Route::get('/admin/dashboard/assets/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showAssetEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'asset.edit'
 ]);
 Route::post('/admin/dashboard/assets/{id}/edit', [
   'middleware' => ['role'],
@@ -60,17 +65,20 @@ Route::post('/admin/dashboard/assets/{id}/edit', [
 Route::get('/admin/dashboard/users', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@userList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'user.list'
 ]);
 Route::get('/admin/dashboard/users/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showUserCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'user.create'
 ]);
 Route::get('/admin/dashboard/users/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showUserEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'user.edit'
 ]);
 Route::post('/admin/dashboard/users/{id}/edit', [
   'middleware' => ['role'],
@@ -89,17 +97,20 @@ Route::post('/admin/dashboard/users/create', [
 Route::get('/admin/dashboard/tags', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@tagsList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'tag.list'
 ]);
 Route::get('/admin/dashboard/tags/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showTagCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'tag.create'
 ]);
 Route::get('/admin/dashboard/tags/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showTagEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'tag.edit'
 ]);
 Route::post('/admin/dashboard/tags/{id}/edit', [
   'middleware' => ['role'],
@@ -118,17 +129,20 @@ Route::post('/admin/dashboard/tags/create', [
 Route::get('/admin/dashboard/genres', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@genreList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'genre.list'
 ]);
 Route::get('/admin/dashboard/genres/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showGenreCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'genre.create'
 ]);
 Route::get('/admin/dashboard/genres/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showGenreEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'genre.edit'
 ]);
 Route::post('/admin/dashboard/genres/{id}/edit', [
   'middleware' => ['role'],
@@ -147,17 +161,20 @@ Route::post('/admin/dashboard/genres/create', [
 Route::get('/admin/dashboard/images', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@imageList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'image.list'
 ]);
 Route::get('/admin/dashboard/images/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showImageCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'image.create'
 ]);
 Route::get('/admin/dashboard/images/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showImageEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'image.edit'
 ]);
 Route::post('/admin/dashboard/images/{id}/edit', [
   'middleware' => ['role'],
@@ -172,7 +189,8 @@ Route::post('/admin/dashboard/images/create', [
 Route::get('/admin/dashboard/images/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@imageDelete',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'image.delete'
 ]);
 
 /**
@@ -181,17 +199,20 @@ Route::get('/admin/dashboard/images/{id}/delete', [
 Route::get('/admin/dashboard/videos', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@videoList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'video.list'
 ]);
 Route::get('/admin/dashboard/videos/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showVideoCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'video.create'
 ]);
 Route::get('/admin/dashboard/videos/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showVideoEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'video.edit'
 ]);
 Route::post('/admin/dashboard/videos/{id}/edit', [
   'middleware' => ['role'],
@@ -210,17 +231,20 @@ Route::post('/admin/dashboard/videos/create', [
 Route::get('/admin/dashboard/episodes', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@episodeList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'episode.list'
 ]);
 Route::get('/admin/dashboard/episodes/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showEpisodeCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'episode.create'
 ]);
 Route::get('/admin/dashboard/episodes/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showEpisodeEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'episode.edit'
 ]);
 Route::post('/admin/dashboard/episodes/{id}/edit', [
   'middleware' => ['role'],
@@ -235,7 +259,8 @@ Route::post('/admin/dashboard/episodes/create', [
 Route::get('/admin/dashboard/episodes/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@episodeDelete',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'episode.delete'
 ]);
 
 
@@ -245,17 +270,20 @@ Route::get('/admin/dashboard/episodes/{id}/delete', [
 Route::get('/admin/dashboard/sliders', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@sliderList',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'slider.list'
 ]);
 Route::get('/admin/dashboard/sliders/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showSliderCreate',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'slider.create'
 ]);
 Route::get('/admin/dashboard/sliders/{id}/edit', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@showSliderEdit',
-  'roles' => ['admin']
+  'roles' => ['admin'],
+  'as' => 'slider.edit'
 ]);
 Route::post('/admin/dashboard/sliders/{id}/edit', [
   'middleware' => ['role'],
@@ -266,4 +294,21 @@ Route::post('/admin/dashboard/sliders/create', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@sliderCreate',
   'roles' => ['admin']
+]);
+
+/**
+ * Media
+ *   Routes for images
+ */
+Route::get('/poster/{filename}', [
+  'uses' => 'DashboardController@getPosterImage',
+  'as' => 'poster.image'
+]);
+Route::get('/slide/{filename}', [
+  'uses' => 'DashboardController@getSlideImage',
+  'as' => 'slide.image'
+]);
+Route::get('/preview/{filename}', [
+  'uses' => 'DashboardController@getPreviewImage',
+  'as' => 'preview.image'
 ]);

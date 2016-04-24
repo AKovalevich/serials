@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Users</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/users/create">Create User</a>
+                        <a class="btn btn-primary" href="{{ route('user.create') }}">Create User</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,9 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td><a href="/admin/dashboard/users/{{ $user->id }}/edit">Edit</a></td>
+                        <td>
+                            <a href="{{ route('user.edit', ['id' => $user->id]) }}">Edit</a>
+                        </td>
                     </tr>
                     @endforeach
                     </tbody>

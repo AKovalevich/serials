@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Tags</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/tags/create">Create Tag</a>
+                        <a class="btn btn-primary" href="{{ route('tag.create') }}">Create Tag</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,9 @@
                     @foreach ($tags as $tag)
                     <tr>
                         <td>{{ $tag->name }}</td>
-                        <td><a href="/admin/dashboard/tags/{{ $tag->id }}/edit">Edit</a></td>
+                        <td>
+                            <a href="{{ route('tag.edit', ['id' => $tag->id]) }}">Edit</a>
+                        </td>
                     </tr>
                     @endforeach
                     </tbody>

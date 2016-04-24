@@ -6,21 +6,23 @@ use Share\Episode;
 use Share\Image;
 use Share\Slider;
 use Share\Video;
+use Share\User;
+use Share\Asset;
+use Share\Tag;
+use Share\Genre;
+use DateTime;
+use Illuminate\Http\Response;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
-use \Share\User;
-use \Share\Asset;
-use \Share\Tag;
-use \Share\Genre;
-use Illuminate\Http\Request;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
-class DashboardController extends BaseController
+class DashboardController extends Controller
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
@@ -159,6 +161,8 @@ class DashboardController extends BaseController
             'selected_preview' => $selected_preview,
             'slider_list' => $slider_list,
             'selected_slider' => $selected_slider,
+            'start_date' => new DateTime($asset->start_date),
+            'end_date' => new DateTime($asset->end_date)
           ]
         );
     }
@@ -434,11 +438,6 @@ class DashboardController extends BaseController
     public function imageList()
     {
         $images = Image::orderBy('id', 'desc')->get();
-
-        foreach ($images as $image) {
-            $image->path = public_path() . '//' . ($image->path);
-        }
-
         return view('dashboard.pages.image.image_list', ['images' => $images]);
     }
 
@@ -453,8 +452,6 @@ class DashboardController extends BaseController
     {
         $image = Image::find($id);
 
-        $image->src = asset(Storage::disk($image->type)->url($image->path));
-
         return view('dashboard.pages.image.image_edit',
           ['image' => $image, 'types' => Image::getTypes()]
         );
@@ -465,7 +462,7 @@ class DashboardController extends BaseController
         $image = Image::find($id);
         $image->delete();
 
-        return redirect('/admin/dashboard/images');
+        return redirect(route('image.list'));
     }
 
     public function imageEdit(Request $request, $id)
@@ -475,7 +472,6 @@ class DashboardController extends BaseController
         $validator = Validator::make($input, [
           'title' => 'required|max:255',
           'type' => 'required|max:255',
-          'path' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -484,19 +480,19 @@ class DashboardController extends BaseController
               ->withInput();
         }
 
-        $file = $request->file('path');
-        $extension = $file->getClientOriginalExtension();
-        Storage::disk($input['type'])->put($file->getFilename() . '.' . $extension,
-          File::get($file));
-
         $image = Image::find($id);
         $image->title = $input['title'];
         $image->type = $input['type'];
-        $image->path = $file->getFilename() . '.' . $extension;
 
+        if ($file = $request->file('path')) {
+            $extension = $file->getClientOriginalExtension();
+            Storage::disk($input['type'])->put($file->getFilename() . '.' . $extension,
+              File::get($file));
+            $image->path = $file->getFilename() . '.' . $extension;
+        }
         $image->save();
 
-        return redirect('/admin/dashboard/images');
+        return redirect(route('image.list'));
     }
 
     public function imageCreate(Request $request)
@@ -527,7 +523,7 @@ class DashboardController extends BaseController
 
         $image->save();
 
-        return redirect('/admin/dashboard/images');
+        return redirect(route('image.list'));
     }
 
 
@@ -576,12 +572,15 @@ class DashboardController extends BaseController
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
 
-        $file_content = file_get_contents($request->file('path')->getRealPath());
-        Storage::disk('videos')->put($_FILES['path']['name'], $file_content);
-        $video->path = $_FILES['path']['name'];
+        if ($file = $request->file('path')) {
+            $extension = $file->getClientOriginalExtension();
+            Storage::disk('videos')->put($file->getFilename() . '.' . $extension,
+              File::get($file));
+            $video->path = $file->getFilename() . '.' . $extension;
+        }
         $video->save();
 
-        return redirect('/admin/dashboard/videos');
+        return redirect(route('video.list'));
     }
 
     public function videoCreate(Request $request)
@@ -612,7 +611,7 @@ class DashboardController extends BaseController
         $video->path = $_FILES['path']['name'];
         $video->save();
 
-        return redirect('/admin/dashboard/videos');
+        return redirect(route('video.list'));
     }
 
 
@@ -672,13 +671,17 @@ class DashboardController extends BaseController
         $selected_asset = [];
         $asset_list = [];
 
-        $selected_images[$current_image->id] = $current_image->id;
+        if ($current_image) {
+            $selected_images[$current_image->id] = $current_image->id;
+        }
 
         foreach ($images as $image) {
             $images_list[$image['id']] = $image['title'];
         }
 
-        $selected_video[$current_video_id->id] = $current_video_id->id;
+        if ($current_video_id) {
+            $selected_video[$current_video_id->id] = $current_video_id->id;
+        }
 
         foreach ($video_ids as $video_id) {
             $video_list[$video_id->id] = $video_id->title;
@@ -708,7 +711,7 @@ class DashboardController extends BaseController
         $episode = Episode::find($id);
         $episode->delete();
 
-        return redirect('/admin/dashboard/episodes');
+        return redirect(route('episode.list'));
     }
 
     public function episodeEdit(Request $request, $id)
@@ -741,7 +744,7 @@ class DashboardController extends BaseController
         $episode->video_id = $input['video_id'];
         $episode->save();
 
-        return redirect('/admin/dashboard/episodes');
+        return redirect(route('episode.list'));
     }
 
     public function episodeCreate(Request $request)
@@ -774,7 +777,7 @@ class DashboardController extends BaseController
         $episode->video_id = $input['video_id'];
         $episode->save();
 
-        return redirect('/admin/dashboard/episodes');
+        return redirect(route('episode.list'));
     }
 
 
@@ -847,7 +850,7 @@ class DashboardController extends BaseController
         $slider->slides()->detach();
         $slider->slides()->sync($input['slides']);
 
-        return redirect('/admin/dashboard/sliders');
+        return redirect(route('slider.list'));
     }
 
     public function sliderCreate(Request $request)
@@ -874,6 +877,25 @@ class DashboardController extends BaseController
 
         $slider->save();
 
-        return redirect('/admin/dashboard/sliders');
+        return redirect(route('slider.list'));
+    }
+
+
+    /**
+     *  Routing for Image media.
+     */
+    public function getPosterImage($filename) {
+        $file = Storage::disk('poster')->get($filename);
+        return new Response($file, 200);
+    }
+
+    public function getPreviewImage($filename) {
+        $file = Storage::disk('preview')->get($filename);
+        return new Response($file, 200);
+    }
+
+    public function getSlideImage($filename) {
+        $file = Storage::disk('slide')->get($filename);
+        return new Response($file, 200);
     }
 }
