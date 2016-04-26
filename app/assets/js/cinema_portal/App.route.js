@@ -2,25 +2,25 @@
   'use strict';
 
   angular
-    .module('application')
+    .module('CinemaPortal')
     .config(['$routeProvider',
       function($routeProvider) {
         $routeProvider
           .when('/', {
-            templateUrl: 'app/partials/landing-page.html',
+            templateUrl: 'assets/partials/landing-page.html',
             controller: 'LandingPageController',
             controllerAs: 'LPCtrl'
           })
           .when('/login', {
-            templateUrl: 'app/partials/login-page.html',
+            templateUrl: 'assets/partials/login-page.html',
             controller: 'LoginPageController',
             controllerAs: 'LoginCtrl'
           })
           .when('/browse', {
-            templateUrl: 'app/partials/browse.html'
+            templateUrl: 'assets/partials/browse.html'
           })
           .when('/watch/:videoId', {
-            templateUrl: 'app/partials/watch-page.html',
+            templateUrl: 'assets/partials/watch-page.html',
             controller: 'WatchPageController',
             controllerAs: 'WPCtrl'
           })

@@ -1,7 +1,7 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('application')
+  angular.module('CinemaPortal')
     .controller('WatchPageController', ["$sce", function ($sce) {
       var ctrl = this;
 

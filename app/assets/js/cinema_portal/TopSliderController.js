@@ -1,7 +1,7 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('application')
+  angular.module('CinemaPortal')
     .controller('TopSliderController', ['$scope', '$log', function ($scope, $log) {
       var ctr = this;
 
@@ -44,7 +44,7 @@
     .directive('topSlider', function() {
       return {
         restrict: 'A',
-        templateUrl: 'app/partials/top-slider.html',
+        templateUrl: 'assets/partials/top-slider.html',
         controller: 'TopSliderController',
         controllerAs: 'TSCtrl'
       }

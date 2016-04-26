@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('application', [
+    .module('CinemaPortal', [
       'ngRoute',
       'ngAnimate',
       'ngSanitize',

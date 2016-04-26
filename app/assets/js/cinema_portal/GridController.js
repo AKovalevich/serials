@@ -1,7 +1,7 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('application')
+  angular.module('CinemaPortal')
     .service('GridService', function() {
       var grid = this;
     })
@@ -289,7 +289,7 @@
     .directive('grid', function() {
       return {
         restrict: 'A',
-        templateUrl: 'app/partials/grid.html',
+        templateUrl: 'assets/partials/grid.html',
         controller: 'GridController',
         controllerAs: 'GCtrl'
       }
