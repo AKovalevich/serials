@@ -12,6 +12,15 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
+var spritesmith = require('gulp.spritesmith');
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('assets/images/*.jpg').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }));
+  return spriteData.pipe(gulp.dest('./assets/css/'));
+});
 
 gulp.task('less', function () {
   gulp.src('./assets/less/main.less')
@@ -89,7 +98,8 @@ gulp.task('watch', function() {
   gulp.watch('assets/js/**/*.js', ['scripts']);
   gulp.watch('assets/less/**/*.less', ['less']);
   gulp.watch('assets/less/**/integrate.less', ['integrate-less']);
+  gulp.watch('assets/images/*.jpg', ['sprite']);
 });
 
 // Default Task
-gulp.task('default', ['less', 'scripts', 'watch']);
+gulp.task('default', ['less', 'scripts', 'sprite', 'watch']);
