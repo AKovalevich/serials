@@ -1,7 +1,7 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('application')
+  angular.module('CinemaPortal')
     .controller('LoginPageController', ['$scope', '$log', function ($scope, $log) {
       var ctrl = this;
 
