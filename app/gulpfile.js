@@ -13,12 +13,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var spritesmith = require('gulp.spritesmith');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('sprite', function () {
   var spriteData = gulp.src('assets/images/*.jpg').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));
+  gulp.src('assets/css/sprite.png')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [
+        {removeViewBox: false},
+        {cleanupIDs: false}
+      ]
+    }))
+    .pipe(gulp.dest('./assets/css/'));
+
   return spriteData.pipe(gulp.dest('./assets/css/'));
 });
 
