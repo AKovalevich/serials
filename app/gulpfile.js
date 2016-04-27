@@ -22,7 +22,9 @@ gulp.task('sprite', function () {
   }));
   gulp.src('assets/css/sprite.png')
     .pipe(imagemin({
-      progressive: true,
+      progressive: true, // for JPEG
+      //interlaced: true, // for GIF
+      //multipass: true, // for SVG
       svgoPlugins: [
         {removeViewBox: false},
         {cleanupIDs: false}
