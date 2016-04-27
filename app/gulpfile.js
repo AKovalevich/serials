@@ -1,3 +1,5 @@
+"use strict";
+
 // Include gulp
 var gulp = require('gulp');
 
@@ -13,24 +15,28 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var spritesmith = require('gulp.spritesmith');
-var imagemin = require('gulp-imagemin');
+var image = require('gulp-image');
 
 gulp.task('sprite', function () {
   var spriteData = gulp.src('assets/images/*.jpg').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));
+
   gulp.src('assets/css/sprite.png')
-    .pipe(imagemin({
-      progressive: true, // for JPEG
-      //interlaced: true, // for GIF
-      //multipass: true, // for SVG
-      svgoPlugins: [
-        {removeViewBox: false},
-        {cleanupIDs: false}
-      ]
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      advpng: true,
+      jpegRecompress: false,
+      jpegoptim: true,
+      mozjpeg: true,
+      gifsicle: true,
+      svgo: true
     }))
     .pipe(gulp.dest('./assets/css/'));
+
 
   return spriteData.pipe(gulp.dest('./assets/css/'));
 });
@@ -45,22 +51,6 @@ gulp.task('less', function () {
       remove: false
     }))
     .pipe(sourcemaps.write())
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-gulp.task('integrate-less', function () {
-  gulp.src('./assets/less/integrate.less')
-    .pipe(less())
-    .on('error', function (err) {
-      this.emit('end');
-    })
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false,
-      remove: false
-    }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.reload({stream:true}));
@@ -104,9 +94,9 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  browserSync({
-    proxy: "localhost"
-  });
+  //browserSync({
+  //  proxy: "localhost"
+  //});
 
   gulp.watch('assets/js/**/*.js', ['scripts']);
   gulp.watch('assets/less/**/*.less', ['less']);
