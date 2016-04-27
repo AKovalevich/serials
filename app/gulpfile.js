@@ -31,7 +31,7 @@ gulp.task('less', function () {
       cascade: false,
       remove: false
     }))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(minifyCSS())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.reload({stream:true}));
@@ -103,3 +103,6 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['less', 'scripts', 'sprite', 'watch']);
+
+// Compile CSS
+gulp.task('watch-css', ['less', 'sprite', 'watch']);
