@@ -11,20 +11,14 @@
 |
 */
 
-/**
- * Routes with token
- */
+$api = app('Dingo\Api\Routing\Router');
 
+// JWT Protected routes
 $api->version('v1', ['middleware' => 'api.auth', 'providers' => 'jwt'], function ($api) {
-    $api->get('users/{id}', 'App\Api\V1\Controllers\UserController@show');
+    $api->get('/index', 'App\Http\Controllers\BackendController@index');
 });
 
-
-/**
- * Free routes.
- */
-
+// Publicly accessible routes
 $api->version('v1', [], function ($api) {
-    $api->post('/register', 'App\Api\V1\Controllers\AuthenticateController@register');
-    $api->post('/auth', 'App\Api\V1\Controllers\AuthenticateController@auth');
+    $api->post('/authenticate', 'App\Http\Controllers\AuthenticateController@backend');
 });

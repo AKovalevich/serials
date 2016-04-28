@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of jwt-auth.
- *
- * (c) Sean Tymon <tymon148@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 return [
 
     /*
@@ -20,70 +11,9 @@ return [
     | your tokens. A helper command is provided for this:
     | `php artisan jwt:secret`
     |
-    | Note: This will be used for Symmetric algorithms only (HMAC),
-    | since RSA and ECDSA use a private/public key combo (See below).
-    |
     */
 
     'secret' => env('JWT_SECRET'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | JWT Authentication Keys
-    |--------------------------------------------------------------------------
-    |
-    | What algorithm you are using, will determine whether your tokens are
-    | signed with a random string (defined in `JWT_SECRET`) or using the
-    | following public & private keys.
-    |
-    | Symmetric Algorithms:
-    | HS256, HS384 & HS512 will use `JWT_SECRET`.
-    |
-    | Asymmetric Algorithms:
-    | RS256, RS384 & RS512 / ES256, ES384 & ES512 will use the keys below.
-    |
-    */
-
-    'keys' => [
-
-        /*
-        |--------------------------------------------------------------------------
-        | Public Key
-        |--------------------------------------------------------------------------
-        |
-        | A path or resource to your public key.
-        |
-        | E.g. 'file://path/to/public/key'
-        |
-        */
-
-        'public' => env('JWT_PUBLIC_KEY'),
-
-        /*
-        |--------------------------------------------------------------------------
-        | Private Key
-        |--------------------------------------------------------------------------
-        |
-        | A path or resource to your private key.
-        |
-        | E.g. 'file://path/to/private/key'
-        |
-        */
-
-        'private' => env('JWT_PRIVATE_KEY'),
-
-        /*
-        |--------------------------------------------------------------------------
-        | Passphrase
-        |--------------------------------------------------------------------------
-        |
-        | The passphrase for your private key. Can be null if none set.
-        |
-        */
-
-        'passphrase' => env('JWT_PASSPHRASE'),
-
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -100,7 +30,7 @@ return [
     |
     */
 
-    'ttl' => env('JWT_TTL', null),
+    'ttl' => env('JWT_TTL', 60),
 
     /*
     |--------------------------------------------------------------------------
@@ -110,12 +40,7 @@ return [
     | Specify the length of time (in minutes) that the token can be refreshed
     | within. I.E. The user can refresh their token within a 2 week window of
     | the original token being created until they must re-authenticate.
-    | Defaults to 2 weeks.
-    |
-    | You can also set this to null, to yield an infinite refresh time.
-    | Some may want this instead of never expiring tokens for e.g. a mobile app.
-    | This is not particularly recommended, so make sure you have appropriate
-    | systems in place to revoke the token if necessary.
+    | Defaults to 2 weeks
     |
     */
 
@@ -128,8 +53,8 @@ return [
     |
     | Specify the hashing algorithm that will be used to sign the token.
     |
-    | See here: https://github.com/namshi/jose/tree/master/src/Namshi/JOSE/Signer/OpenSSL
-    | for possible values.
+    | See here: https://github.com/namshi/jose/tree/2.2.0/src/Namshi/JOSE/Signer
+    | for possible values
     |
     */
 
@@ -146,14 +71,14 @@ return [
     |
     */
 
-    'required_claims' => ['iss', 'iat', 'nbf', 'sub', 'jti'],
+    'required_claims' => ['iss', 'iat', 'exp', 'nbf', 'sub', 'jti'],
 
     /*
     |--------------------------------------------------------------------------
     | Blacklist Enabled
     |--------------------------------------------------------------------------
     |
-    | In order to invalidate tokens, you must have the blacklist enabled.
+    | In order to invalidate tokens, you must have the the blacklist enabled.
     | If you do not want or need this functionality, then set this to false.
     |
     */
@@ -186,6 +111,8 @@ return [
 
     'providers' => [
 
+        'user' => \App\Models\ApiSubscriber::class,
+
         /*
         |--------------------------------------------------------------------------
         | JWT Provider
@@ -213,12 +140,12 @@ return [
         | Storage Provider
         |--------------------------------------------------------------------------
         |
-        | Specify the provider that is used to store tokens in the blacklist.
+        | Specify the provider that is used to store tokens in the blacklist
         |
         */
 
-        'storage' => Tymon\JWTAuth\Providers\Storage\Illuminate::class,
+        'storage' => Tymon\JWTAuth\Providers\Storage\Illuminate::class
 
-    ],
+    ]
 
 ];
