@@ -22,6 +22,7 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));
+
   // We need to optimize sprite image.
   gulp.src('assets/css/sprite.png')
     .pipe(image({
@@ -36,7 +37,6 @@ gulp.task('sprite', function () {
       svgo: true
     }))
     .pipe(gulp.dest('./assets/css/'));
-
 
   return spriteData.pipe(gulp.dest('./assets/css/'));
 });
