@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .service('GridService', function() {
+    .service('GridService', function () {
       var grid = this;
     })
     .controller('GridController', ['$scope', function ($scope) {
@@ -207,7 +207,7 @@
         }
       ];
 
-      ctrl.setFocus = function(elementId) {
+      ctrl.setFocus = function (elementId) {
         if (ctrl.borderedElement && ctrl.showMoreInfo && elementId) {
           ctrl.borderedElement = elementId;
           ctrl.showMoreInfo = elementId;
@@ -218,15 +218,15 @@
         if (!elementId) ctrl.firstAppear = null;
       };
 
-      ctrl.isFocused = function(elementId) {
+      ctrl.isFocused = function (elementId) {
         return ctrl.focusedElement === elementId;
       };
 
-      ctrl.isBordered = function(elementId) {
+      ctrl.isBordered = function (elementId) {
         return ctrl.borderedElement === elementId;
       };
 
-      ctrl.getNeedClassElement = function(iconId) {
+      ctrl.getNeedClassElement = function (iconId) {
         var elementClass = ctrl.isFocused(iconId)
           ? 'opened'
           : 'closed';
@@ -239,7 +239,7 @@
         return elementClass;
       };
 
-      ctrl.getPanelClass = function(iconId) {
+      ctrl.getPanelClass = function (iconId) {
         var panelClass = ctrl.firstAppear === iconId
           ? 'first-appear'
           : 'fade-in-out';
@@ -251,11 +251,11 @@
         return panelClass;
       };
 
-      ctrl.showPanel = function(iconId) {
+      ctrl.showPanel = function (iconId) {
         return ctrl.showMoreInfo === iconId;
       };
 
-      ctrl.setActiveElement = function(iconId, $event) {
+      ctrl.setActiveElement = function (iconId, $event) {
         if (!ctrl.showMoreInfo) {
           ctrl.firstAppear = iconId;
         }
@@ -263,10 +263,9 @@
         ctrl.focusedElement = null;
         ctrl.borderedElement = iconId;
         ctrl.showMoreInfo = iconId;
-
       };
 
-      ctrl.closePanel = function() {
+      ctrl.closePanel = function () {
         ctrl.activeElement = null;
         ctrl.focusedElement = null;
         ctrl.borderedElement = null;
@@ -274,19 +273,19 @@
         ctrl.closeState = false;
       };
 
-      ctrl.setCloseState = function(state) {
+      ctrl.setCloseState = function (state) {
         ctrl.closeState = state;
       };
 
-      ctrl.isCloseState = function() {
+      ctrl.isCloseState = function () {
         return !!ctrl.closeState;
       };
 
-      ctrl.getActiveElement = function() {
+      ctrl.getActiveElement = function () {
         return !!ctrl.activeElement;
       };
     }])
-    .directive('grid', function() {
+    .directive('grid', function () {
       return {
         restrict: 'A',
         templateUrl: 'assets/partials/grid.html',

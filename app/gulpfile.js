@@ -51,11 +51,11 @@ gulp.task('less', function () {
     .pipe(sourcemaps.write())
     .pipe(minifyCSS())
     .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   return gulp.src([
     'assets/js/vendor/jquery/dist/jquery.js',
     'assets/js/vendor/jquery-ui/jquery-ui.js',
@@ -87,11 +87,11 @@ gulp.task('scripts', function() {
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // Watch Files For Changes
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   //browserSync({
   //  proxy: "localhost"
   //});
