@@ -33,15 +33,19 @@
       ctr.beforeChange = beforeChange;
       ctr.lastSlide = lastSlide;
 
-      function lastSlide(index) {}
+      function lastSlide(index) {
+      }
 
-      function beforeChange(index) {}
+      function beforeChange(index) {
+      }
 
-      function selectedClick(index) {}
+      function selectedClick(index) {
+      }
 
-      function slideChanged(index) {}
+      function slideChanged(index) {
+      }
     }])
-    .directive('topSlider', function() {
+    .directive('topSlider', function () {
       return {
         restrict: 'A',
         templateUrl: 'assets/partials/top-slider.html',

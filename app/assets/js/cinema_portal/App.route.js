@@ -4,7 +4,7 @@
   angular
     .module('CinemaPortal')
     .config(['$routeProvider',
-      function($routeProvider) {
+      function ($routeProvider) {
         $routeProvider
           .when('/', {
             templateUrl: 'assets/partials/landing-page.html',
