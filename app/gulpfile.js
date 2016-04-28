@@ -22,7 +22,7 @@ gulp.task('sprite', function () {
     imgName: 'sprite.png',
     cssName: 'sprite.css'
   }));
-
+  // We need to optimize sprite image.
   gulp.src('assets/css/sprite.png')
     .pipe(image({
       pngquant: true,
@@ -44,7 +44,6 @@ gulp.task('sprite', function () {
 gulp.task('less', function () {
   gulp.src('./assets/less/main.less')
     .pipe(less())
-
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false,
