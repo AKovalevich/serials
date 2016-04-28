@@ -2,9 +2,9 @@
 
 namespace Share;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
     /**
      * The attributes that are mass assignable.
