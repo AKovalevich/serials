@@ -2,38 +2,87 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .controller('WatchPageController', ["$sce", function ($sce) {
+    .service('watchService', ['$q', 'generalConf', function($q, generalConf) {
+      var watchService = this;
+
+      watchService.getVideo = function(seasonId, videoId) {
+        var deferred = $q.defer();
+
+        $http.get(generalConf.basePath + '/api/episode/' + seasonId + '/' + videoId)
+          .then(function(response) {
+            deferred.resolve(response)
+          });
+
+        return deferred.promise;
+      }
+    }])
+    .controller('WatchPageController', ['$sce', '$routeParams', 'watchService', function ($sce, $routeParams, watchService) {
       var ctrl = this;
 
-      ctrl.config = {
-        sources: [
-          {
-            src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"),
-            type: "video/mp4"
-          },
-          {
-            src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"),
-            type: "video/webm"
-          },
-          {
-            src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"),
-            type: "video/ogg"
+      ctrl.videoId = $routeParams.videoId;
+      ctrl.seasonId = $routeParams.seasonId;
+      ctrl.loading = false;
+      ctrl.config = null;
+      ctrl.isEnging = false;
+      ctrl.nextVideo = false;
+      ctrl.timer = 10;
+      ctrl.countdown = 0;
+
+      ctrl.getVideoInfo = function(seasonId, videoId) {
+        ctrl.loading = true;
+        watchService.getVideo(seasonId, videoId)
+          .then(function(response) {
+            ctrl.nextVideo = response.nextVideo;
+
+            ctrl.config = {
+              autoHide: true,
+              autoHideTime: 3000,
+              autoPlay: false,
+              sources: [
+                {
+                  src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"),
+                  type: "video/mp4"
+                }
+              ],
+              theme: "assets/js/vendor/videogular-themes-default/videogular.css",
+              plugins: {
+                poster: "http://www.videogular.com/assets/images/videogular.png"
+              }
+            };
+
+            ctrl.isEnging = false;
+            ctrl.loading = false;
+          });
+      };
+
+      ctrl.updateTime = function(currentTime, duration) {
+        if (!ctrl.isEnging) {
+          if (duration - currentTime <= 70) {
+            ctrl.countdown = 10;
           }
-        ],
-        tracks: [
-          {
-            src: "http://www.videogular.com/assets/subs/pale-blue-dot.vtt",
-            kind: "subtitles",
-            srclang: "en",
-            label: "English",
-            default: ""
-          }
-        ],
-        theme: "assets/js/vendor/videogular-themes-default/videogular.css",
-        plugins: {
-          poster: "http://www.videogular.com/assets/images/videogular.png"
         }
       };
+
+      ctrl.timerFinished = function() {
+        ctrl.isEnging = true;
+        ctrl.videoId = ctrl.nextVideo.videoId;
+        ctrl.seasonId = ctrl.nextVideo.seasonId;
+        ctrl.getVideoInfo(ctrl.seasonId, ctrl.videoId);
+      };
+
+      ctrl.isLoading = function () {
+        $timeout(function () {
+          $rootScope.loading = true;
+        });
+      };
+
+      ctrl.isNotLoading = function () {
+        $timeout(function () {
+          $rootScope.loading = false;
+        });
+      };
+
+      ctrl.getVideoInfo(ctrl.seasonId, ctrl.videoId);
     }])
 
 })(angular, window);
