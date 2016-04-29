@@ -1,10 +1,14 @@
 <div ng-controller="WatchPageController as WPCtrl">
     <!-- We will put here Videogular tags... -->
-    <!--<a class="button button-back" href="#/browse">-->
-        <!--<span class="button-back-image">Back</span>-->
-    <!--</a>-->
+    <a type="button" class="button button-back" href="#/browse">
+        <span class="button-back-image">Back</span>
+    </a>
+    <section ng-hide="!WPCtrl.loading" id="spinner">
+        <md-progress-circular class="md-spinner" md-diameter="100" md-mode="indeterminate"></md-progress-circular>
+    </section>
+
     <div class="wrapper-video">
-        <videogular vg-theme="WPCtrl.config.theme">
+        <videogular vg-theme="WPCtrl.config.theme" vg-update-time="WPCtrl.updateTime($currentTime, $duration)">
             <vg-media vg-src="WPCtrl.config.sources"
                       vg-tracks="WPCtrl.config.tracks"
                       vg-dash>
@@ -26,13 +30,11 @@
             <vg-overlay-play></vg-overlay-play>
             <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
         </videogular>
-        <script src="http://cdn.dashjs.org/v2.0.0/dash.all.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
-        <script src="http://static.videogular.com/scripts/videogular/latest/videogular.js"></script>
-        <script src="http://static.videogular.com/scripts/controls/latest/vg-controls.js"></script>
-        <script src="http://static.videogular.com/scripts/overlay-play/latest/vg-overlay-play.js"></script>
-        <script src="http://static.videogular.com/scripts/poster/latest/vg-poster.js"></script>
-        <script src="http://static.videogular.com/scripts/dash/latest/vg-dash.js"></script>
+    </div>
+
+    <div id="next-video">
+        <div ng-if="WPCtrl.countdown">
+            <timer countdown="{{ WPCtrl.countdown }}" interval="1000" finish-callback="WPCtrl.timerFinished()">{{seconds}} second{{secondsS}}</timer>
+        </div>
     </div>
 </div>

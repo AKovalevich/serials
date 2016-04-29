@@ -76,6 +76,8 @@ gulp.task('scripts', function () {
     'assets/js/vendor/videogular-overlay-play/vg-overlay-play.js',
     'assets/js/vendor/videogular-poster/vg-poster.js',
     'assets/js/vendor/videogular-buffering/vg-buffering.js',
+    'assets/js/vendor/dash/dash.all.min.js',
+    'assets/js/vendor/videogular-dash/vg-dash.js',
     'assets/js/cinema_portal/App.js',
     'assets/js/cinema_portal/App.route.js',
     'assets/js/cinema_portal/TopSliderController.js',
