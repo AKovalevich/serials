@@ -898,4 +898,9 @@ class DashboardController extends Controller
         $file = Storage::disk('slide')->get($filename);
         return new Response($file, 200);
     }
+
+    public function getVideoFile($filename) {
+        $file = Storage::disk('videos')->get($filename);
+        return new Response($file, 200);
+    }
 }

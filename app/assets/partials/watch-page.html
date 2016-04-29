@@ -1,28 +1,38 @@
 <div ng-controller="WatchPageController as WPCtrl">
     <!-- We will put here Videogular tags... -->
-    <a class="button button-back" href="#/browse">
-        <span class="button-back-image">Back</span>
-    </a>
-    <videogular vg-theme="WPCtrl.config.theme">
-        <vg-media vg-src="WPCtrl.config.sources"
-                  vg-tracks="WPCtrl.config.tracks">
-        </vg-media>
+    <!--<a class="button button-back" href="#/browse">-->
+        <!--<span class="button-back-image">Back</span>-->
+    <!--</a>-->
+    <div class="wrapper-video">
+        <videogular vg-theme="WPCtrl.config.theme">
+            <vg-media vg-src="WPCtrl.config.sources"
+                      vg-tracks="WPCtrl.config.tracks"
+                      vg-dash>
+            </vg-media>
 
-        <vg-controls>
-            <vg-play-pause-button></vg-play-pause-button>
-            <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
-            <vg-scrub-bar>
-                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-            </vg-scrub-bar>
-            <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
-            <vg-volume>
-                <vg-mute-button></vg-mute-button>
-                <vg-volume-bar></vg-volume-bar>
-            </vg-volume>
-            <vg-fullscreen-button></vg-fullscreen-button>
-        </vg-controls>
-
-        <vg-overlay-play></vg-overlay-play>
-        <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
-    </videogular>
+            <vg-controls>
+                <vg-play-pause-button></vg-play-pause-button>
+                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                </vg-scrub-bar>
+                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                <vg-volume>
+                    <vg-mute-button></vg-mute-button>
+                    <vg-volume-bar></vg-volume-bar>
+                </vg-volume>
+                <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+            <vg-overlay-play></vg-overlay-play>
+            <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
+        </videogular>
+        <script src="http://cdn.dashjs.org/v2.0.0/dash.all.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
+        <script src="http://static.videogular.com/scripts/videogular/latest/videogular.js"></script>
+        <script src="http://static.videogular.com/scripts/controls/latest/vg-controls.js"></script>
+        <script src="http://static.videogular.com/scripts/overlay-play/latest/vg-overlay-play.js"></script>
+        <script src="http://static.videogular.com/scripts/poster/latest/vg-poster.js"></script>
+        <script src="http://static.videogular.com/scripts/dash/latest/vg-dash.js"></script>
+    </div>
 </div>

@@ -26,7 +26,7 @@
                         <p>{{ Auth::user()->email }}</p>
 
                         <div class="btn-group margin-bottom-1x" role="group">
-                            <a href="/logout" type="button" class="btn btn-default">
+                            <a href="/admin/logout" type="button" class="btn btn-default">
                                 <i class="fa fa-sign-out"></i>Logout
                             </a>
                         </div>

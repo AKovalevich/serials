@@ -67,4 +67,9 @@ class LoginAdminController extends Controller
             }
         }
     }
+
+    public function adminLogout(Request $request) {
+        Auth::logout();
+        return Redirect::route('admin.login');
+    }
 }
