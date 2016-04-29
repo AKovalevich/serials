@@ -14,6 +14,8 @@
 Route::post('/auth/login', 'Auth\AuthController@postLogin');
 Route::get('/admin/login', ['uses' => 'LoginAdminController@showLogin', 'as' => 'admin.login']);
 Route::post('/admin/login', ['uses' => 'LoginAdminController@adminLogin']);
+Route::get('/admin/logout', ['uses' => 'LoginAdminController@adminLogout', 'as' => 'admin.logout']);
+
 Route::get('/admin/dashboard', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@index',
@@ -311,4 +313,8 @@ Route::get('/slide/{filename}', [
 Route::get('/preview/{filename}', [
   'uses' => 'DashboardController@getPreviewImage',
   'as' => 'preview.image'
+]);
+Route::get('/video/{filename}', [
+  'uses' => 'DashboardController@getVideoFile',
+  'as' => 'video.file'
 ]);

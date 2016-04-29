@@ -3,8 +3,11 @@
 
   angular
     .module('CinemaPortal')
+    .constant('generalConf', {
+      basePath: "http://api.serials.loc"
+    })
     .config(['$routeProvider',
-      function($routeProvider) {
+      function ($routeProvider) {
         $routeProvider
           .when('/', {
             templateUrl: 'assets/partials/landing-page.html',
@@ -19,7 +22,7 @@
           .when('/browse', {
             templateUrl: 'assets/partials/browse.html'
           })
-          .when('/watch/:videoId', {
+          .when('/watch/:seasonId/:videoId', {
             templateUrl: 'assets/partials/watch-page.html',
             controller: 'WatchPageController',
             controllerAs: 'WPCtrl'
@@ -27,5 +30,6 @@
           .otherwise({
             redirectTo: '/browse'
           });
-      }]);
+      }])
+    .config();
 })(angular, window);
