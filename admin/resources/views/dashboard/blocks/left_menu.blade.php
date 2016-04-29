@@ -11,7 +11,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li>
-                <a href="/admin/dashboard">
+                <a href="{{ route('admin.dashboard') }}">
                     <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
                 </a>
             </li>
@@ -23,14 +23,14 @@
                 <div id="dropdown-form" class="panel-collapse collapse">
                     <div class="panel-body">
                         <ul class="nav navbar-nav">
-                            <li><a href="/admin/dashboard/assets">TV Shows</a></li>
-                            <li><a href="/admin/dashboard/episodes">Episodes</a></li>
-                            <li><a href="/admin/dashboard/videos">Videos</a></li>
-                            <li><a href="/admin/dashboard/images">Images</a></li>
-                            <li><a href="/admin/dashboard/tags">Tags</a></li>
-                            <li><a href="/admin/dashboard/sliders">Sliders</a></li>
-                            <li><a href="/admin/dashboard/genres">Genres</a></li>
-                            <li><a href="/admin/dashboard/users">Users</a></li>
+                            <li><a href="{{ route('asset.list') }}">TV Shows</a></li>
+                            <li><a href="{{ route('episode.list') }}">Episodes</a></li>
+                            <li><a href="{{ route('video.list') }}">Videos</a></li>
+                            <li><a href="{{ route('image.list') }}">Images</a></li>
+                            <li><a href="{{ route('tag.list') }}">Tags</a></li>
+                            <li><a href="{{ route('slider.list') }}">Sliders</a></li>
+                            <li><a href="{{ route('genre.list') }}">Genres</a></li>
+                            <li><a href="{{ route('user.list') }}">Users</a></li>
                         </ul>
                     </div>
                 </div>

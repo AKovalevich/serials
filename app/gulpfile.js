@@ -1,3 +1,5 @@
+"use strict";
+
 // Include gulp
 var gulp = require('gulp');
 
@@ -12,40 +14,48 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
+var spritesmith = require('gulp.spritesmith');
+var image = require('gulp-image');
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('assets/images/*.jpg').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css'
+  }));
+  // We need to optimize sprite image.
+  gulp.src('assets/css/sprite.png')
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      advpng: true,
+      jpegRecompress: false,
+      jpegoptim: true,
+      mozjpeg: true,
+      gifsicle: true,
+      svgo: true
+    }))
+    .pipe(gulp.dest('./assets/css/'));
+
+  return spriteData.pipe(gulp.dest('./assets/css/'));
+});
 
 gulp.task('less', function () {
   gulp.src('./assets/less/main.less')
     .pipe(less())
-
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false,
       remove: false
     }))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(minifyCSS())
     .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-gulp.task('integrate-less', function () {
-  gulp.src('./assets/less/integrate.less')
-    .pipe(less())
-    .on('error', function (err) {
-      this.emit('end');
-    })
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false,
-      remove: false
-    }))
-    .pipe(minifyCSS())
-    .pipe(gulp.dest('./assets/css'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   return gulp.src([
     'assets/js/vendor/jquery/dist/jquery.js',
     'assets/js/vendor/jquery-ui/jquery-ui.js',
@@ -66,6 +76,8 @@ gulp.task('scripts', function() {
     'assets/js/vendor/videogular-overlay-play/vg-overlay-play.js',
     'assets/js/vendor/videogular-poster/vg-poster.js',
     'assets/js/vendor/videogular-buffering/vg-buffering.js',
+    'assets/js/vendor/dash/dash.all.min.js',
+    'assets/js/vendor/videogular-dash/vg-dash.js',
     'assets/js/cinema_portal/App.js',
     'assets/js/cinema_portal/App.route.js',
     'assets/js/cinema_portal/TopSliderController.js',
@@ -77,19 +89,22 @@ gulp.task('scripts', function() {
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // Watch Files For Changes
-gulp.task('watch', function() {
-  browserSync({
-    proxy: "localhost"
-  });
-
+gulp.task('watch', function () {
+  //browserSync({
+  //  proxy: "localhost"
+  //});
   gulp.watch('assets/js/**/*.js', ['scripts']);
   gulp.watch('assets/less/**/*.less', ['less']);
   gulp.watch('assets/less/**/integrate.less', ['integrate-less']);
+  gulp.watch('assets/images/*.jpg', ['sprite']);
 });
 
 // Default Task
-gulp.task('default', ['less', 'scripts', 'watch']);
+gulp.task('default', ['less', 'scripts', 'sprite', 'watch']);
+
+// Compile CSS
+gulp.task('watch-css', ['less', 'sprite', 'watch']);
