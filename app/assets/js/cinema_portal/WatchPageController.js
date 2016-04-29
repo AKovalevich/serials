@@ -15,7 +15,10 @@
             src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.webm"),
             type: "video/webm"
           },
-          {src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"), type: "video/ogg"}
+          {
+            src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.ogg"),
+            type: "video/ogg"
+          }
         ],
         tracks: [
           {
@@ -26,7 +29,7 @@
             default: ""
           }
         ],
-        theme: "libraries/videogular-themes-default/videogular.css",
+        theme: "assets/js/vendor/videogular-themes-default/videogular.css",
         plugins: {
           poster: "http://www.videogular.com/assets/images/videogular.png"
         }
