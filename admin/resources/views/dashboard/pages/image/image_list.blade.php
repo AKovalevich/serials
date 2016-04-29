@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Images</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/images/create">Add image</a>
+                        <a class="btn btn-primary" href="{{ route('image.create') }}">Add image</a>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                             <td>{{ $image->type }}</td>
                             <td><img class="image image-preview" src="{{ $image->path }}"/></td>
                             <td>
-                                <a href="/admin/dashboard/images/{{ $image->id }}/edit">Edit</a>
-                                <a href="/admin/dashboard/images/{{ $image->id }}/delete">Delete</a>
+                                <a href="{{ route('image.edit', ['id' => $image->id]) }}">Edit</a>
+                                <a href="{{ route('image.delete', ['id' => $image->id]) }}">Delete</a>
                             </td>
                         </tr>
                     @endforeach
