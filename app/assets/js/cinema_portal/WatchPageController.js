@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .service('watchService', ['$q', 'generalConf', function($q, generalConf) {
+    .service('watchService', ['$q', '$http', 'generalConf', function($q, $http, generalConf) {
       var watchService = this;
 
       watchService.getVideo = function(seasonId, videoId) {
@@ -37,10 +37,12 @@
             ctrl.config = {
               autoHide: true,
               autoHideTime: 3000,
-              autoPlay: false,
+              autoPlay: true,
+              loop: false,
+              preload: "none",
               sources: [
                 {
-                  src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/videos/videogular.mp4"),
+                  src: $sce.trustAsResourceUrl("http://admin.serials.loc/video/1"),
                   type: "video/mp4"
                 }
               ],
