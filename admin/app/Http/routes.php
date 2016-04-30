@@ -314,7 +314,7 @@ Route::get('/preview/{filename}', [
   'uses' => 'DashboardController@getPreviewImage',
   'as' => 'preview.image'
 ]);
-Route::get('/video/{filename}', [
+Route::get('/video/{video_id}', [
   'uses' => 'DashboardController@getVideoFile',
   'as' => 'video.file'
 ]);

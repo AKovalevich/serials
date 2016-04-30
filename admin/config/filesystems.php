@@ -75,7 +75,7 @@ return [
         'videos' => [
             'driver' => 'local',
             'root' => storage_path('app/public/videos'),
-            'visibility' => 'private',
+            'visibility' => 'public',
         ],
 
         's3' => [
