@@ -31,5 +31,4 @@
             redirectTo: '/browse'
           });
       }])
-    .config();
 })(angular, window);
