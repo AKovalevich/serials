@@ -21,6 +21,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use VideoStream;
 
 class DashboardController extends Controller
 {
@@ -574,9 +575,9 @@ class DashboardController extends Controller
 
         if ($file = $request->file('path')) {
             $extension = $file->getClientOriginalExtension();
-            Storage::disk('videos')->put($file->getFilename() . '.' . $extension,
+            Storage::disk('videos')->put($video->title . '.' . $extension,
               File::get($file));
-            $video->path = $file->getFilename() . '.' . $extension;
+            $video->path = $video->title . '.' . $extension;
         }
         $video->save();
 
@@ -605,10 +606,10 @@ class DashboardController extends Controller
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
 
-        $file_content =
-          file_get_contents($request->file('path')->getRealPath());
-        Storage::disk('videos')->put($_FILES['path']['name'], $file_content);
-        $video->path = $_FILES['path']['name'];
+        $file = $request->file('path');
+        $extension = $file->getClientOriginalExtension();
+        Storage::disk('videos')->put($video->title . '.' . $extension, File::get($file));
+        $video->path = $video->title . '.' . $extension;;
         $video->save();
 
         return redirect(route('video.list'));
@@ -899,8 +900,13 @@ class DashboardController extends Controller
         return new Response($file, 200);
     }
 
-    public function getVideoFile($filename) {
-        $file = Storage::disk('videos')->get($filename);
-        return new Response($file, 200);
+    public function getVideoFile($video_id) {
+        $video = Video::find($video_id);
+
+        if ($file = Storage::disk('videos')->get($video->path)) {
+            $path = storage_path('app/public/videos/' . $video->path);
+            $stream = new VideoStream($path);
+            $stream->start();
+        }
     }
 }
