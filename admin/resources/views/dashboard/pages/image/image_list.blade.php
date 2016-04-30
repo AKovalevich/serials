@@ -41,7 +41,7 @@
                         <tr>
                             <td>{{ $image->title }}</td>
                             <td>{{ $image->type }}</td>
-                            <td><img class="image image-preview" src="{{ $image->path }}"/></td>
+                            <td><img class="image image-preview" src="{{ route( $image->type . '.image', ['filename' => $image->path]) }}"/></td>
                             <td>
                                 <a href="{{ route('image.edit', ['id' => $image->id]) }}">Edit</a>
                                 <a href="{{ route('image.delete', ['id' => $image->id]) }}">Delete</a>
