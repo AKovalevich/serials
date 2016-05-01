@@ -1,6 +1,6 @@
 var fs = require('fs'),
   http = require('http'),
-  auth = require('basic-auth'),
+  auth = require('basic-auth');
 
 http.createServer(function (request, response) {
     'use strict';
