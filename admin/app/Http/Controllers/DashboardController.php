@@ -538,16 +538,29 @@ class DashboardController extends Controller
     public function showVideoCreate()
     {
         return view('dashboard.pages.video.video_create',
-          ['quality' => Video::getQuality()]
+          [
+            'quality' => Video::getQuality(),
+            'file_list' => Video::getAvailableAssetFiles()
+          ]
         );
     }
 
     public function showVideoEdit(Request $request, $id)
     {
         $video = Video::find($id);
+        $file_list = Video::getAssetFilesById($id);
+        $selected_file = array_search(
+          $video->path,
+          $file_list
+        );
 
         return view('dashboard.pages.video.video_edit',
-          ['video' => $video, 'quality' => Video::getQuality()]
+          [
+            'video' => $video,
+            'quality' => Video::getQuality(),
+            'file_list' => $file_list,
+            'selected_file' => $selected_file
+          ]
         );
     }
 
@@ -572,13 +585,8 @@ class DashboardController extends Controller
         $video->title = $input['title'];
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
-
-        if ($file = $request->file('path')) {
-            $extension = $file->getClientOriginalExtension();
-            Storage::disk('videos')->put($video->title . '.' . $extension,
-              File::get($file));
-            $video->path = $video->title . '.' . $extension;
-        }
+        $file_list = Video::getAssetFilesById($id);
+        $video->path = $file_list[$input['path']];
         $video->save();
 
         return redirect(route('video.list'));
@@ -605,11 +613,8 @@ class DashboardController extends Controller
         $video->title = $input['title'];
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
-
-        $file = $request->file('path');
-        $extension = $file->getClientOriginalExtension();
-        Storage::disk('videos')->put($video->title . '.' . $extension, File::get($file));
-        $video->path = $video->title . '.' . $extension;;
+        $file_list = Video::getAvailableAssetFiles();
+        $video->path = $file_list[$input['path']];
         $video->save();
 
         return redirect(route('video.list'));
@@ -903,7 +908,7 @@ class DashboardController extends Controller
     public function getVideoFile($video_id) {
         $video = Video::find($video_id);
 
-        if ($file = Storage::disk('videos')->get($video->path)) {
+        if ($file = Storage::disk('videos')->exists($video->path)) {
             $path = storage_path('app/public/videos/' . $video->path);
             $stream = new VideoStream($path);
             $stream->start();
