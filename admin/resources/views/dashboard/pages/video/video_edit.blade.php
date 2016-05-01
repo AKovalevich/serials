@@ -30,7 +30,7 @@
                     {!! csrf_field() !!}
                     <div class="control">
                         <div class="sub-title">Title</div>
-                        {{ Form::text('title', $video->title, array('class' => 'form-control')) }}
+                        {{ Form::text('title', $video->title, ['class' => 'form-control']) }}
                     </div>
                     <div class="control">
                         <div class="sub-title">Quality</div>
@@ -38,15 +38,19 @@
                     </div>
                     <div class="control">
                         <div class="sub-title">Extension</div>
-                        {{ Form::text('extension', $video->extension, array('class' => 'form-control')) }}
+                        {{ Form::text('extension', $video->extension, ['class' => 'form-control']) }}
                     </div>
                     <div class="control">
                         <div class="sub-title">Video file</div>
-                        {{ Form::file('path', Input::old('path'), array('class' => 'form-control')) }}
+                        @if ($file_list)
+
+                            {{ Form::select('path', $file_list, $selected_file, ['class' => 'form-control']) }}
+                        @else
+                            <div>You have not available video files in Storage. Please waiting 10 minutes or upload new via NodeJS</div>
+                        @endif
                     </div>
-                    
                     <div class="login-button text-center">
-                        {{ Form::submit('Update', array('class' => 'btn btn-primary')) }}
+                        {{ Form::submit('Update', ['class' => 'btn btn-primary']) }}
                     </div>
                 {{ Form::close() }}
             </div>
