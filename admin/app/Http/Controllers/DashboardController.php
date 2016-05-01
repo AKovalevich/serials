@@ -908,9 +908,13 @@ class DashboardController extends Controller
     public function getVideoFile($video_id) {
         $video = Video::find($video_id);
 
-        if ($file = Storage::disk('videos')->exists($video->path)) {
-            $path = storage_path('app/public/videos/' . $video->path);
-            $stream = new VideoStream($path);
+        $storage = Storage::disk('videos');
+        if ($storage->exists($video->path)) {
+            $stream = new VideoStream(
+              $storage->readStream($video->path),
+              $storage->getSize($video->path),
+              $storage->lastModified($video->path)
+            );
             $stream->start();
         }
     }
