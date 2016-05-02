@@ -1,423 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="844eb55d-83a6-43be-a424-ce098f632cfb" name="Default" comment="Rename web directory">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/images/forkme.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/placeholder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/HISTORY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/HISTORY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/Moment.js.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/UploadFileServer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/app/Helpers/VideoStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/_timer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/js/angular-timer-all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/css/angular-timer-bower.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/js/angular-timer-bower.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/angular-timer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/angular-timer.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-add-countdown-seconds.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-add-countdown-seconds.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-multiple-timers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-multiple-timers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-polling-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-polling-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-reset-timer" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-reset-timer" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-single-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-single-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-ma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-sa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-tn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-8bits.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-8bits.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-8bits.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-atom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-atom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-atom.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-beat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-beat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-beat.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-circus.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-circus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-circus.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-climbing-dot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-climbing-dot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-climbing-dot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-multiple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate-multiple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-multiple.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-pulse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate-pulse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-pulse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-elastic-dots.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-elastic-dots.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-elastic-dots.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fall.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-fall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fall.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fussion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-fussion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fussion.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-beat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-grid-beat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-beat.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-pulse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-grid-pulse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-pulse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-newton-cradle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-newton-cradle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-newton-cradle.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-rise.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse-rise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-rise.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-sync.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse-sync.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-sync.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-rotate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-rotate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-rotate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-running-dots.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-running-dots.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-running-dots.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-multiple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-multiple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-multiple.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-pulse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-pulse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-pulse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple-multiple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-ripple-multiple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple-multiple.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-ripple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade-rotating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise-fade-rotating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade-rotating.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise-fade.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade-rotating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-fade-rotating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade-rotating.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-fade.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-rotate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-rotate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-rotate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-clockwise-spin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-square-clockwise-spin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-clockwise-spin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-spin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-square-spin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-spin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-triangle-path.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-triangle-path.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-triangle-path.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag-deflect.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-zig-zag-deflect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag-deflect.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-zig-zag.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/be.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/benchmarks/clone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/cog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cog.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cube-transition.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/cube-transition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cube-transition.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/dash/dash.all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/de-at.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/unit/directivesSpec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/css/docs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/docs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/export.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/fire.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/fire.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/fire.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/humanize-duration.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hy-am.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/i18nService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/index.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/jquery-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/jquery-timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/config/karma-e2e.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/config/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-party.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-party.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-party.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out-rapid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-pulse-out-rapid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out-rapid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-pulse-out.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade-rotating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-clockwise-fade-rotating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade-rotating.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-clockwise-fade.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade-rotating.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-fade-rotating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade-rotating.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-fade.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/loaders.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/locales.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/locales.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment-with-locales.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment-with-locales.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/mr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ms-my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ne.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/scripts/npm_prepublish.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/pacman.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/pacman.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/pacman.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/plain-javascript.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/plain-javascript.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/plugins.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/css/prettify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/prettify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/progressBarService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/e2e/runner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/e2e/scenarios.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/script.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/sprite.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-jelly-box.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-jelly-box.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-jelly-box.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-loader.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-loader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-loader.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-spin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-spin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-spin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sr-cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/timer-with-autostart-false-and-starttime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/timer-with-autostart-false-and-starttime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/timer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/timer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/timer.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/unit/timerSetTimeTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tl-ph.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/triangle-skew-spin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/triangle-skew-spin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/triangle-skew-spin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tzm-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tzm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/uz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/vg-dash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/vg-dash.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/zh-tw.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/directive.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/-carousel-3d.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d-slide.directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.directive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.service.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/LICENSE" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/.gitignore" afterPath="$PROJECT_DIR$/admin/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.route.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/GridController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/GridController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/Controllers/LoginAdminController.php" afterPath="$PROJECT_DIR$/admin/app/Http/Controllers/LoginAdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/LoginPageController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/LoginPageController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/TopSliderController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/TopSliderController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/share/Models/Video.php" afterPath="$PROJECT_DIR$/share/Models/Video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/WatchPageController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/WatchPageController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bower.json" afterPath="$PROJECT_DIR$/app/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/composer.json" afterPath="$PROJECT_DIR$/admin/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/episode/episode_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/episode/episode_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/config/filesystems.php" afterPath="$PROJECT_DIR$/admin/config/filesystems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/grid.html" afterPath="$PROJECT_DIR$/app/assets/partials/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/gulpfile.js" afterPath="$PROJECT_DIR$/app/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/image/image_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/image/image_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/landing-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/landing-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/left_menu.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/left_menu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/login-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/login-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/main.css" afterPath="$PROJECT_DIR$/app/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/less/main.less" afterPath="$PROJECT_DIR$/app/assets/less/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/package.json" afterPath="$PROJECT_DIR$/app/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/routes.php" afterPath="$PROJECT_DIR$/admin/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/scripts.min.js" afterPath="$PROJECT_DIR$/app/assets/js/scripts.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick-theme.css" afterPath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick.css" afterPath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/top-slider.html" afterPath="$PROJECT_DIR$/app/assets/partials/top-slider.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/top_menu.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/top_menu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_create.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_edit.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/watch-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/watch-page.html" />
+    <list default="true" id="844eb55d-83a6-43be-a424-ce098f632cfb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Helpers/Format.php" afterPath="$PROJECT_DIR$/admin/app/Helpers/Format.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="serials.iws" />
@@ -441,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DashboardController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DashboardController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="14595">
+            <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="14595">
               <folding />
             </state>
           </provider>
@@ -459,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Format.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Format.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="38" selection-start="73" selection-end="84" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
+            <state line="16" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="509">
               <folding />
             </state>
           </provider>
@@ -629,11 +214,11 @@
         <option value="$PROJECT_DIR$/api/app/Jobs/Job.php" />
         <option value="$PROJECT_DIR$/admin/app/Helpers/SystemDispatcher.php" />
         <option value="$PROJECT_DIR$/share/Models/User.php" />
-        <option value="$PROJECT_DIR$/admin/app/Helpers/Format.php" />
         <option value="$PROJECT_DIR$/admin/composer.json" />
         <option value="$PROJECT_DIR$/admin/public/css/custom.css" />
         <option value="$PROJECT_DIR$/admin/resources/views/dashboard/pages/index.blade.php" />
         <option value="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" />
+        <option value="$PROJECT_DIR$/admin/app/Helpers/Format.php" />
       </list>
     </option>
   </component>
@@ -722,7 +307,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -841,7 +448,11 @@
       <created>1462208435899</created>
       <updated>1462208435899</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hotfix">
+      <created>1462209955621</created>
+      <updated>1462209955621</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -911,7 +522,8 @@
     <MESSAGE value="Update models CRUD forms" />
     <MESSAGE value="Rename web directory" />
     <MESSAGE value="System dashboard, some css fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="System dashboard, some css fixes" />
+    <MESSAGE value="hotfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="hotfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1337,16 +949,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="38" selection-start="73" selection-end="84" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
+        <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="14595">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php">
+    <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="14595">
+        <state line="16" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="509">
           <folding />
         </state>
       </provider>
