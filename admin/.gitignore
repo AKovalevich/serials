@@ -1,7 +1,7 @@
-vendor/
 .idea/
 composer.lock
 .env
 storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
+vendor/

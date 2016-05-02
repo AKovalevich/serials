@@ -1,28 +1,41 @@
 <div ng-controller="WatchPageController as WPCtrl">
     <!-- We will put here Videogular tags... -->
-    <a class="button button-back" href="#/browse">
+    <a type="button" class="button button-back" href="#/browse">
         <span class="button-back-image">Back</span>
     </a>
-    <videogular vg-theme="WPCtrl.config.theme">
-        <vg-media vg-src="WPCtrl.config.sources"
-                  vg-tracks="WPCtrl.config.tracks">
-        </vg-media>
 
-        <vg-controls>
-            <vg-play-pause-button></vg-play-pause-button>
-            <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
-            <vg-scrub-bar>
-                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-            </vg-scrub-bar>
-            <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
-            <vg-volume>
-                <vg-mute-button></vg-mute-button>
-                <vg-volume-bar></vg-volume-bar>
-            </vg-volume>
-            <vg-fullscreen-button></vg-fullscreen-button>
-        </vg-controls>
+    <div class="wrapper-video">
+        <videogular vg-theme="WPCtrl.config.theme" vg-update-time="WPCtrl.updateTime($currentTime, $duration)">
+            <vg-media vg-src="WPCtrl.config.sources"
+                      vg-tracks="WPCtrl.config.tracks"
+                      vg-dash>
+            </vg-media>
 
-        <vg-overlay-play></vg-overlay-play>
-        <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
-    </videogular>
+            <vg-controls>
+                <vg-play-pause-button></vg-play-pause-button>
+                <vg-time-display>{[ currentTime | date:'mm:ss' ]}</vg-time-display>
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                </vg-scrub-bar>
+                <vg-time-display>{[ timeLeft | date:'mm:ss' ]}</vg-time-display>
+                <vg-volume>
+                    <vg-mute-button></vg-mute-button>
+                    <vg-volume-bar></vg-volume-bar>
+                </vg-volume>
+                <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+            <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
+            <vg-analytics vg-track-info="controller.config.plugins.analytics"></vg-analytics>
+            <vg-overlay-play></vg-overlay-play>
+            <vg-buffering></vg-buffering>
+        </videogular>
+    </div>
+
+    <div id="next-video">
+        <div ng-if="WPCtrl.countdown">
+            <timer countdown="{[ WPCtrl.countdown ]}" interval="1000" finish-callback="WPCtrl.timerFinished()">
+                {[seconds]} second{[secondsS]}
+            </timer>
+        </div>
+    </div>
 </div>

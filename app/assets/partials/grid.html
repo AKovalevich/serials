@@ -1,15 +1,15 @@
 <slick responsive="GCtrl.responsive">
-    <div ng-repeat="icon in GCtrl.icons track by icon.id"
+    <div ng-repeat="icon in ::GCtrl.icons track by icon.id"
          ng-click="GCtrl.setActiveElement(icon.id, $event)"
          ng-mouseover="GCtrl.setFocus(icon.id)"
          ng-mouseleave="GCtrl.setFocus(null)"
          ng-class="GCtrl.getNeedClassElement(icon.id)">
-        <img ng-src="{{ ::icon.preview }}"/>
+        <img ng-src="{[ ::icon.preview ]}"/>
         <div class="focus-preview"
-             ng-repeat="icon in GCtrl.icons"
+             ng-repeat="icon in ::GCtrl.icons"
              ng-if="GCtrl.isFocused(icon.id)">
-            <img ng-src="{{ ::icon.preview }}"/>
-            <a href="/watch/{{ ::icon.id }}" class="play-video"><span class="icon play-icon"></span></a>
+            <img ng-src="{[ ::icon.preview ]}"/>
+            <a href="/watch/{[ ::icon.id ]}" class="play-video"><span class="icon play-icon"></span></a>
             <a href=""><span class="icon icon-arrow-bottom"></span></a>
             <a href=""><span class="icon icon-add-list"></span></a>
         </div>
@@ -17,12 +17,12 @@
 </slick>
 
 <div class="fade gridder-content"
-     ng-repeat="icon in GCtrl.icons track by icon.id"
+     ng-repeat="icon in ::GCtrl.icons track by icon.id"
      ng-class="GCtrl.getPanelClass(icon.id)"
      ng-if="GCtrl.showPanel(icon.id)">
     <span class="description">
         <span class="preview-full">
-            <img preload-image default-image="{{ ::icon.full }}" fallback-image="{{ ::icon.full }}" class="preview" ng-src="{{ ::icon.full }}"/>
+            <img preload-image default-image="{[ ::icon.full ]}" fallback-image="{[ ::icon.full ]}" class="preview" ng-src="{[ ::icon.full ]}"/>
             <a class="close-button icon-close"
                ng-click="GCtrl.closePanel(icon.id)"
                ng-mouseover="GCtrl.setCloseState(true)"
@@ -30,10 +30,10 @@
             <ul class="sub-menu">
                 <li><a>OVERVIEW</a></li>
                 <li><a>EPISODES</a></li>
-                <li><a href="#/watch/{{ ::icon.id }}">PLAY</a></li>
+                <li><a href="/watch/{[ ::icon.id ]}">PLAY</a></li>
                 <li><a>DETAILS</a></li>
             </ul>
         </span>
-        <p class="description">{{ ::icon.text }}</p>
+        <p class="description">{[ ::icon.text ]}</p>
     </span>
 </div>

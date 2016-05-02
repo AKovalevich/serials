@@ -1,0 +1,19 @@
+{
+  "name": "videogular-dash",
+  "version": "1.4.3",
+  "main": "./vg-dash.js",
+  "dependencies": {
+    "videogular": "~1.4.3"
+  },
+  "homepage": "https://github.com/2fdevs/bower-videogular-dash",
+  "_release": "1.4.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.3",
+    "commit": "8e83c28f5cfb1c9faf091703a0d01bb9c50193b1"
+  },
+  "_source": "https://github.com/2fdevs/bower-videogular-dash.git",
+  "_target": "^1.4.3",
+  "_originalSource": "videogular-dash",
+  "_direct": true
+}

@@ -40,10 +40,18 @@
                     @foreach ($videos as $video)
                     <tr>
                         <td>{{ $video->id }}</td>
-                        <td>{{ $video->title }}</td>
+                        <td>
+                            <a href="{{ route('video.file', ['id' => $video->id]) }}" target="_blank">{{ $video->title }}</a>
+                        </td>
                         <td>{{ $video->quality }}</td>
                         <td>
                             <a href="{{ route('video.edit', ['id' => $video->id]) }}">Edit</a>
+                            {{ Form::open([
+                                'url' => route('video.delete', ['id' => $video->id]),
+                                'method' => 'DELETE'
+                            ]) }}
+                                <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                            {{ Form::close() }}
                         </td>
                     </tr>
                     @endforeach

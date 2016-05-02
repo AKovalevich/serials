@@ -1,88 +1,49 @@
-<header class="pop clearfix ">
-    <div class="shadow"></div>
-    <a href="#/browse" title="D.A.M.K." class="logo">
-        <div class="img"><img src="https://assets.nflxext.com/us/layout/ecweb/common/logo-reg2x.png" id="print-img">
-        </div>
-    </a>
-</header>
-
-<div class="main contents-wrapper">
-    <section class="contents">
-        <div class="lifestyle-img"></div>
-
-        <section class="content login-content clearfix">
-            <section class="login-form-content">
-
-                <div class="form-container">
-
-                    <section class="main_headline">
-                        <div id="mh_h1"><h1 class="hmain">Sign In</h1></div>
-                    </section>
-
-                    <fieldset class="form-fieldset">
-                        <form id="login-form" class="login-form" method="post">
-                            <input type="hidden" name="authURL" value="1460560859189.idUwYSbPdnFclL4Qh5eKkk7uhZM="/>
-
-                            <div class="field-row ">
-                                <div class="field-label">
-                                    <label for="email">Email</label>
-                                </div>
-                                <div class="field-input">
-                                    <input class="form-input" type="text" id="email" name="email" value=""
-                                           data-type="email" data-title="Email" autofocus/>
-
-                                </div>
-                            </div>
-                            <div class="field-row clearfix ">
-                                <div class="field-label">
-                                    <label for="password">Password</label>
-                                </div>
-                                <div class="field-input">
-                                    <input class="form-input" type="password" id="password" name="password"
-                                           data-type="email" data-title="Password" autocomplete="current-password"/>
-                                </div>
-                                <a class="login-help" href="https://www.netflix.com/LoginHelp?locale=en-RU">Forgot your
-                                    email or password? </a>
-                            </div>
-
-                            <div class="field-row">
-                                <div class="field-input field-indent login-form-reMe">
-                                    <label>
-                                        <input class="form-checkbox" type="checkbox" id="RememberMe" name="RememberMe"
-                                               checked="checked"/>
-                                        Remember me on this device. <a class="popuplayer" data-pop="true"
-                                                                       data-width="400"
-                                                                       href="https://www.netflix.com/rememberme?locale=en-RU"
-                                                                       target="_blank" tabindex="-1"><img
-                                            class="vert-bott"
-                                            src="https://assets.nflxext.com/us/layout/ecweb/common/question_mark.png"
-                                            alt="What is this?" border="0"></a>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="field-row">
-                                <div class="field-input field-indent">
-                                    <button class=" red btnlg" type="submit" id="login-form-contBtn"
-                                            data-wait="please wait ...">Sign In
-                                    </button>
-                                </div>
-                            </div>
-
-
-                        </form>
-
-                        <ul class="field-row field-indent login-form-help">
-                            <li>New to Netflix? <a href="https://www.netflix.com?locale=en-RU">Sign up now.</a></li>
-                        </ul>
-                    </fieldset>
-                </div>
-            </section>
-        </section>
-    </section>
+<div class="panel">
+    <ul id="menu" class="panel__menu">
+        <hr/>
+        <li id="signIn"><a href="javascript:void(0)" ng-click="LoginCtrl.changeTab('signIn', $event)">Login</a></li>
+        <li id="signUp"><a href="javascript:void(0)" ng-click="LoginCtrl.changeTab('signUp', $event)">Sign up</a></li>
+    </ul>
+    <div class="panel__wrap">
+        <form id="signInBox" class="panel__box active">
+            <label>
+                <input placeholder="Email"
+                       ng-model="LoginCtrl.singIn.email"
+                       type="email"
+                       ng-required/>
+            </label>
+            <label>
+                <input placeholder="Password"
+                       ng-model="LoginCtrl.singIn.password"
+                       type="password"
+                       ng-required
+                       ng-minlength="8"/>
+            </label>
+            <input ng-click="LoginCtrl.signIn()" type="submit"/>
+        </form>
+        <form id="signUpBox" class="panel__box">
+            <label>
+                <input placeholder="Email"
+                       ng-model="LoginCtrl.singUp.email"
+                       type="email"
+                       ng-required/>
+            </label>
+            <label>
+                <input placeholder="Password"
+                       ng-model="LoginCtrl.singUp.password"
+                       type="password"
+                       ng-required
+                       ng-minlength="8"/>
+            </label>
+            <label>
+                <input placeholder="Confirm password"
+                       ng-model="LoginCtrl.singUp.confirmPassword"
+                       type="password"
+                       ng-required
+                       ng-minlength="8"/>
+            </label>
+            <input ng-click="LoginCtrl.signUp()" type="submit"/>
+        </form>
+    </div>
+    <span id="browse"><a href="#/browse">browse</a></span>
 </div>
-
-<div class="footer contents-wrapper">
-    <footer class="clearfix limited">
-    </footer>
-</div>
-<div id="nflx-layer"></div>

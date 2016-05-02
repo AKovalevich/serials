@@ -1,20 +1,78 @@
 <!doctype html>
 <html lang="en" ng-app="CinemaPortal">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Netflix</title>
-    <!--Contrib css-->
-    <link rel="stylesheet" href="assets/js/vendor/angular/angular-csp.css" type="text/css">
-    <link rel="stylesheet" href="assets/js/vendor/angular-material/angular-material.css" type="text/css">
-    <link rel="stylesheet" href="assets/js/vendor/angular-carousel-3d/dist/carousel-3d.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick-theme.css" type="text/css"/>
-    <!--Custom css-->
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
-    <!--Contrib ibraries-->
-    <script type="text/javascript" src="assets/js/scripts.min.js"></script>
-</head>
-<body ng-view>
-</body>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Cinema Portal</title>
+
+        <!--Contrib css-->
+        <link rel="stylesheet" href="assets/js/vendor/angular/angular-csp.css" type="text/css">
+        <link rel="stylesheet" href="assets/js/vendor/angular-material/angular-material.css" type="text/css">
+        <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick.css" type="text/css"/>
+        <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick-theme.css" type="text/css"/>
+        <link rel="stylesheet" href="assets/js/vendor/load-awesome/css/line-scale-pulse-out.css" type="text/css" />
+
+        <!--Custom css-->
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
+
+        <!--Contrib ibraries-->
+        <script type="text/javascript" src="assets/js/vendor/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/jquery-ui/jquery-ui.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-animate/angular-animate.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-aria/angular-aria.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-material/angular-material.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-messages/angular-messages.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-swipe/dist/angular-swipe.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-sanitize/angular-sanitize.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-touch/angular-touch.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/slick-carousel/slick/slick.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-slick/dist/slick.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-preload-image/angular-preload-image.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angulartics/src/angulartics.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angulartics/src/angulartics-ga.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular/videogular.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-controls/vg-controls.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-overlay-play/vg-overlay-play.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-poster/vg-poster.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-buffering/vg-buffering.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-angulartics/vg-analytics.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/dash/dash.all.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/videogular-dash/vg-dash.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/App.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/App.route.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/TopSliderController.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/GridController.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/WatchPageController.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/LandingPageController.js"></script>
+        <script type="text/javascript" src="assets/js/cinema_portal/LoginPageController.js"></script>
+        <!--<script type="text/javascript" src="assets/js/scripts.min.js"></script>-->
+
+        <!-- Google Analitycs-->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-77221614-1', 'auto');
+        </script>
+
+    </head>
+    <body>
+        <div class="main-wrapper" ng-controller="MainController as MCtrl">
+            <show-loader></show-loader>
+            <div id="main-menu sticky">
+                <a href="#/">Main</a> |
+                <a ng-if="!isLogged" href="#/login">Login</a>
+                <a ng-if="isLogged" href="#/logout">Logout</a> |
+                <a href="#/browse">Browse</a> |
+            </div>
+
+            <div class="view-animate-container">
+                <div ng-view class="view-animate"></div>
+            </div>
+        </div>
+    </body>
 </html>
