@@ -81,7 +81,7 @@ class VideoStream
      *           */
     private function end()
     {
-        $a = fclose($this->stream);
+        fclose($this->stream);
         exit;
     }
 
