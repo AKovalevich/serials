@@ -38,7 +38,7 @@ Route::get('/admin/dashboard/assets/create', [
   'roles' => ['admin'],
   'as' => 'asset.create'
 ]);
-Route::get('/admin/dashboard/assets/{id}/delete', [
+Route::delete('/admin/dashboard/assets/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@assetDelete',
   'roles' => ['admin'],
@@ -188,7 +188,7 @@ Route::post('/admin/dashboard/images/create', [
   'uses' => 'DashboardController@imageCreate',
   'roles' => ['admin']
 ]);
-Route::get('/admin/dashboard/images/{id}/delete', [
+Route::delete('/admin/dashboard/images/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@imageDelete',
   'roles' => ['admin'],
@@ -226,6 +226,12 @@ Route::post('/admin/dashboard/videos/create', [
   'uses' => 'DashboardController@videoCreate',
   'roles' => ['admin']
 ]);
+Route::delete('/admin/dashboard/videos/{id}/delete', [
+  'middleware' => ['role'],
+  'uses' => 'DashboardController@videosDelete',
+  'roles' => ['admin'],
+  'as' => 'video.delete'
+]);
 
 /**
  * Episode routes.
@@ -258,7 +264,7 @@ Route::post('/admin/dashboard/episodes/create', [
   'uses' => 'DashboardController@episodeCreate',
   'roles' => ['admin']
 ]);
-Route::get('/admin/dashboard/episodes/{id}/delete', [
+Route::delete('/admin/dashboard/episodes/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@episodeDelete',
   'roles' => ['admin'],
