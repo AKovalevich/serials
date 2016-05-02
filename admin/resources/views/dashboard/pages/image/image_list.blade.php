@@ -44,7 +44,12 @@
                             <td><img class="image image-preview" width="200" height="100" src="{{ route( $image->type . '.image', ['filename' => $image->path]) }}"/></td>
                             <td>
                                 <a href="{{ route('image.edit', ['id' => $image->id]) }}">Edit</a>
-                                <a href="{{ route('image.delete', ['id' => $image->id]) }}">Delete</a>
+                                {{ Form::open([
+                                    'url' => route('image.delete', ['id' => $image->id]),
+                                    'method' => 'DELETE'
+                                ]) }}
+                                <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                                {{ Form::close() }}
                             </td>
                         </tr>
                     @endforeach
