@@ -97,7 +97,7 @@ gulp.task('watch', function () {
   //browserSync({
   //  proxy: "localhost"
   //});
-  gulp.watch('assets/js/**/*.js', ['scripts']);
+  //gulp.watch('assets/js/**/*.js', ['scripts']);
   gulp.watch('assets/less/**/*.less', ['less']);
   gulp.watch('assets/less/**/integrate.less', ['integrate-less']);
   gulp.watch('assets/images/*.jpg', ['sprite']);

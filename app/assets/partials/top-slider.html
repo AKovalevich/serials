@@ -8,7 +8,7 @@
 
     <carousel3d-slide ng-repeat="slide in TSCtrl.slides">
         <figure>
-            <img class="slider-image" ng-src="{{::slide.src}}" alt=""/>
+            <img class="slider-image" ng-src="{[::slide.src]}" alt=""/>
         </figure>
     </carousel3d-slide>
 </carousel3d>
