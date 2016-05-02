@@ -6,7 +6,6 @@
       'ngRoute',
       'ngAnimate',
       'ngSanitize',
-      'angular-carousel',
       'angular-preload-image',
       'slick',
       'angulartics.google.analytics',
