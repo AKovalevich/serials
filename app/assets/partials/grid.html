@@ -1,12 +1,12 @@
 <slick responsive="GCtrl.responsive">
-    <div ng-repeat="icon in GCtrl.icons track by icon.id"
+    <div ng-repeat="icon in ::GCtrl.icons track by icon.id"
          ng-click="GCtrl.setActiveElement(icon.id, $event)"
          ng-mouseover="GCtrl.setFocus(icon.id)"
          ng-mouseleave="GCtrl.setFocus(null)"
          ng-class="GCtrl.getNeedClassElement(icon.id)">
         <img ng-src="{[ ::icon.preview ]}"/>
         <div class="focus-preview"
-             ng-repeat="icon in GCtrl.icons"
+             ng-repeat="icon in ::GCtrl.icons"
              ng-if="GCtrl.isFocused(icon.id)">
             <img ng-src="{[ ::icon.preview ]}"/>
             <a href="/watch/{[ ::icon.id ]}" class="play-video"><span class="icon play-icon"></span></a>
@@ -17,7 +17,7 @@
 </slick>
 
 <div class="fade gridder-content"
-     ng-repeat="icon in GCtrl.icons track by icon.id"
+     ng-repeat="icon in ::GCtrl.icons track by icon.id"
      ng-class="GCtrl.getPanelClass(icon.id)"
      ng-if="GCtrl.showPanel(icon.id)">
     <span class="description">
@@ -30,7 +30,7 @@
             <ul class="sub-menu">
                 <li><a>OVERVIEW</a></li>
                 <li><a>EPISODES</a></li>
-                <li><a href="#/watch/{[ ::icon.id ]}">PLAY</a></li>
+                <li><a href="/watch/{[ ::icon.id ]}">PLAY</a></li>
                 <li><a>DETAILS</a></li>
             </ul>
         </span>
