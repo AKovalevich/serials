@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="844eb55d-83a6-43be-a424-ce098f632cfb" name="Default" comment="">
+    <list default="true" id="844eb55d-83a6-43be-a424-ce098f632cfb" name="Default" comment="hotfix">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Helpers/Format.php" afterPath="$PROJECT_DIR$/admin/app/Helpers/Format.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,7 +47,7 @@
       <file leaf-file-name="Format.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="509">
+            <state line="14" column="43" selection-start="485" selection-end="485" vertical-scroll-proportion="0.41257367" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -452,7 +452,23 @@
       <created>1462209955621</created>
       <updated>1462209955621</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="hotfix">
+      <created>1462210046037</created>
+      <updated>1462210046037</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hotfix">
+      <created>1462211000274</created>
+      <updated>1462211000274</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hotfix">
+      <created>1462211075543</created>
+      <updated>1462211075543</updated>
+    </task>
+    <task id="LOCAL-00013" summary="hotfix">
+      <created>1462211170841</created>
+      <updated>1462211170841</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -958,7 +974,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="62" selection-start="503" selection-end="503" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="509">
+        <state line="14" column="43" selection-start="485" selection-end="485" vertical-scroll-proportion="0.41257367" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
