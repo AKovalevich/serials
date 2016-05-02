@@ -1,7 +1,5 @@
-<div class="carousel-demo">
-    <ul class="carousel5" rn-carousel="" rn-carousel-index="3" rn-carousel-auto-slide="3">
-        <li ng-repeat="slide in ::TSCtrl.slides">
-            <img class="slider-image" ng-src="{[::slide.src]}" alt=""/>
-        </li>
-    </ul>
-</div>
+<slick arrows="false" autoplay-speed="15000" speed="400" speed="860" autoplay="true" draggable="false" swipe="false" infinite="true" dots="false">
+    <div ng-repeat="slide in ::TSCtrl.slides track by $index">
+        <img ng-src="{[ ::slide.src ]}"/>
+    </div>
+</slick>
