@@ -620,6 +620,12 @@ class DashboardController extends Controller
         return redirect(route('video.list'));
     }
 
+    public function videosDelete(Request $request, $id) {
+        $video = Video::find($id);
+        $video->delete();
+
+        return redirect(route('video.list'));
+    }
 
     public function episodeList(Request $request)
     {
@@ -729,7 +735,7 @@ class DashboardController extends Controller
           'episode_number' => 'required|numeric|max:255|min:1',
           'asset_id' => 'required|max:255|min:1',
           'title' => 'required|max:255',
-          'description' => 'required|max:255',
+          'description' => 'required|max:520',
           'image_id' => 'required',
           'video_id' => 'required'
         ]);
@@ -761,7 +767,7 @@ class DashboardController extends Controller
           'season_number' => 'required|numeric|max:255|min:1',
           'episode_number' => 'required|numeric|max:255|min:1',
           'title' => 'required|max:255',
-          'description' => 'required|max:255',
+          'description' => 'required|max:520',
           'asset_id' => 'required|max:255|min:1',
           'image_id' => 'required',
           'video_id' => 'required'
