@@ -4,11 +4,10 @@ namespace App\Helpers;
 
 class Format {
     public static function formatBytes($bytes, $precision = 2) {
-        if (!isset($bytes)) {
-            return '';
-        }
-        $unit = ["B", "KB", "MB", "GB"];
-        $exp = floor(log($bytes, 1024)) | 0;
-        return round($bytes / (pow(1024, $exp)), $precision).$unit[$exp];
+        $unit = array('B','KB','MB','GB','TB','PB','EB');
+
+        return @round(
+                $bytes / pow(1024, ($i = floor(log($bytes, 1024)))), $precision
+            ) . ' ' . $unit[$i];
     }
 }
