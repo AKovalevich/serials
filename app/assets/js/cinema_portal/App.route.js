@@ -3,9 +3,6 @@
 
   angular
     .module('CinemaPortal')
-    .constant('generalConf', {
-      basePath: "http://api.serials.loc"
-    })
     .config(['$routeProvider',
       function ($routeProvider) {
         $routeProvider

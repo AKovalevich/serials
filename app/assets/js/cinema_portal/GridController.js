@@ -5,7 +5,7 @@
     .service('GridService', function () {
       var grid = this;
     })
-    .controller('GridController', ['$scope', function ($scope) {
+    .controller('GridController', ['$scope', function ($rootScope, $scope) {
       var ctrl = this;
 
       ctrl.activeElement = null;
