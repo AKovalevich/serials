@@ -1,8 +1,8 @@
 <div class="panel">
     <ul id="menu" class="panel__menu">
         <hr/>
-        <li id="signIn"><a href="#login" ng-click="LoginCtrl.changeTab('signIn', $event)">Login</a></li>
-        <li id="signUp"><a href="#login" ng-click="LoginCtrl.changeTab('signUp', $event)">Sign up</a></li>
+        <li id="signIn"><a href="javascript:void(0)" ng-click="LoginCtrl.changeTab('signIn', $event)">Login</a></li>
+        <li id="signUp"><a href="javascript:void(0)" ng-click="LoginCtrl.changeTab('signUp', $event)">Sign up</a></li>
     </ul>
     <div class="panel__wrap">
         <form id="signInBox" class="panel__box active">
@@ -45,4 +45,5 @@
             <input ng-click="LoginCtrl.signUp()" type="submit"/>
         </form>
     </div>
+    <span id="browse"><a href="#/browse">browse</a></span>
 </div>
