@@ -21,6 +21,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Helpers\SystemDispatcher;
+use App\Helpers\Format;
 
 class DashboardController extends Controller
 {
@@ -28,7 +30,45 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('dashboard.pages.index');
+        $block = [];
+        $system_dispatcher = new SystemDispatcher();
+        $system_params = $system_dispatcher->getParams();
+        $block['memory']['color'] = 'green';
+        $block['memory']['memory_total'] = isset($system_params['MemTotal']) ? Format::formatBytes($system_params['MemTotal'] * 1024) : NULL;
+        $block['memory']['memory_free'] = isset($system_params['MemFree']) ? Format::formatBytes($system_params['MemFree'] * 1024) : NULL;
+
+        if (isset($system_params['MemTotal'], $system_params['MemFree'])
+            && ($system_params['MemTotal'] - $system_params['MemFree']) > 1000000) {
+            $block['memory']['color'] = 'red';
+        }
+
+        $block['swap']['color'] = 'green';
+        $block['swap']['swap_total'] = isset($system_params['SwapTotal']) ? Format::formatBytes($system_params['SwapTotal'] * 1024) : NULL;
+        $block['swap']['swap_free'] = isset($system_params['SwapFree']) ? Format::formatBytes($system_params['SwapFree'] * 1024) : NULL;
+        if (isset($system_params['SwapTotal'], $system_params['SwapFree'])
+            && ($system_params['SwapTotal'] - $system_params['SwapFree']) > 100000000) {
+            $block['swap']['color'] = 'red';
+        }
+
+        $block['disk']['color'] = 'green';
+        $block['disk']['disk_total'] = isset($system_params['DiskTotalSpace']) ? Format::formatBytes($system_params['DiskTotalSpace']) : NULL;
+        $block['disk']['disk_free'] = isset($system_params['DiskFreeSpace']) ? Format::formatBytes($system_params['DiskFreeSpace']) : NULL;
+        if (isset($system_params['DiskFreeSpace'], $system_params['DiskTotalSpace'])
+            && ($system_params['DiskTotalSpace'] - $system_params['DiskFreeSpace']) > 100000000) {
+            $block['disk']['color'] = 'red';
+        }
+
+        $system_info = [];
+        foreach ($system_params as $param_name => $param_value) {
+            if (in_array($param_name, array('DiskFreeSpace', 'DiskTotalSpace'))) {
+                $system_info[$param_name] = Format::formatBytes($param_value);
+            }
+            else {
+                $system_info[$param_name] = Format::formatBytes($param_value * 1024);
+            }
+        }
+
+        return view('dashboard.pages.index', ['block' => $block, 'system_info' => $system_info]);
     }
 
 
