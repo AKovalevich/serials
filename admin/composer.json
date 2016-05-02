@@ -23,7 +23,11 @@
         "psr-4": {
             "App\\": "app/",
             "Share\\": "../share/Models/"
-        }
+        },
+        "files": [
+            "app/Helpers/SystemDispatcher.php",
+            "app/Helpers/Format.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

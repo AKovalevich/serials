@@ -25,3 +25,15 @@ body.login-page .login-form .login-body .form-control:focus {
 body.login-page .login-form .login-body .form-control {
     color: #B4B4B4;
 }
+
+.app-container .content-container .side-menu .navbar-header .navbar-brand .icon, .app-container .content-container .side-menu .navbar-nav li a .icon {
+    margin-top: 21px;
+}
+
+.container-fluid > .navbar-header {
+    width: 30%;
+}
+
+.card.summary-inline .card-body .content .title {
+    font-size: 1.5em;
+}
