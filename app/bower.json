@@ -24,7 +24,6 @@
     "jquery-gridder": "^1.4.2",
     "angular-material": "^1.0.7",
     "angular-ui-router": "^0.2.18",
-    "angular-carousel-3d": "*",
     "angular-sanitize": "^1.5.3",
     "angular-slick": "^0.2.1",
     "slick-carousel": "^1.5.9",
@@ -42,6 +41,7 @@
   },
   "resolutions": {
     "angular": "1.5.5",
-    "slick-carousel": "^1.5.9"
+    "slick-carousel": "^1.5.9",
+    "angular-carousel": "^1.0.1"
   }
 }

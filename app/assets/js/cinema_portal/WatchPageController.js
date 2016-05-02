@@ -48,7 +48,19 @@
                 ],
                 theme: "assets/js/vendor/videogular-themes-default/videogular.css",
                 plugins: {
-                  poster: "http://www.videogular.com/assets/images/videogular.png"
+                  poster: "http://www.videogular.com/assets/images/videogular.png",
+                  analytics: {
+                    category: "Videogular",
+                    label: "Main",
+                    events: {
+                      ready: true,
+                      play: true,
+                      pause: true,
+                      stop: true,
+                      complete: true,
+                      progress: 10
+                    }
+                  }
                 }
               };
 
