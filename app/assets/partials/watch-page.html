@@ -3,9 +3,6 @@
     <a type="button" class="button button-back" href="#/browse">
         <span class="button-back-image">Back</span>
     </a>
-    <section ng-hide="!WPCtrl.loading" id="spinner">
-        <md-progress-circular class="md-spinner" md-diameter="100" md-mode="indeterminate"></md-progress-circular>
-    </section>
 
     <div class="wrapper-video">
         <videogular vg-theme="WPCtrl.config.theme" vg-update-time="WPCtrl.updateTime($currentTime, $duration)">
@@ -28,6 +25,7 @@
                 <vg-fullscreen-button></vg-fullscreen-button>
             </vg-controls>
             <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
+            <vg-analytics vg-track-info="controller.config.plugins.analytics"></vg-analytics>
             <vg-overlay-play></vg-overlay-play>
             <vg-buffering></vg-buffering>
         </videogular>

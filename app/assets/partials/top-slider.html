@@ -1,14 +1,7 @@
-<carousel3d
-        ng-model="TSCtrl.slides"
-        options="TSCtrl.options"
-        on-selected-click="TSCtrl.selectedClick(index)"
-        on-slide-change="TSCtrl.slideChanged(index)"
-        on-last-slide="TSCtrl.lastSlide(index)"
-        on-before-change="TSCtrl.beforeChange(index)">
-
-    <carousel3d-slide ng-repeat="slide in TSCtrl.slides">
-        <figure>
+<div class="carousel-demo">
+    <ul class="carousel5" rn-carousel="" rn-carousel-index="3" rn-carousel-auto-slide="3">
+        <li ng-repeat="slide in ::TSCtrl.slides">
             <img class="slider-image" ng-src="{[::slide.src]}" alt=""/>
-        </figure>
-    </carousel3d-slide>
-</carousel3d>
+        </li>
+    </ul>
+</div>
