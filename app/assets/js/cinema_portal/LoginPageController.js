@@ -44,11 +44,11 @@
       };
 
       ctrl.signUp = function () {
-
+        $rootScope.isLogged = true;
       };
 
       ctrl.signIn = function () {
-
+        $rootScope.isLogged = true;
       };
     }])
 })(angular, window);
