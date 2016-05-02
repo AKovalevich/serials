@@ -14,6 +14,8 @@
 Route::post('/auth/login', 'Auth\AuthController@postLogin');
 Route::get('/admin/login', ['uses' => 'LoginAdminController@showLogin', 'as' => 'admin.login']);
 Route::post('/admin/login', ['uses' => 'LoginAdminController@adminLogin']);
+Route::get('/admin/logout', ['uses' => 'LoginAdminController@adminLogout', 'as' => 'admin.logout']);
+
 Route::get('/admin/dashboard', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@index',
@@ -36,7 +38,7 @@ Route::get('/admin/dashboard/assets/create', [
   'roles' => ['admin'],
   'as' => 'asset.create'
 ]);
-Route::get('/admin/dashboard/assets/{id}/delete', [
+Route::delete('/admin/dashboard/assets/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@assetDelete',
   'roles' => ['admin'],
@@ -186,7 +188,7 @@ Route::post('/admin/dashboard/images/create', [
   'uses' => 'DashboardController@imageCreate',
   'roles' => ['admin']
 ]);
-Route::get('/admin/dashboard/images/{id}/delete', [
+Route::delete('/admin/dashboard/images/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@imageDelete',
   'roles' => ['admin'],
@@ -224,6 +226,12 @@ Route::post('/admin/dashboard/videos/create', [
   'uses' => 'DashboardController@videoCreate',
   'roles' => ['admin']
 ]);
+Route::delete('/admin/dashboard/videos/{id}/delete', [
+  'middleware' => ['role'],
+  'uses' => 'DashboardController@videosDelete',
+  'roles' => ['admin'],
+  'as' => 'video.delete'
+]);
 
 /**
  * Episode routes.
@@ -256,7 +264,7 @@ Route::post('/admin/dashboard/episodes/create', [
   'uses' => 'DashboardController@episodeCreate',
   'roles' => ['admin']
 ]);
-Route::get('/admin/dashboard/episodes/{id}/delete', [
+Route::delete('/admin/dashboard/episodes/{id}/delete', [
   'middleware' => ['role'],
   'uses' => 'DashboardController@episodeDelete',
   'roles' => ['admin'],
@@ -311,4 +319,8 @@ Route::get('/slide/{filename}', [
 Route::get('/preview/{filename}', [
   'uses' => 'DashboardController@getPreviewImage',
   'as' => 'preview.image'
+]);
+Route::get('/video/{id}', [
+  'uses' => 'DashboardController@getVideoFile',
+  'as' => 'video.file'
 ]);

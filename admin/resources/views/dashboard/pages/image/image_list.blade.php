@@ -14,7 +14,7 @@
                 <div class="card-title">
                     <div class="title">Images</div>
                     <div class="login-button text-center">
-                        <a class="btn btn-primary" href="/admin/dashboard/images/create">Add image</a>
+                        <a class="btn btn-primary" href="{{ route('image.create') }}">Add image</a>
                     </div>
                 </div>
             </div>
@@ -41,10 +41,15 @@
                         <tr>
                             <td>{{ $image->title }}</td>
                             <td>{{ $image->type }}</td>
-                            <td><img class="image image-preview" src="{{ $image->path }}"/></td>
+                            <td><img class="image image-preview" width="200" height="100" src="{{ route( $image->type . '.image', ['filename' => $image->path]) }}"/></td>
                             <td>
-                                <a href="/admin/dashboard/images/{{ $image->id }}/edit">Edit</a>
-                                <a href="/admin/dashboard/images/{{ $image->id }}/delete">Delete</a>
+                                <a href="{{ route('image.edit', ['id' => $image->id]) }}">Edit</a>
+                                {{ Form::open([
+                                    'url' => route('image.delete', ['id' => $image->id]),
+                                    'method' => 'DELETE'
+                                ]) }}
+                                <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                                {{ Form::close() }}
                             </td>
                         </tr>
                     @endforeach

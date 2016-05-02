@@ -47,7 +47,12 @@
                             <td>{{ $episode->asstetTitle() }}</td>
                             <td>
                                 <a href="{{ route('episode.edit', ['id' => $episode->id]) }}">Edit</a>
-                                <a href="{{ route('episode.delete', ['id' => $episode->id]) }}">Delete</a>
+                                {{ Form::open([
+                                    'url' => route('episode.delete', ['id' => $episode->id]),
+                                    'method' => 'DELETE'
+                                ]) }}
+                                <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                                {{ Form::close() }}
                             </td>
                         </tr>
                     @endforeach

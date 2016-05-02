@@ -50,7 +50,12 @@
                             <td>{{ $asset->end_date }}</td>
                             <td>
                                 <a href="{{ route('asset.edit', ['id' => $asset->id]) }}">Edit</a>
-                                <a href="{{ route('asset.delete', ['id' => $asset->id]) }}">Delete</a>
+                                {{ Form::open([
+                                    'url' => route('asset.delete', ['id' => $asset->id]),
+                                    'method' => 'DELETE'
+                                ]) }}
+                                <button type="submit" class="btn btn-danger btn-mini">Delete</button>
+                                {{ Form::close() }}
                             </td>
                         </tr>
                     @endforeach

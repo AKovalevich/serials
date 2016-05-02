@@ -6,7 +6,6 @@ admin/.env.php
 admin/.env
 
 .idea/
-admin/vendor/
 admin/composer.lock
 api/vendor/
 api/composer.lock

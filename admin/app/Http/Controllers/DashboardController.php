@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Helpers\SystemDispatcher;
 use App\Helpers\Format;
+use VideoStream;
 
 class DashboardController extends Controller
 {
@@ -577,16 +578,29 @@ class DashboardController extends Controller
     public function showVideoCreate()
     {
         return view('dashboard.pages.video.video_create',
-          ['quality' => Video::getQuality()]
+          [
+            'quality' => Video::getQuality(),
+            'file_list' => Video::getAvailableAssetFiles()
+          ]
         );
     }
 
     public function showVideoEdit(Request $request, $id)
     {
         $video = Video::find($id);
+        $file_list = Video::getAssetFilesById($id);
+        $selected_file = array_search(
+          $video->path,
+          $file_list
+        );
 
         return view('dashboard.pages.video.video_edit',
-          ['video' => $video, 'quality' => Video::getQuality()]
+          [
+            'video' => $video,
+            'quality' => Video::getQuality(),
+            'file_list' => $file_list,
+            'selected_file' => $selected_file
+          ]
         );
     }
 
@@ -611,13 +625,8 @@ class DashboardController extends Controller
         $video->title = $input['title'];
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
-
-        if ($file = $request->file('path')) {
-            $extension = $file->getClientOriginalExtension();
-            Storage::disk('videos')->put($file->getFilename() . '.' . $extension,
-              File::get($file));
-            $video->path = $file->getFilename() . '.' . $extension;
-        }
+        $file_list = Video::getAssetFilesById($id);
+        $video->path = $file_list[$input['path']];
         $video->save();
 
         return redirect(route('video.list'));
@@ -644,16 +653,19 @@ class DashboardController extends Controller
         $video->title = $input['title'];
         $video->extension = $input['extension'];
         $video->quality = $input['quality'];
-
-        $file_content =
-          file_get_contents($request->file('path')->getRealPath());
-        Storage::disk('videos')->put($_FILES['path']['name'], $file_content);
-        $video->path = $_FILES['path']['name'];
+        $file_list = Video::getAvailableAssetFiles();
+        $video->path = $file_list[$input['path']];
         $video->save();
 
         return redirect(route('video.list'));
     }
 
+    public function videosDelete(Request $request, $id) {
+        $video = Video::find($id);
+        $video->delete();
+
+        return redirect(route('video.list'));
+    }
 
     public function episodeList(Request $request)
     {
@@ -763,7 +775,7 @@ class DashboardController extends Controller
           'episode_number' => 'required|numeric|max:255|min:1',
           'asset_id' => 'required|max:255|min:1',
           'title' => 'required|max:255',
-          'description' => 'required|max:255',
+          'description' => 'required|max:520',
           'image_id' => 'required',
           'video_id' => 'required'
         ]);
@@ -795,7 +807,7 @@ class DashboardController extends Controller
           'season_number' => 'required|numeric|max:255|min:1',
           'episode_number' => 'required|numeric|max:255|min:1',
           'title' => 'required|max:255',
-          'description' => 'required|max:255',
+          'description' => 'required|max:520',
           'asset_id' => 'required|max:255|min:1',
           'image_id' => 'required',
           'video_id' => 'required'
@@ -937,5 +949,19 @@ class DashboardController extends Controller
     public function getSlideImage($filename) {
         $file = Storage::disk('slide')->get($filename);
         return new Response($file, 200);
+    }
+
+    public function getVideoFile($video_id) {
+        $video = Video::find($video_id);
+
+        $storage = Storage::disk('videos');
+        if ($storage->exists($video->path)) {
+            $stream = new VideoStream(
+              $storage->readStream($video->path),
+              $storage->getSize($video->path),
+              $storage->lastModified($video->path)
+            );
+            $stream->start();
+        }
     }
 }

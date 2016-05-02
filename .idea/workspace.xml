@@ -2,64 +2,423 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="844eb55d-83a6-43be-a424-ce098f632cfb" name="Default" comment="Rename web directory">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/lumendingojwtapi.json.postman_collection" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/.env" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/storage/framework/cache/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/storage/framework/sessions/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/database/migrations/2015_11_30_095335_create_api_subscribers_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Models/ApiSubscriber.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/AuthenticateController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/BackendController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/Controller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Listeners/Listener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/config/cors.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/app/Http/routes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/serials.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/resources/lang/en/validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/_ide_helper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Controllers/AuthenticateController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Controllers/BaseController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Controllers/UserController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Models/Asset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Models/Episod.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Models/Season.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Models/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/V1/Models/Video.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Api/routes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Events/ExampleEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Http/Middleware/Authenticate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Jobs/ExampleJob.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Listeners/ExampleListener.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Providers/AuthServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/app/Support/helpers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/config/ide-helper.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/.gitignore" afterPath="$PROJECT_DIR$/api/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/api/storage/logs/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/.htaccess" afterPath="$PROJECT_DIR$/api/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/public/.htaccess" afterPath="$PROJECT_DIR$/api/public/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/api/app/Providers/AppServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/api/app/Providers/EventServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/tests/ExampleTest.php" afterPath="$PROJECT_DIR$/api/tests/ExampleTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/api/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/api/app/Jobs/Job.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/api/app/Console/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/api/database/factories/ModelFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/share/Models/User.php" afterPath="$PROJECT_DIR$/share/Models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/bootstrap/app.php" afterPath="$PROJECT_DIR$/api/bootstrap/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/config/auth.php" afterPath="$PROJECT_DIR$/api/config/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/composer.json" afterPath="$PROJECT_DIR$/api/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/config/jwt.php" afterPath="$PROJECT_DIR$/api/config/jwt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/phpunit.xml" afterPath="$PROJECT_DIR$/api/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/images/forkme.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/placeholder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/Moment.js.nuspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/UploadFileServer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/app/Helpers/VideoStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/_timer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/af.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/js/angular-timer-all.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/css/angular-timer-bower.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/assets/js/angular-timer-bower.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/angular-timer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/angular-timer.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/angular-touch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-add-countdown-seconds.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-add-countdown-seconds.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-multiple-timers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-multiple-timers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-polling-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-polling-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-reset-timer" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-reset-timer" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/angularjs-single-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/angularjs-single-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-ma.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-sa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar-tn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-8bits.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-8bits.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-8bits.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-atom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-atom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-atom.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-beat.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-beat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-beat.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-circus.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-circus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-circus.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-climbing-dot.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-climbing-dot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-climbing-dot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-multiple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate-multiple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-multiple.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-pulse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate-pulse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate-pulse.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-clip-rotate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-clip-rotate.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-elastic-dots.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-elastic-dots.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-elastic-dots.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fall.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-fall.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fall.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fussion.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-fussion.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-fussion.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-beat.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-grid-beat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-beat.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-pulse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-grid-pulse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-grid-pulse.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-newton-cradle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-newton-cradle.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-newton-cradle.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-rise.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse-rise.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-rise.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-sync.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse-sync.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse-sync.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-pulse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-pulse.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-rotate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-rotate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-rotate.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-running-dots.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-running-dots.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-running-dots.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-multiple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-multiple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-multiple.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-pulse.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-pulse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-pulse.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple-multiple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-ripple-multiple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple-multiple.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale-ripple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale-ripple.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-scale.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-scale.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade-rotating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise-fade-rotating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade-rotating.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise-fade.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise-fade.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-clockwise.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-clockwise.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade-rotating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-fade-rotating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade-rotating.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-fade.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-fade.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-rotate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin-rotate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin-rotate.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-spin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-spin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-clockwise-spin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-square-clockwise-spin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-clockwise-spin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-spin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-square-spin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-square-spin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-triangle-path.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-triangle-path.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-triangle-path.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag-deflect.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-zig-zag-deflect.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag-deflect.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/ball-zig-zag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/ball-zig-zag.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/be.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/bs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/benchmarks/clone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/cog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cog.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cube-transition.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/cube-transition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/cube-transition.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/cy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/dash/dash.all.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/de-at.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/unit/directivesSpec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/css/docs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/docs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-au.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/en-gb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/eo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/export.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/fire.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/fire.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/fire.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fr-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/fy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/humanize-duration.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/hy-am.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/i18nService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/index.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/jquery-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/jquery-timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/config/karma-e2e.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/config/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-party.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-party.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-party.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out-rapid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-pulse-out-rapid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out-rapid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale-pulse-out.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale-pulse-out.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-scale.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-scale.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade-rotating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-clockwise-fade-rotating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade-rotating.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-clockwise-fade.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-clockwise-fade.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade-rotating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-fade-rotating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade-rotating.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/line-spin-fade.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/line-spin-fade.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/loaders.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/locales.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment-with-locales.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment-with-locales.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/moment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/min/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/mr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ms-my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/navbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/navbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ne.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/nn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/scripts/npm_prepublish.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/serverjs/node_modules/basic-auth/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-touch/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/humanize-duration/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/pacman.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/pacman.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/pacman.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/plain-javascript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/plain-javascript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/plugins.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/css/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/docs/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/app/js/progressBarService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/e2e/runner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/e2e/scenarios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/script.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/css/sprite.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-jelly-box.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-jelly-box.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-jelly-box.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-loader.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-loader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-loader.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-spin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/square-spin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/square-spin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sr-cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/assets/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/ta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/meteor/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/dist/examples/timer-with-autostart-false-and-starttime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/examples/timer-with-autostart-false-and-starttime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/timer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/timer.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/angular-timer/test/unit/timerSetTimeTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tl-ph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/triangle-skew-spin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/docs/animations/triangle-skew-spin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/load-awesome/css/triangle-skew-spin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tzm-latn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/tzm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/uz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/vg-dash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/vg-dash.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/zh-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/js/vendor/momentjs/locale/zh-tw.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/demo/images/photo8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/directive.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/dist/carousel-3d.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/-carousel-3d.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d-slide.directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/src/carousel-3d.service.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/js/vendor/angular-carousel-3d/LICENSE" afterPath="$PROJECT_DIR$/app/assets/js/vendor/videogular-dash/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/.gitignore" afterPath="$PROJECT_DIR$/admin/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.route.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/App.route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" afterPath="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/GridController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/GridController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/Controllers/LoginAdminController.php" afterPath="$PROJECT_DIR$/admin/app/Http/Controllers/LoginAdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/LoginPageController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/LoginPageController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/TopSliderController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/TopSliderController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/share/Models/Video.php" afterPath="$PROJECT_DIR$/share/Models/Video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/cinema_portal/WatchPageController.js" afterPath="$PROJECT_DIR$/app/assets/js/cinema_portal/WatchPageController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bower.json" afterPath="$PROJECT_DIR$/app/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/composer.json" afterPath="$PROJECT_DIR$/admin/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/episode/episode_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/episode/episode_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/config/filesystems.php" afterPath="$PROJECT_DIR$/admin/config/filesystems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/grid.html" afterPath="$PROJECT_DIR$/app/assets/partials/grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/gulpfile.js" afterPath="$PROJECT_DIR$/app/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/image/image_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/image/image_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/landing-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/landing-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/left_menu.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/left_menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/login-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/login-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/css/main.css" afterPath="$PROJECT_DIR$/app/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/less/main.less" afterPath="$PROJECT_DIR$/app/assets/less/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/package.json" afterPath="$PROJECT_DIR$/app/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/app/Http/routes.php" afterPath="$PROJECT_DIR$/admin/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/scripts.min.js" afterPath="$PROJECT_DIR$/app/assets/js/scripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick-theme.css" afterPath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick.css" afterPath="$PROJECT_DIR$/app/assets/js/vendor/slick-carousel/slick/slick.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/top-slider.html" afterPath="$PROJECT_DIR$/app/assets/partials/top-slider.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/top_menu.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/blocks/top_menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_create.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_edit.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_list.blade.php" afterPath="$PROJECT_DIR$/admin/resources/views/dashboard/pages/video/video_list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/partials/watch-page.html" afterPath="$PROJECT_DIR$/app/assets/partials/watch-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="serials.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,95 +441,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/.gitignore">
+      <file leaf-file-name="DashboardController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
+            <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="14595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTableSeeder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/database/seeds/UserTableSeeder.php">
+      <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/public/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="22" selection-start="506" selection-end="506" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="585">
+            <state line="37" column="21" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Format.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="38" selection-start="73" selection-end="84" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="39" selection-start="3246" selection-end="3246" vertical-scroll-proportion="-15.291667" vertical-offset="698" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genre_list.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/genre/genre_list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.583333" vertical-offset="206" max-vertical-offset="825">
               <folding>
-                <element signature="e#7#38#0" expanded="true" />
+                <marker date="1461873778835" expanded="true" signature="129:178" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="196:1587" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="224:1580" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="251:1569" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="289:614" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="331:595" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="442:572" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="650:1554" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="741:1535" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="769:928" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="794:899" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="956:1115" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="981:1086" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="1143:1510" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="1217:1449" placeholder="..." />
+                <marker date="1461873778835" expanded="true" signature="1298:1423" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/.env">
+      <file leaf-file-name="asset_create.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.166666" vertical-offset="604" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/.env">
+      <file leaf-file-name="asset_list.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="150" selection-end="150" vertical-scroll-proportion="0.23156089" vertical-offset="0" max-vertical-offset="795">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/share/Models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="39" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625" vertical-offset="45" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Job.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Jobs/Job.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.708334" vertical-offset="425" max-vertical-offset="1080">
               <folding>
-                <element signature="e#28#57#0" expanded="true" />
+                <marker date="1462209360627" expanded="true" signature="129:180" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="198:2595" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="226:2589" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="253:2578" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="291:616" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="333:597" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="445:574" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="652:2563" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="743:2544" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="771:1100" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="796:1071" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="1128:1457" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="1153:1428" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="1485:2519" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="1563:2458" placeholder="..." />
+                <marker date="1462209360627" expanded="true" signature="1908:2428" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/config/auth.php">
+      <file leaf-file-name="Request.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/app/Http/Requests/Request.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="2" selection-start="88" selection-end="88" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cors.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/config/cors.php">
+      <file leaf-file-name="SystemDispatcher.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/app/Helpers/SystemDispatcher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="73" column="6" selection-start="1471" selection-end="1471" vertical-scroll-proportion="-45.625" vertical-offset="0" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jwt.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/config/jwt.php">
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3345">
+            <state line="29" column="36" selection-start="843" selection-end="843" vertical-scroll-proportion="-0.9583333" vertical-offset="412" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -194,10 +583,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/dashboard/pages/genre/genre_edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Asset.php" />
-        <option value="$PROJECT_DIR$/app/Role.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/pages/asset/asset_create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/pages/asset/asset_edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
@@ -213,7 +598,6 @@
         <option value="$PROJECT_DIR$/api/app/Api/routes.php" />
         <option value="$PROJECT_DIR$/api/app/Api/V1/Controllers/AssetController.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/admin/composer.json" />
         <option value="$PROJECT_DIR$/admin/server.php" />
         <option value="$PROJECT_DIR$/share/Models/Asset.php" />
         <option value="$PROJECT_DIR$/share/Models/Episode.php" />
@@ -230,7 +614,6 @@
         <option value="$PROJECT_DIR$/admin/config/auth.php" />
         <option value="$PROJECT_DIR$/admin/admin/storage/logs/laravel.log" />
         <option value="$PROJECT_DIR$/admin/storage/logs/laravel.log" />
-        <option value="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" />
         <option value="$PROJECT_DIR$/api/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.htaccess" />
@@ -242,9 +625,15 @@
         <option value="$PROJECT_DIR$/admin/database/seeds/RoleTableSeeder.php" />
         <option value="$PROJECT_DIR$/admin/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/api/.env" />
-        <option value="$PROJECT_DIR$/share/Models/User.php" />
         <option value="$PROJECT_DIR$/api/config/auth.php" />
         <option value="$PROJECT_DIR$/api/app/Jobs/Job.php" />
+        <option value="$PROJECT_DIR$/admin/app/Helpers/SystemDispatcher.php" />
+        <option value="$PROJECT_DIR$/share/Models/User.php" />
+        <option value="$PROJECT_DIR$/admin/app/Helpers/Format.php" />
+        <option value="$PROJECT_DIR$/admin/composer.json" />
+        <option value="$PROJECT_DIR$/admin/public/css/custom.css" />
+        <option value="$PROJECT_DIR$/admin/resources/views/dashboard/pages/index.blade.php" />
+        <option value="$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php" />
       </list>
     </option>
   </component>
@@ -315,7 +704,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,7 +837,11 @@
       <created>1461423663153</created>
       <updated>1461423663153</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="System dashboard, some css fixes">
+      <created>1462208435899</created>
+      <updated>1462208435899</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -438,25 +849,46 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3027976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31925398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34507772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39792746" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3968912" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34507772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31925398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34507772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495886" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3968912" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -478,7 +910,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="Update models CRUD forms" />
     <MESSAGE value="Rename web directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename web directory" />
+    <MESSAGE value="System dashboard, some css fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="System dashboard, some css fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,11 +1002,6 @@
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php</url>
-          <line>127</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/api/app/Http/Controllers/AuthenticateController.php</url>
           <line>18</line>
           <option name="timeStamp" value="59" />
@@ -583,215 +1011,52 @@
           <line>220</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="63" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/api/vendor/tymon/jwt-auth/src/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="15" selection-start="2211" selection-end="2211" vertical-scroll-proportion="-8.291667" vertical-offset="821" max-vertical-offset="2580" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1461" selection-end="1461" vertical-scroll-proportion="-7.0416665" vertical-offset="506" max-vertical-offset="1320" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2274" selection-end="2274" vertical-scroll-proportion="-14.291667" vertical-offset="887" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Http/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="872" column="0" selection-start="19926" selection-end="19926" vertical-scroll-proportion="-7.0416665" vertical-offset="12911" max-vertical-offset="15795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="11475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="3374" selection-end="3374" vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/storage/logs/laravel.log">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10433" column="122" selection-start="1659820" selection-end="1659820" vertical-scroll-proportion="0.0" vertical-offset="156309" max-vertical-offset="158325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/storage/logs/laravel.log">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2193" column="122" selection-start="356208" selection-end="356208" vertical-scroll-proportion="0.0" vertical-offset="32652" max-vertical-offset="39615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="948" column="0" selection-start="26138" selection-end="26138" vertical-scroll-proportion="0.0" vertical-offset="14220" max-vertical-offset="53025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="34" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="4440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin/bootstrap/cache/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/vendor/laravel/lumen-framework/config/cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="1314" selection-end="1314" vertical-scroll-proportion="-28.125" vertical-offset="0" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/storage/logs/lumen.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="122" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/vendor/vlucas/phpdotenv/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="31" selection-start="5208" selection-end="5208" vertical-scroll-proportion="-7.76" vertical-offset="2146" max-vertical-offset="3075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="0" selection-start="9052" selection-end="9052" vertical-scroll-proportion="-7.0416665" vertical-offset="4241" max-vertical-offset="6165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/vendor/vlucas/phpdotenv/src/Dotenv.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1383" selection-end="1383" vertical-scroll-proportion="-7.0416665" vertical-offset="581" max-vertical-offset="4695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <marker date="1461435641062" expanded="true" signature="-1:-1" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/bootstrap/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="4" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="1770">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="644" selection-end="685" vertical-scroll-proportion="-5.625" vertical-offset="225" max-vertical-offset="870">
-          <folding />
-        </state>
+        <state line="68" column="4" selection-start="2068" selection-end="2068" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="1770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="50.73077" vertical-offset="1319" max-vertical-offset="62130" />
+      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="50.73077" vertical-offset="1319" max-vertical-offset="62130">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="-9.041667" vertical-offset="83" max-vertical-offset="630">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/composer/autoload_classmap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="6930">
-          <folding />
-        </state>
+        <state line="8" column="11" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="6930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="9" selection-start="443" selection-end="443" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="705">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="29" column="9" selection-start="443" selection-end="443" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="705" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="712" selection-end="724" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="22" column="29" selection-start="712" selection-end="724" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share/Models/Slider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="25" selection-end="64" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="25" selection-end="64" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/illuminate/http/Request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="0" selection-start="6358" selection-end="6358" vertical-scroll-proportion="-7.0416665" vertical-offset="4406" max-vertical-offset="13725">
-          <folding />
-        </state>
+        <state line="312" column="0" selection-start="6358" selection-end="6358" vertical-scroll-proportion="-7.0416665" vertical-offset="4406" max-vertical-offset="13725" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/illuminate/events/Dispatcher.php">
@@ -803,46 +1068,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/tymon/jwt-auth/src/JWTAuth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-7.0416665" vertical-offset="386" max-vertical-offset="1290">
-          <folding />
-        </state>
+        <state line="45" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-7.0416665" vertical-offset="386" max-vertical-offset="1290" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/tymon/jwt-auth/src/Providers/Auth/Illuminate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="-7.0416665" vertical-offset="341" max-vertical-offset="975">
-          <folding />
-        </state>
+        <state line="42" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="-7.0416665" vertical-offset="341" max-vertical-offset="975" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/illuminate/auth/Guard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="0" selection-start="9539" selection-end="9539" vertical-scroll-proportion="-7.0416665" vertical-offset="5156" max-vertical-offset="11520">
-          <folding />
-        </state>
+        <state line="364" column="0" selection-start="9539" selection-end="9539" vertical-scroll-proportion="-7.0416665" vertical-offset="5156" max-vertical-offset="11520" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Models/ApiSubscriber.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="480" selection-end="480" vertical-scroll-proportion="-8.166667" vertical-offset="59" max-vertical-offset="735">
-          <folding>
-            <element signature="e#29#75#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="17" column="7" selection-start="480" selection-end="480" vertical-scroll-proportion="-8.166667" vertical-offset="59" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/BackendController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/AuthenticateController.php">
@@ -854,104 +1105,248 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/vendor/illuminate/auth/EloquentUserProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2696" selection-end="2696" vertical-scroll-proportion="-7.0416665" vertical-offset="1271" max-vertical-offset="2655">
-          <folding />
-        </state>
+        <state line="99" column="0" selection-start="2696" selection-end="2696" vertical-scroll-proportion="-7.0416665" vertical-offset="1271" max-vertical-offset="2655" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="19" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/database/seeds/RoleTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="122" selection-end="122" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="540">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="8" column="19" selection-start="122" selection-end="122" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/database/seeds/UserTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="506" selection-end="506" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="585">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
-          <folding />
-        </state>
+        <state line="22" column="22" selection-start="506" selection-end="506" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="88" selection-end="88" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
+        <state line="4" column="2" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/config/cors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config/jwt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3345" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Jobs/Job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="824" selection-end="824" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="4665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/config/jwt.php">
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Middleware/EncryptCookies.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3345">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="37" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="0" selection-start="3374" selection-end="3374" vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="2760">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/share/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625" vertical-offset="45" max-vertical-offset="945">
+        <state line="6" column="34" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Jobs/Job.php">
+    <entry file="file://$PROJECT_DIR$/admin/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Requests/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.166666" vertical-offset="604" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/asset/asset_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.708334" vertical-offset="425" max-vertical-offset="1005">
           <folding>
-            <element signature="e#28#57#0" expanded="true" />
+            <marker date="1462209360627" expanded="true" signature="129:180" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="198:2595" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="226:2589" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="253:2578" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="291:616" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="333:597" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="445:574" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="652:2563" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="743:2544" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="771:1100" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="796:1071" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="1128:1457" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="1153:1428" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="1485:2519" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="1563:2458" placeholder="..." />
+            <marker date="1462209360627" expanded="true" signature="1908:2428" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/.htaccess">
+    <entry file="file://$PROJECT_DIR$/admin/app/Helpers/SystemDispatcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+        <state line="73" column="6" selection-start="1471" selection-end="1471" vertical-scroll-proportion="-45.625" vertical-offset="0" max-vertical-offset="1245">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/.gitignore">
+    <entry file="file://$PROJECT_DIR$/admin/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="120">
+        <state line="29" column="36" selection-start="843" selection-end="843" vertical-scroll-proportion="-0.9583333" vertical-offset="412" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/.env">
+    <entry file="file://$PROJECT_DIR$/admin/public/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="150" selection-end="150" vertical-scroll-proportion="0.23156089" vertical-offset="0" max-vertical-offset="795">
+        <state line="37" column="21" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/genre/genre_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.583333" vertical-offset="206" max-vertical-offset="825">
+          <folding>
+            <marker date="1461873778835" expanded="true" signature="129:178" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="196:1587" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="224:1580" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="251:1569" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="289:614" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="331:595" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="442:572" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="650:1554" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="741:1535" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="769:928" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="794:899" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="956:1115" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="981:1086" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="1143:1510" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="1217:1449" placeholder="..." />
+            <marker date="1461873778835" expanded="true" signature="1298:1423" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/resources/views/dashboard/pages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="39" selection-start="3246" selection-end="3246" vertical-scroll-proportion="-15.291667" vertical-offset="698" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Helpers/Format.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="38" selection-start="73" selection-end="84" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/app/Http/Controllers/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="45" selection-start="329" selection-end="329" vertical-scroll-proportion="0.47151276" vertical-offset="0" max-vertical-offset="14595">
           <folding />
         </state>
       </provider>

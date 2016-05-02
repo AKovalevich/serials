@@ -1,14 +1,5 @@
-<carousel3d
-        ng-model="TSCtrl.slides"
-        options="TSCtrl.options"
-        on-selected-click="TSCtrl.selectedClick(index)"
-        on-slide-change="TSCtrl.slideChanged(index)"
-        on-last-slide="TSCtrl.lastSlide(index)"
-        on-before-change="TSCtrl.beforeChange(index)">
-
-    <carousel3d-slide ng-repeat="slide in TSCtrl.slides">
-        <figure>
-            <img class="slider-image" ng-src="{{::slide.src}}" alt=""/>
-        </figure>
-    </carousel3d-slide>
-</carousel3d>
+<slick arrows="false" autoplay-speed="15000" speed="400" speed="860" autoplay="true" draggable="false" swipe="false" infinite="true" dots="false">
+    <div ng-repeat="slide in ::TSCtrl.slides track by $index">
+        <img ng-src="{[ ::slide.src ]}"/>
+    </div>
+</slick>
