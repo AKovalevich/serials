@@ -676,7 +676,6 @@ class DashboardController extends Controller
 
     public function videosDelete(Request $request, $id) {
         $video = Video::find($id);
-        Storage::disk('videos')->delete($video->path);
         $video->delete();
         return redirect(route('video.list'));
     }
@@ -694,6 +693,7 @@ class DashboardController extends Controller
         $images = Image::where(['type' => 'poster'])->get();
         $videos = Video::orderBy('id', 'desc')->get();
         $assets = Asset::orderBy('id', 'desc')->get();
+        $episode_videos = Episode::orderBy('id', 'desc')->lists('video_id');
 
         $images_options = [];
         foreach ($images as $image) {
@@ -701,7 +701,9 @@ class DashboardController extends Controller
         }
         $videos_options = [];
         foreach ($videos as $video) {
-            $videos_options[$video->id] = $video->title;
+            if (!in_array($video->id, $episode_videos->all())) {
+                $videos_options[$video->id] = $video->title;
+            }
         }
         $assets_options = [];
         foreach ($assets as $asset) {
@@ -728,9 +730,11 @@ class DashboardController extends Controller
         $images_list = [];
 
         $current_video_id = Video::find($episode->video_id);
+        $episode_videos = Episode::orderBy('id', 'desc')->lists('video_id', 'id');
         $video_ids = Video::all();
         $selected_video = [];
-        $video_list = [];
+        $episode_videos_list = $episode_videos->all();
+        unset($episode_videos_list[$id]);
 
         $current_asset_id = Asset::find($episode->asset_id);
         $asset_ids = Asset::all();
@@ -750,7 +754,9 @@ class DashboardController extends Controller
         }
 
         foreach ($video_ids as $video_id) {
-            $video_list[$video_id->id] = $video_id->title;
+            if (!in_array($video_id->id, $episode_videos_list)) {
+                $video_list[$video_id->id] = $video_id->title;
+            }
         }
 
         $selected_asset[$current_asset_id->id] = $current_asset_id->id;
