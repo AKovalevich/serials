@@ -2,11 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-try {
-    (new Dotenv\Dotenv(__DIR__.'/../'))->load();
-} catch (Dotenv\Exception\InvalidPathException $e) {
-    //
-}
+Dotenv::load(__DIR__.'/../');
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +19,13 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-$app->withFacades();
-
-$app->configure('auth');
-$app->configure('jwt');
+// $app->withFacades();
 
 $app->withEloquent();
+
+// Register config files
+$app->configure('auth');
+$app->configure('jwt');
 
 /*
 |--------------------------------------------------------------------------
@@ -62,12 +59,17 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
-// ]);
+ $app->middleware([
+//     // Illuminate\Cookie\Middleware\EncryptCookies::class,
+//     // Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+//     // Illuminate\Session\Middleware\StartSession::class,
+//     // Illuminate\View\Middleware\ShareErrorsFromSession::class,
+//     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
+//     'Barryvdh\Cors\HandleCors'
+ ]);
 
 // $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
+
 // ]);
 
 /*
@@ -80,20 +82,18 @@ $app->singleton(
 | totally optional, so you are not required to uncomment this line.
 |
 */
+
+ $app->register(App\Providers\AppServiceProvider::class);
+// $app->register(App\Providers\EventServiceProvider::class);
+
 $app->register(Dingo\Api\Provider\LumenServiceProvider::class);
-$app->register(Wn\Generators\CommandsServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
-$app->register(Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-$app->register(App\Providers\AppServiceProvider::class);
 
 app('Dingo\Api\Auth\Auth')->extend('jwt', function ($app) {
     return new Dingo\Api\Auth\Provider\JWT($app['Tymon\JWTAuth\JWTAuth']);
 });
 
-
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
-
+$app->register(Barryvdh\Cors\LumenServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
@@ -105,9 +105,8 @@ app('Dingo\Api\Auth\Auth')->extend('jwt', function ($app) {
 |
 */
 
-$app->group(['namespace' => 'App\Api\V1\Controllers'], function ($app) {
-    $api = app('Dingo\Api\Routing\Router');
-    require __DIR__.'/../app/Api/routes.php';
+$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+    require __DIR__.'/../app/Http/routes.php';
 });
 
 return $app;
