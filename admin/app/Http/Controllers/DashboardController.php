@@ -514,6 +514,7 @@ class DashboardController extends Controller
     public function imageDelete(Request $request, $id)
     {
         $image = Image::find($id);
+        Storage::disk($image->type)->delete($image->path);
         $image->delete();
 
         return redirect(route('image.list'));
@@ -675,8 +676,8 @@ class DashboardController extends Controller
 
     public function videosDelete(Request $request, $id) {
         $video = Video::find($id);
+        Storage::disk('videos')->delete($video->path);
         $video->delete();
-
         return redirect(route('video.list'));
     }
 
