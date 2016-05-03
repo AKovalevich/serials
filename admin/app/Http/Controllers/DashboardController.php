@@ -31,6 +31,10 @@ class DashboardController extends Controller
 
     public function index()
     {
+        return view('dashboard.pages.index');
+    }
+
+    public function systemInfo() {
         $block = [];
         $system_dispatcher = new SystemDispatcher();
         $system_params = $system_dispatcher->getParams();
@@ -39,7 +43,7 @@ class DashboardController extends Controller
         $block['memory']['memory_free'] = isset($system_params['MemFree']) ? Format::formatBytes($system_params['MemFree'] * 1024) : NULL;
 
         if (isset($system_params['MemTotal'], $system_params['MemFree'])
-            && ($system_params['MemTotal'] - $system_params['MemFree']) > 1000000) {
+          && ($system_params['MemTotal'] - $system_params['MemFree']) > 1000000) {
             $block['memory']['color'] = 'red';
         }
 
@@ -47,7 +51,7 @@ class DashboardController extends Controller
         $block['swap']['swap_total'] = isset($system_params['SwapTotal']) ? Format::formatBytes($system_params['SwapTotal'] * 1024) : NULL;
         $block['swap']['swap_free'] = isset($system_params['SwapFree']) ? Format::formatBytes($system_params['SwapFree'] * 1024) : NULL;
         if (isset($system_params['SwapTotal'], $system_params['SwapFree'])
-            && ($system_params['SwapTotal'] - $system_params['SwapFree']) > 100000000) {
+          && ($system_params['SwapTotal'] - $system_params['SwapFree']) > 100000000) {
             $block['swap']['color'] = 'red';
         }
 
@@ -55,7 +59,7 @@ class DashboardController extends Controller
         $block['disk']['disk_total'] = isset($system_params['DiskTotalSpace']) ? Format::formatBytes($system_params['DiskTotalSpace']) : NULL;
         $block['disk']['disk_free'] = isset($system_params['DiskFreeSpace']) ? Format::formatBytes($system_params['DiskFreeSpace']) : NULL;
         if (isset($system_params['DiskFreeSpace'], $system_params['DiskTotalSpace'])
-            && ($system_params['DiskTotalSpace'] - $system_params['DiskFreeSpace']) > 100000000) {
+          && ($system_params['DiskTotalSpace'] - $system_params['DiskFreeSpace']) > 100000000) {
             $block['disk']['color'] = 'red';
         }
 
@@ -69,7 +73,16 @@ class DashboardController extends Controller
             }
         }
 
-        return view('dashboard.pages.index', ['block' => $block, 'system_info' => $system_info]);
+        return view('dashboard.pages.system', ['block' => $block, 'system_info' => $system_info]);
+    }
+
+    public function contentInfo() {
+        return view('dashboard.pages.content');
+    }
+
+
+    public function mediaInfo() {
+        return view('dashboard.pages.media');
     }
 
 
