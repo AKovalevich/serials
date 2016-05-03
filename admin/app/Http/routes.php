@@ -23,6 +23,27 @@ Route::get('/admin/dashboard', [
   'as' => 'admin.dashboard'
 ]);
 
+Route::get('/admin/dashboard/system', [
+  'middleware' => ['role'],
+  'uses' => 'DashboardController@systemInfo',
+  'roles' => ['admin'],
+  'as' => 'admin.dashboard.system'
+]);
+
+Route::get('/admin/dashboard/content', [
+  'middleware' => ['role'],
+  'uses' => 'DashboardController@contentInfo',
+  'roles' => ['admin'],
+  'as' => 'admin.dashboard.content'
+]);
+
+Route::get('/admin/dashboard/media', [
+  'middleware' => ['role'],
+  'uses' => 'DashboardController@mediaInfo',
+  'roles' => ['admin'],
+  'as' => 'admin.dashboard.media'
+]);
+
 /**
  * Asset routes
  */
