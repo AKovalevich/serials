@@ -1,0 +1,20 @@
+{
+  "name": "client_file_upload",
+  "version": "1.0.0",
+  "description": "Client for filt upload service",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "client",
+    "file",
+    "upload"
+  ],
+  "author": "andrew.mikhailov.18.01@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^1.4.3",
+    "mkdirp": "^0.5.1"
+  }
+}
