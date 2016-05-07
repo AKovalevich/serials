@@ -7,17 +7,17 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
     <!-- CSS Libs -->
 
-    {{ Html::style('css/bootstrap.min.css') }}
-    {{ Html::style('css/font-awesome.min.css') }}
-    {{ Html::style('css/animate.min.css') }}
-    {{ Html::style('css/bootstrap-switch.min.css') }}
-    {{ Html::style('css/checkbox3.min.css') }}
-    {{ Html::style('css/jquery.dataTables.min.css') }}
-    {{ Html::style('css/dataTables.bootstrap.css') }}
-    {{ Html::style('css/select2.min.css') }}
-    {{ Html::style('css/style.css') }}
-    {{ Html::style('css/themes/flat-blue.css') }}
-    {{ Html::style('css/custom.css') }}
+    {{ Html::style('/admin/public/css/bootstrap.min.css') }}
+    {{ Html::style('/admin/public/css/font-awesome.min.css') }}
+    {{ Html::style('/admin/public/css/animate.min.css') }}
+    {{ Html::style('/admin/public/css/bootstrap-switch.min.css') }}
+    {{ Html::style('/admin/public/css/checkbox3.min.css') }}
+    {{ Html::style('/admin/public/css/jquery.dataTables.min.css') }}
+    {{ Html::style('/admin/public/css/dataTables.bootstrap.css') }}
+    {{ Html::style('/admin/public/css/select2.min.css') }}
+    {{ Html::style('/admin/public/css/style.css') }}
+    {{ Html::style('/admin/public/css/themes/flat-blue.css') }}
+    {{ Html::style('/admin/public/css/custom.css') }}
     <style id="ace_editor.css">.ace_editor {
             position: relative;
             overflow: hidden;
@@ -711,18 +711,18 @@
 </body>
 
 <!-- Javascript Libs -->
-{{ Html::script('js/jquery.min.js') }}
-{{ Html::script('js/bootstrap.min.js') }}
-{{ Html::script('js/Chart.min.js') }}
-{{ Html::script('js/bootstrap-switch.min.js') }}
-{{ Html::script('js/jquery.matchHeight-min.js') }}
-{{ Html::script('js/jquery.dataTables.min.js') }}
-{{ Html::script('js/dataTables.bootstrap.min.js') }}
-{{ Html::script('js/select2.full.min.js') }}
-{{ Html::script('js/ace/ace.js') }}
-{{ Html::script('js/ace/mode-html.js') }}
-{{ Html::script('js/ace/theme-github.js') }}
-{{ Html::script('js/app.js') }}
-{{ Html::script('js/index.js') }}
+{{ Html::script('/admin/public/js/jquery.min.js') }}
+{{ Html::script('/admin/public/js/bootstrap.min.js') }}
+{{ Html::script('/admin/public/js/Chart.min.js') }}
+{{ Html::script('/admin/public/js/bootstrap-switch.min.js') }}
+{{ Html::script('/admin/public/js/jquery.matchHeight-min.js') }}
+{{ Html::script('/admin/public/js/jquery.dataTables.min.js') }}
+{{ Html::script('/admin/public/js/dataTables.bootstrap.min.js') }}
+{{ Html::script('/admin/public/js/select2.full.min.js') }}
+{{ Html::script('/admin/public/js/ace/ace.js') }}
+{{ Html::script('/admin/public/js/ace/mode-html.js') }}
+{{ Html::script('/admin/public/js/ace/theme-github.js') }}
+{{ Html::script('/admin/public/js/app.js') }}
+{{ Html::script('/admin/public/js/index.js') }}
 
 </Html>
