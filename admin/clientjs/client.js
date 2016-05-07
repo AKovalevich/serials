@@ -40,14 +40,9 @@ function uploadFile (path) {
     var child = spawn('curl', ['-T', filename, url]);
 
     // Send data to the child process via its stdin stream
-    child.stdin.write("Hello there!");
     // Listen for any response from the child:
     child.stdout.on('data', function (data) {
-      console.log('We received a reply: ' + data);
-    });
-    // Listen for any errors:
-    child.stderr.on('data', function (data) {
-      console.log('There was an error: ' + data);
+      console.log('We received: file ' + filename  + ' has a status: '+ data);
     });
   }
 }

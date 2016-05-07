@@ -45,7 +45,7 @@ http.createServer(function (request, response) {
         });
 
         request.on('end', function () {
-          response.end('uploaded!');
+          response.end('Uploaded');
         });
       }
     });
