@@ -22,3 +22,8 @@ $api->version('v1', ['middleware' => 'api.auth', 'providers' => 'jwt'], function
 $api->version('v1', [], function ($api) {
     $api->post('/authenticate', 'App\Http\Controllers\AuthenticateController@backend');
 });
+
+// Publicly accessible routes
+$api->version('v1', [], function ($api) {
+    $api->get('/asset/{asset_id?}', 'App\Http\Controllers\AssetController@getAsset');
+});
