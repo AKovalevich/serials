@@ -41,7 +41,7 @@ http.createServer(function (request, response) {
         request.on('data', function (chunk) {
           uploadedBytes += chunk.length;
           progress = (uploadedBytes / fileBytes) * 100;
-          response.write("progress: " + parseFloat(progress).toFixed(4) + "%\n");
+          //response.write("progress: " + parseFloat(progress).toFixed(4) + "%\n");
         });
 
         request.on('end', function () {
