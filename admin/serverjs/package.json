@@ -1,0 +1,21 @@
+{
+  "name": "file_server",
+  "version": "1.0.0",
+  "description": "Upload File Server",
+  "main": "UploadFileServer.js",
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file",
+    "upload",
+    "server"
+  ],
+  "author": "andrew.mikhailov.18.01@gmail.com",
+  "license": "MIT"
+}
