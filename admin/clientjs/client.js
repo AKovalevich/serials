@@ -1,7 +1,7 @@
 var fs = require('fs'),
   chokidar = require('chokidar'),
   mkdirp = require('mkdirp'),
-  exec = require('child_process').exec;
+  spawn = require('child_process').spawn;
 
 mkdirp('./files/');
 
@@ -36,9 +36,18 @@ function uploadFile (path) {
       + config.basicAuth.password + '@'
       + config.domain + ':' + config.port;
 
-    filename = './files/' + filename.replace(/ /g,"\\ ");
-    exec('curl -T ' + filename + ' ' + url, function(error, stdout, stderr){
-      console.log('outputs & errors:' + error, stdout, stderr);
+    filename = './files/' + filename;
+    var child = spawn('curl', ['-T', filename, url]);
+
+    // Send data to the child process via its stdin stream
+    child.stdin.write("Hello there!");
+    // Listen for any response from the child:
+    child.stdout.on('data', function (data) {
+      console.log('We received a reply: ' + data);
+    });
+    // Listen for any errors:
+    child.stderr.on('data', function (data) {
+      console.log('There was an error: ' + data);
     });
   }
 }
