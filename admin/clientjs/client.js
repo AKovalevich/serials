@@ -13,7 +13,10 @@ config = JSON.parse(config);
 var watcher = chokidar.watch('./files');
 var log = console.log.bind(console);
 
-watcher.on('add', function (path) {
+watcher.on('change', uploadFile );
+watcher.on('add', uploadFile);
+
+function uploadFile (path) {
   log('File ' + path + ' has been added');
   // We need to check file name (TVShow with spaces.s1.e1.480.title with spaces.mp4)
   // ([\w\d\s]+) - TVShow title
@@ -38,6 +41,4 @@ watcher.on('add', function (path) {
       console.log('outputs & errors:' + error, stdout, stderr);
     });
   }
-});
-
-
+}
