@@ -37,7 +37,7 @@ function uploadFile (path) {
       + config.domain + ':' + config.port;
 
     filename = './files/' + filename;
-    var child = spawn('curl', ['-T', filename, url]);
+    var child = spawn('curl', ['--upload-file', filename, url]);
 
     // Send data to the child process via its stdin stream
     // Listen for any response from the child:
