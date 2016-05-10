@@ -42,8 +42,6 @@ end
 Asset.prepareAllRelations = function(assetInfo)
     assetInfo['genres'] = {};
     if assetInfo["id"] ~= nil then
-        ngx.print(assetInfo["image_id"])
-
         -- Get all genres.
         local tags = db.select("* from genres g  \
             inner join asset_genre ag ON ag.genre_id = g.id \
