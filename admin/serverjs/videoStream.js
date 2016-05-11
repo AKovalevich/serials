@@ -25,4 +25,4 @@ http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Length': total, 'Content-Type': 'video/mp4' });
     fs.createReadStream(path).pipe(res);
   }
-}).listen(1337, '127.0.0.1');
+}).listen(1337);
