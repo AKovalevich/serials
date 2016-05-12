@@ -2,8 +2,7 @@
 
 var express = require('express'),
   cluster = require('cluster'),
-  vs = require('./video-stream'),
-  uf = require('./upload-filestream'),
+  vs = require('./helpers/video-stream'),
   app = express();
 
 if (cluster.isMaster) {
@@ -27,10 +26,6 @@ if (cluster.isMaster) {
 else {
   app.get('/watch/:video', function(req, res, next) {
     vs.videoStream(req, res, next)
-  });
-
-  app.get('/upload', function(req, res, next) {
-    uf.uploadStream(req, res, next)
   });
 
   app.listen(1337);
