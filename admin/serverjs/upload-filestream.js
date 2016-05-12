@@ -1,18 +1,18 @@
+'use strict';
+
 var fs = require('fs'),
-  http = require('http'),
   auth = require('basic-auth'),
   mkdirp = require('mkdirp');
 
-http.createServer(function (request, response) {
-  'use strict';
-
+exports.uploadStream = function (request, response, next) {
   var credentials = auth(request);
 
   if (!credentials || credentials.name !== 'bwb' || credentials.pass !== 'bwb2016') {
     response.statusCode = 401;
     response.setHeader('WWW-Authenticate', 'Basic realm="example"');
     response.end('Access denied');
-  } else {
+  }
+  else {
     var file = request.url,
       folders = file.split('.'),
       tvShow = folders.shift(),
@@ -51,4 +51,4 @@ http.createServer(function (request, response) {
       }
     });
   }
-}).listen(8888);
+};
