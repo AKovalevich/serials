@@ -2,10 +2,42 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .service('GridService', function () {
+    .service('GridService', ['$http', 'apiConfig', function ($http, apiConfig) {
       var grid = this;
-    })
-    .controller('GridController', ['$scope', function ($rootScope, $scope) {
+
+      grid.getGenres = function () {
+        return $http.get(apiConfig.baseUrl + 'genres')
+          .then(function(response) {
+            return response.data.data.items;
+          })
+      };
+
+      grid.getAssetsByGenre = function (genreId) {
+        return $http.get(apiConfig.baseUrl + 'assets/genre/' + genreId)
+          .then(function(response) {
+            return response.data.data.items;
+          })
+      }
+    }])
+    .controller('GridController', ['GridService', function(GridService) {
+      var ctrl = this;
+
+      ctrl.genres = [];
+
+      ctrl.updateGenres = function() {
+        GridService.getGenres()
+          .then(function(items) {
+            ctrl.genres = items;
+          });
+      };
+
+      ctrl.init = function() {
+        this.updateGenres();
+      };
+
+      ctrl.init();
+    }])
+    .controller('GridSliderController', ['$scope', 'GridService', function ($scope, GridService) {
       var ctrl = this;
 
       ctrl.activeElement = null;
@@ -15,6 +47,7 @@
       ctrl.showMoreInfo = null;
       ctrl.firstAppear = null;
       ctrl.closeState = null;
+      ctrl.genreId = $scope.$parent.genre.id;
 
       ctrl.responsive = [
         {
@@ -207,6 +240,16 @@
         }
       ];
 
+      ctrl.icons = [];
+
+      ctrl.getAssetsByGenre = function () {
+        GridService.getAssetsByGenre(ctrl.genreId)
+          .then(function(assets) {
+            console.log(assets);
+            ctrl.icons = assets.length ? assets : [];
+          })
+      };
+
       ctrl.setFocus = function (elementId) {
         if (ctrl.borderedElement && ctrl.showMoreInfo && elementId) {
           ctrl.borderedElement = elementId;
@@ -284,14 +327,12 @@
       ctrl.getActiveElement = function () {
         return !!ctrl.activeElement;
       };
+
+      ctrl.init = function() {
+        ctrl.getAssetsByGenre();
+      };
+
+      ctrl.init();
     }])
-    .directive('grid', function () {
-      return {
-        restrict: 'A',
-        templateUrl: 'assets/partials/grid.html',
-        controller: 'GridController',
-        controllerAs: 'GCtrl'
-      }
-    });
 
 })(angular, window);

@@ -16,12 +16,19 @@
       'com.2fdevs.videogular.plugins.buffering',
       'com.2fdevs.videogular.plugins.analytics'
     ])
-    .constant('generalConf', {
-      basePath: "http://api.serials.loc"
+    .constant('apiConst', {
+      host: 'http://188.120.255.201',
+      port: '8080',
+      version: '1.0'
     })
     .config(function ($interpolateProvider) {
       $interpolateProvider.startSymbol("{[").endSymbol("]}");
     })
+    .factory('apiConfig', ['apiConst', function(apiConst) {
+        return {
+          baseUrl: [apiConst.host, apiConst.port].join(':') + '/api/' + apiConst.version + '/'
+        }
+    }])
     .controller('MainController', ['$rootScope', '$scope', '$timeout', function ($rootScope, $scope, $timeout) {
       var ctrl = this;
 

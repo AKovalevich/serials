@@ -1,4 +1,53 @@
 <div class="container" top-slider></div>
-<div class="grid" grid></div>
 
-<div class="grid" grid></div>
+<div ng-controller="GridController as GCtrl">
+    <section ng-repeat="genre in GCtrl.genres">
+        <div><a href="#">{[ ::genre.name ]}</a></div>
+        <div class="grid-slider" ng-controller="GridSliderController as GSCtrl">
+            <slick responsive="GSCtrl.responsive">
+                <div ng-repeat="icon in GSCtrl.icons track by icon.id"
+                     ng-click="GSCtrl.setActiveElement(icon.id, $event)"
+                     ng-mouseover="GSCtrl.setFocus(icon.id)"
+                     ng-mouseleave="GSCtrl.setFocus(null)"
+                     ng-class="GSCtrl.getNeedClassElement(icon.id)">
+                    <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{[ ::icon.image_id ]}"/>
+                    <div class="focus-preview"
+                         ng-repeat="icon in GSCtrl.icons"
+                         ng-if="GSCtrl.isFocused(icon.id)">
+                        <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{[ ::icon.image_id ]}"/>
+                        <a href="#/watch/{[ ::icon.id ]}" class="play-video"><span class="icon play-icon"></span></a>
+                        <a href=""><span class="icon icon-arrow-bottom"></span></a>
+                        <a href=""><span class="icon icon-add-list"></span></a>
+                    </div>
+                </div>
+            </slick>
+
+            <div class="fade gridder-content"
+                 ng-repeat="icon in GSCtrl.icons track by icon.id"
+                 ng-class="GSCtrl.getPanelClass(icon.id)"
+                 ng-if="GSCtrl.showPanel(icon.id)">
+                <span class="description">
+                    <span class="preview-full">
+                        <img height="300" width="945"
+                             preload-image
+                             default-image="http://188.120.255.201/media/preview/{[ ::icon.image_id ]}"
+                             fallback-image="http://188.120.255.201/media/preview/{[ ::icon.image_id ]}"
+                             class="preview"
+                             ng-src="http://188.120.255.201/media/preview/{[ ::icon.image_id ]}"/>
+                        <a class="close-button icon-close"
+                           ng-click="GSCtrl.closePanel(icon.id)"
+                           ng-mouseover="GSCtrl.setCloseState(true)"
+                           ng-mouseleave="GSCtrl.setCloseState(false)">x</a>
+                        <ul class="sub-menu">
+                            <li><a>OVERVIEW</a></li>
+                            <li><a>EPISODES</a></li>
+                            <li><a href="/watch/{[ ::icon.id ]}">PLAY</a></li>
+                            <li><a>DETAILS</a></li>
+                        </ul>
+                    </span>
+                    <p class="description">{[ ::icon.text ]}</p>
+                </span>
+            </div>
+        </div>
+    </section>
+</div>

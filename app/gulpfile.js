@@ -55,7 +55,38 @@ gulp.task('less', function () {
 });
 
 // Concatenate & Minify JS
-gulp.task('scripts', function () {
+gulp.task('contrib', function () {
+  return gulp.src([
+    'assets/js/vendor/jquery/dist/jquery.js',
+    'assets/js/vendor/jquery-ui/jquery-ui.js',
+    'assets/js/vendor/angular/angular.js',
+    'assets/js/vendor/angular-animate/angular-animate.js',
+    'assets/js/vendor/angular-aria/angular-aria.js',
+    'assets/js/vendor/angular-material/angular-material.js',
+    'assets/js/vendor/angular-messages/angular-messages.js',
+    'assets/js/vendor/angular-swipe/dist/angular-swipe.js',
+    'assets/js/vendor/angular-sanitize/angular-sanitize.js',
+    'assets/js/vendor/angular-carousel-3d/dist/carousel-3d.js',
+    'assets/js/vendor/angular-route/angular-route.js',
+    'assets/js/vendor/slick-carousel/slick/slick.js',
+    'assets/js/vendor/angular-slick/dist/slick.js',
+    'assets/js/vendor/angular-preload-image/angular-preload-image.min.js',
+    'assets/js/vendor/videogular/videogular.js',
+    'assets/js/vendor/videogular-controls/vg-controls.js',
+    'assets/js/vendor/videogular-overlay-play/vg-overlay-play.js',
+    'assets/js/vendor/videogular-poster/vg-poster.js',
+    'assets/js/vendor/videogular-buffering/vg-buffering.js',
+    'assets/js/vendor/dash/dash.all.min.js',
+    'assets/js/vendor/videogular-dash/vg-dash.js',
+  ])
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
+// Concatenate & Minify JS
+gulp.task('custom', function () {
   return gulp.src([
     'assets/js/vendor/jquery/dist/jquery.js',
     'assets/js/vendor/jquery-ui/jquery-ui.js',
@@ -97,14 +128,14 @@ gulp.task('watch', function () {
   //browserSync({
   //  proxy: "localhost"
   //});
-  //gulp.watch('assets/js/**/*.js', ['scripts']);
+  //gulp.watch('assets/js/**/*.js', ['vendor', 'custom']);
   gulp.watch('assets/less/**/*.less', ['less']);
   gulp.watch('assets/less/**/integrate.less', ['integrate-less']);
   gulp.watch('assets/images/*.jpg', ['sprite']);
 });
 
 // Default Task
-gulp.task('default', ['less', 'scripts', 'sprite', 'watch']);
+gulp.task('default', ['less', 'vendor', 'custom', 'sprite', 'watch']);
 
 // Compile CSS
 gulp.task('watch-css', ['less', 'sprite', 'watch']);
