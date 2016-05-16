@@ -2,21 +2,58 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .service('GridService', ['$http', 'apiConfig', function ($http, apiConfig) {
+    .service('GridService', ['$http', '$q', 'apiConfig', function ($http, $q, apiConfig) {
       var grid = this;
 
+      grid.genres = [];
+      grid.assets = [];
+
       grid.getGenres = function () {
-        return $http.get(apiConfig.baseUrl + 'genres')
-          .then(function(response) {
-            return response.data.data.items;
-          })
+        console.log(grid.genres);
+        if (!grid.genres.length) {
+          return $http.get(apiConfig.baseUrl + 'genres')
+            .then(function(response) {
+              grid.genres = response.data.data.items;
+
+              return grid.genres;
+            })
+        }
+        else {
+
+          return $q.resolve(grid.genres);
+        }
       };
 
       grid.getAssetsByGenre = function (genreId) {
-        return $http.get(apiConfig.baseUrl + 'assets/genre/' + genreId)
-          .then(function(response) {
-            return response.data.data.items;
-          })
+        if (!grid.assets.length) {
+          return $http.get(apiConfig.baseUrl + 'assets/genre/' + genreId)
+            .then(function(response) {
+              grid.assets[genreId] = response.data.data.items;
+
+              return grid.assets[genreId];
+            })
+        }
+        else {
+          return $q.resolve(grid.assets[genreId]);
+        }
+      };
+
+      grid.init = function () {
+        var deferred = $q.defer();
+        var promises = [];
+
+        grid.getGenres()
+          .then(function (genres) {
+            angular.forEach(genres, function(value, key) {
+              promises.push(grid.getAssetsByGenre(genres[key].id));
+            });
+
+            $q.all(promises).then(function () {
+              deferred.resolve(genres)
+            });
+          });
+
+        return deferred.promise;
       }
     }])
     .controller('GridController', ['GridService', function(GridService) {

@@ -32,11 +32,14 @@
           })
           .when('/browse', {
             templateUrl: 'assets/partials/browse.html',
+            controller: 'GridController',
+            controllerAs: 'GCtrl',
             resolve: {
-              delay: function($q, $timeout) {
-                var delay = $q.defer();
-                $timeout(delay.resolve, 1500);
-                return delay.promise;
+              init: function(GridService) {
+                return GridService.init()
+                  .then(function(genres) {
+                    return genres;
+                  });
               }
             }
           })
