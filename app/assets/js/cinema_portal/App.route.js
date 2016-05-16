@@ -11,7 +11,7 @@
             controller: 'LandingPageController',
             controllerAs: 'LPCtrl',
             resolve: {
-              delay: function($q, $timeout) {
+              delay: function ($q, $timeout) {
                 var delay = $q.defer();
                 $timeout(delay.resolve, 1500);
                 return delay.promise;
@@ -23,7 +23,7 @@
             controller: 'LoginPageController',
             controllerAs: 'LoginCtrl',
             resolve: {
-              delay: function($q, $timeout) {
+              delay: function ($q, $timeout) {
                 var delay = $q.defer();
                 $timeout(delay.resolve, 1500);
                 return delay.promise;
@@ -35,9 +35,9 @@
             controller: 'GridController',
             controllerAs: 'GCtrl',
             resolve: {
-              init: function(GridService) {
+              init: function (GridService) {
                 return GridService.init()
-                  .then(function(genres) {
+                  .then(function (genres) {
                     return genres;
                   });
               }
@@ -48,7 +48,7 @@
             controller: 'WatchPageController',
             controllerAs: 'WPCtrl',
             resolve: {
-              delay: function($q, $timeout) {
+              delay: function ($q, $timeout) {
                 var delay = $q.defer();
                 $timeout(delay.resolve, 1500);
                 return delay.promise;
@@ -58,9 +58,9 @@
           .otherwise({
             redirectTo: '/login'
           });
-        //$locationProvider.html5Mode({
-        //  enabled: true,
-        //  requireBase: false
-        //});
+        $locationProvider.html5Mode({
+          enabled: true,
+          requireBase: false
+        });
       }])
 })(angular, window);

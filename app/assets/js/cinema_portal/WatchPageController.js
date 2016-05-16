@@ -2,14 +2,14 @@
   'use strict';
 
   angular.module('CinemaPortal')
-    .service('watchService', ['$q', '$http', 'generalConf', function($q, $http, generalConf) {
+    .service('watchService', ['$q', '$http', 'generalConf', function ($q, $http, generalConf) {
       var watchService = this;
 
-      watchService.getVideo = function(seasonId, videoId) {
+      watchService.getVideo = function (seasonId, videoId) {
         var deferred = $q.defer();
 
         $http.get(generalConf.basePath + '/api/episode/' + seasonId + '/' + videoId)
-          .then(function(response) {
+          .then(function (response) {
             deferred.resolve(response)
           });
 
@@ -28,10 +28,10 @@
         ctrl.timer = 10;
         ctrl.countdown = 0;
 
-        ctrl.getVideoInfo = function(seasonId, videoId) {
+        ctrl.getVideoInfo = function (seasonId, videoId) {
           $rootScope.loading = true;
           watchService.getVideo(seasonId, videoId)
-            .then(function(response) {
+            .then(function (response) {
               ctrl.nextVideo = response.nextVideo;
 
               ctrl.config = {
@@ -69,7 +69,7 @@
             });
         };
 
-        ctrl.updateTime = function(currentTime, duration) {
+        ctrl.updateTime = function (currentTime, duration) {
           if (!ctrl.isEnging) {
             if (duration - currentTime <= 70) {
               ctrl.countdown = 10;
@@ -77,7 +77,7 @@
           }
         };
 
-        ctrl.timerFinished = function() {
+        ctrl.timerFinished = function () {
           ctrl.isEnging = true;
           ctrl.videoId = ctrl.nextVideo.videoId;
           ctrl.seasonId = ctrl.nextVideo.seasonId;
@@ -85,6 +85,6 @@
         };
 
         ctrl.getVideoInfo(ctrl.seasonId, ctrl.videoId);
-    }])
+      }])
 
 })(angular, window);

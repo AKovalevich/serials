@@ -12,7 +12,7 @@
         console.log(grid.genres);
         if (!grid.genres.length) {
           return $http.get(apiConfig.baseUrl + 'genres')
-            .then(function(response) {
+            .then(function (response) {
               grid.genres = response.data.data.items;
 
               return grid.genres;
@@ -27,7 +27,7 @@
       grid.getAssetsByGenre = function (genreId) {
         if (!grid.assets.length) {
           return $http.get(apiConfig.baseUrl + 'assets/genre/' + genreId)
-            .then(function(response) {
+            .then(function (response) {
               grid.assets[genreId] = response.data.data.items;
 
               return grid.assets[genreId];
@@ -44,7 +44,7 @@
 
         grid.getGenres()
           .then(function (genres) {
-            angular.forEach(genres, function(value, key) {
+            angular.forEach(genres, function (value, key) {
               promises.push(grid.getAssetsByGenre(genres[key].id));
             });
 
@@ -56,19 +56,19 @@
         return deferred.promise;
       }
     }])
-    .controller('GridController', ['GridService', function(GridService) {
+    .controller('GridController', ['GridService', function (GridService) {
       var ctrl = this;
 
       ctrl.genres = [];
 
-      ctrl.updateGenres = function() {
+      ctrl.updateGenres = function () {
         GridService.getGenres()
-          .then(function(items) {
+          .then(function (items) {
             ctrl.genres = items;
           });
       };
 
-      ctrl.init = function() {
+      ctrl.init = function () {
         this.updateGenres();
       };
 
@@ -281,7 +281,7 @@
 
       ctrl.getAssetsByGenre = function () {
         GridService.getAssetsByGenre(ctrl.genreId)
-          .then(function(assets) {
+          .then(function (assets) {
             console.log(assets);
             ctrl.icons = assets.length ? assets : [];
           })
@@ -365,7 +365,7 @@
         return !!ctrl.activeElement;
       };
 
-      ctrl.init = function() {
+      ctrl.init = function () {
         ctrl.getAssetsByGenre();
       };
 

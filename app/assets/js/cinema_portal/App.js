@@ -24,10 +24,10 @@
     .config(function ($interpolateProvider) {
       $interpolateProvider.startSymbol("{[").endSymbol("]}");
     })
-    .factory('apiConfig', ['apiConst', function(apiConst) {
-        return {
-          baseUrl: [apiConst.host, apiConst.port].join(':') + '/api/' + apiConst.version + '/'
-        }
+    .factory('apiConfig', ['apiConst', function (apiConst) {
+      return {
+        baseUrl: [apiConst.host, apiConst.port].join(':') + '/api/' + apiConst.version + '/'
+      }
     }])
     .controller('MainController', ['$rootScope', '$scope', '$timeout', function ($rootScope, $scope, $timeout) {
       var ctrl = this;
@@ -74,7 +74,7 @@
           });
 
           $rootScope.$on('$routeChangeSuccess', function () {
-              element.addClass('ng-hide');
+            element.addClass('ng-hide');
           });
         }
       };
