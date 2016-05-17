@@ -1,0 +1,27 @@
+#row {
+    transition: 1s transform;
+}
+.tile {
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+    background-color: skyblue;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 1s transform;
+    transform-origin: top left;
+    float: left;
+    margin-right: 10px;
+}
+
+#row:hover {
+    transform: translate3d(-40px, 0, 0);
+}
+
+.tile:hover {
+    transform: scale(2);
+}
+
+.tile:hover .tile {
+    transform: translate3d(80px, 0, 0);
+}

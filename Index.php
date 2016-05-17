@@ -7,19 +7,15 @@ define('MIN_RANDOM_VALUE', -9);
  * Get random value.
  */
 function get_random_value() {
-    $value = rand(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
-    if (strlen($value) == 1) {
-        $value = ' ' . $value;
-    }
-    return $value;
+    return rand(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
 }
 
 /**
  * Prepare template.
  */
-function render_template($file_name, $vars = array()) {
+function render_template($vars) {
     ob_start();
-    include_once $file_name;
+    include_once 'tasks_template.php';
     return ob_get_clean();
 }
 
@@ -63,21 +59,5 @@ foreach ($vars['task_3_a'] as &$items) {
     }
 }
 
-session_start();
-
-// Process form submit.
-if (!empty($_POST)) {
-    $vars_answer = $_POST;
-    $vars_answer['questions'] = $_SESSION['questions_html'];
-    $answers_html = render_template('answer_template.php', $vars_answer);
-    $file_name = $_POST['fio'] . '_' . $_SERVER['REQUEST_TIME'] . '.html';
-    $fileLocation = getenv("DOCUMENT_ROOT") . "/" . $file_name;
-    $file = fopen($fileLocation,"w") or die("can't open file");
-    $content = $answers_html;
-    fwrite($file, $content);
-    fclose($file);
-}
-
 // Prepare template.
-$_SESSION['questions_html'] = $vars['questions'] = render_template('tasks_template.php', $vars);
-echo render_template('main_template.php', $vars);
+echo render_template($vars);
