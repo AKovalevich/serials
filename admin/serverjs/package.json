@@ -6,6 +6,7 @@
   "dependencies": {
     "basic-auth": "^1.0.3",
     "express": "^4.13.4",
+    "formidable": "^1.0.17",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {},
