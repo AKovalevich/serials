@@ -1,7 +1,7 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('langing')
+  angular.module('landing')
     .controller('LandingPageController', ['$scope', '$log', function ($scope, $log) {
       var LPCtrl = this;
 

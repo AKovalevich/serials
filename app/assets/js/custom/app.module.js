@@ -3,7 +3,7 @@
 
   angular
     .module('cinemaPortal', [
-      'langing',
+      'landing',
       'login-form',
       'slider',
       'grid',

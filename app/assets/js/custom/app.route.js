@@ -13,7 +13,7 @@
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
-                $timeout(delay.resolve, 1500);
+                $timeout(delay.resolve, 300);
                 return delay.promise;
               }
             }
@@ -25,7 +25,7 @@
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
-                $timeout(delay.resolve, 1500);
+                $timeout(delay.resolve, 300);
                 return delay.promise;
               }
             }
@@ -37,7 +37,7 @@
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
-                $timeout(delay.resolve, 1500);
+                $timeout(delay.resolve, 300);
                 return delay.promise;
               }
             }
@@ -49,7 +49,7 @@
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
-                $timeout(delay.resolve, 1500);
+                $timeout(delay.resolve, 300);
                 return delay.promise;
               }
             }
@@ -57,9 +57,9 @@
           .otherwise({
             redirectTo: '/login'
           });
-        // $locationProvider.html5Mode({
-        //   enabled: true,
-        //   requireBase: false
-        // });
+        $locationProvider.html5Mode({
+          enabled: true,
+          requireBase: false
+        });
       }])
 })(angular, window);

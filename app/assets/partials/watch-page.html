@@ -6,11 +6,7 @@
 
     <div class="wrapper-video">
         <videogular vg-theme="VSCtrl.config.theme" vg-update-time="VSCtrl.updateTime($currentTime, $duration)">
-            <vg-media vg-src="VSCtrl.config.sources"
-                      vg-tracks="VSCtrl.config.tracks"
-                      vg-dash>
-            </vg-media>
-
+            <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
             <vg-controls>
                 <vg-play-pause-button></vg-play-pause-button>
                 <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
@@ -34,7 +30,7 @@
     <div id="next-video">
         <div ng-if="VSCtrl.countdown">
             <timer countdown="{{ VSCtrl.countdown }}" interval="1000" finish-callback="VSCtrl.timerFinished()">
-                {{seconds}} second{{secondsS}}
+                {{seconds}} second{{seconds}}
             </timer>
         </div>
     </div>

@@ -2,19 +2,15 @@
   'use strict';
 
   angular.module('video-stream')
-    .factory('videoStream', ['$q', '$http', 'generalConf', function ($q, $http, generalConf) {
+    .factory('videoStream', ['$http', 'apiConfig', function ($http, apiConfig) {
       var videoStream = {};
 
       videoStream.getVideo = function (seasonId, videoId) {
-        var deferred = $q.defer();
-
-        $http.get(generalConf.basePath + '/api/episode/' + seasonId + '/' + videoId)
+        return $http.get(apiConfig.endpoint + '/api/episode/' + seasonId + '/' + videoId)
           .then(function (response) {
-            deferred.resolve(response)
+            return response;
           });
-
-        return deferred.promise;
-      }
+      };
 
       return videoStream;
     }])
