@@ -1,30 +1,30 @@
-<div ng-controller="WatchPageController as WPCtrl">
+<div ng-controller="VideoStreamController as VSCtrl">
     <!-- We will put here Videogular tags... -->
     <a type="button" class="button button-back" href="#/browse">
         <span class="button-back-image">Back</span>
     </a>
 
     <div class="wrapper-video">
-        <videogular vg-theme="WPCtrl.config.theme" vg-update-time="WPCtrl.updateTime($currentTime, $duration)">
-            <vg-media vg-src="WPCtrl.config.sources"
-                      vg-tracks="WPCtrl.config.tracks"
+        <videogular vg-theme="VSCtrl.config.theme" vg-update-time="VSCtrl.updateTime($currentTime, $duration)">
+            <vg-media vg-src="VSCtrl.config.sources"
+                      vg-tracks="VSCtrl.config.tracks"
                       vg-dash>
             </vg-media>
 
             <vg-controls>
                 <vg-play-pause-button></vg-play-pause-button>
-                <vg-time-display>{[ currentTime | date:'mm:ss' ]}</vg-time-display>
+                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
                 <vg-scrub-bar>
                     <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
                 </vg-scrub-bar>
-                <vg-time-display>{[ timeLeft | date:'mm:ss' ]}</vg-time-display>
+                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
                 <vg-volume>
                     <vg-mute-button></vg-mute-button>
                     <vg-volume-bar></vg-volume-bar>
                 </vg-volume>
                 <vg-fullscreen-button></vg-fullscreen-button>
             </vg-controls>
-            <vg-poster vg-url='WPCtrl.config.plugins.poster'></vg-poster>
+            <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
             <vg-analytics vg-track-info="controller.config.plugins.analytics"></vg-analytics>
             <vg-overlay-play></vg-overlay-play>
             <vg-buffering></vg-buffering>
@@ -32,9 +32,9 @@
     </div>
 
     <div id="next-video">
-        <div ng-if="WPCtrl.countdown">
-            <timer countdown="{[ WPCtrl.countdown ]}" interval="1000" finish-callback="WPCtrl.timerFinished()">
-                {[seconds]} second{[secondsS]}
+        <div ng-if="VSCtrl.countdown">
+            <timer countdown="{{ VSCtrl.countdown }}" interval="1000" finish-callback="VSCtrl.timerFinished()">
+                {{seconds}} second{{secondsS}}
             </timer>
         </div>
     </div>

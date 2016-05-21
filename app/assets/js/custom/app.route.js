@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('CinemaPortal')
+    .module('cinemaPortal')
     .config(['$routeProvider', '$locationProvider',
       function ($routeProvider, $locationProvider) {
         $routeProvider
@@ -20,7 +20,7 @@
           })
           .when('/login', {
             templateUrl: 'assets/partials/login-page.html',
-            controller: 'LoginPageController',
+            controller: 'LoginController',
             controllerAs: 'LoginCtrl',
             resolve: {
               delay: function ($q, $timeout) {
@@ -33,20 +33,19 @@
           .when('/browse', {
             templateUrl: 'assets/partials/browse.html',
             controller: 'GridController',
-            controllerAs: 'GCtrl',
+            controllerAs: 'GridCtrl',
             resolve: {
-              init: function (GridService) {
-                return GridService.init()
-                  .then(function (genres) {
-                    return genres;
-                  });
+              delay: function ($q, $timeout) {
+                var delay = $q.defer();
+                $timeout(delay.resolve, 1500);
+                return delay.promise;
               }
             }
           })
           .when('/watch/:seasonId/:videoId', {
             templateUrl: 'assets/partials/watch-page.html',
-            controller: 'WatchPageController',
-            controllerAs: 'WPCtrl',
+            controller: 'VideoStreamController',
+            controllerAs: 'VSCtrl',
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
@@ -58,9 +57,9 @@
           .otherwise({
             redirectTo: '/login'
           });
-        $locationProvider.html5Mode({
-          enabled: true,
-          requireBase: false
-        });
+        // $locationProvider.html5Mode({
+        //   enabled: true,
+        //   requireBase: false
+        // });
       }])
 })(angular, window);

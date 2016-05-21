@@ -1,92 +1,21 @@
 (function (angular, global) {
   'use strict';
 
-  angular.module('CinemaPortal')
-    .service('GridService', ['$http', '$q', 'apiConfig', function ($http, $q, apiConfig) {
-      var grid = this;
+  angular
+    .module('grid')
+    .controller('GridSliderController', ['$scope', 'gridResource', function ($scope, gridResource) {
+      var GridSliderCtrl = this;
 
-      grid.genres = [];
-      grid.assets = [];
+      GridSliderCtrl.activeElement = null;
+      GridSliderCtrl.focusClass = null;
+      GridSliderCtrl.focusedElement = false;
+      GridSliderCtrl.borderedElement = null;
+      GridSliderCtrl.showMoreInfo = null;
+      GridSliderCtrl.firstAppear = null;
+      GridSliderCtrl.closeState = null;
+      GridSliderCtrl.genreId = $scope.$parent.genre.id;
 
-      grid.getGenres = function () {
-        console.log(grid.genres);
-        if (!grid.genres.length) {
-          return $http.get(apiConfig.baseUrl + 'genres')
-            .then(function (response) {
-              grid.genres = response.data.data.items;
-
-              return grid.genres;
-            })
-        }
-        else {
-
-          return $q.resolve(grid.genres);
-        }
-      };
-
-      grid.getAssetsByGenre = function (genreId) {
-        if (!grid.assets.length) {
-          return $http.get(apiConfig.baseUrl + 'assets/genre/' + genreId)
-            .then(function (response) {
-              grid.assets[genreId] = response.data.data.items;
-
-              return grid.assets[genreId];
-            })
-        }
-        else {
-          return $q.resolve(grid.assets[genreId]);
-        }
-      };
-
-      grid.init = function () {
-        var deferred = $q.defer();
-        var promises = [];
-
-        grid.getGenres()
-          .then(function (genres) {
-            angular.forEach(genres, function (value, key) {
-              promises.push(grid.getAssetsByGenre(genres[key].id));
-            });
-
-            $q.all(promises).then(function () {
-              deferred.resolve(genres)
-            });
-          });
-
-        return deferred.promise;
-      }
-    }])
-    .controller('GridController', ['GridService', function (GridService) {
-      var ctrl = this;
-
-      ctrl.genres = [];
-
-      ctrl.updateGenres = function () {
-        GridService.getGenres()
-          .then(function (items) {
-            ctrl.genres = items;
-          });
-      };
-
-      ctrl.init = function () {
-        this.updateGenres();
-      };
-
-      ctrl.init();
-    }])
-    .controller('GridSliderController', ['$scope', 'GridService', function ($scope, GridService) {
-      var ctrl = this;
-
-      ctrl.activeElement = null;
-      ctrl.focusClass = null;
-      ctrl.focusedElement = false;
-      ctrl.borderedElement = null;
-      ctrl.showMoreInfo = null;
-      ctrl.firstAppear = null;
-      ctrl.closeState = null;
-      ctrl.genreId = $scope.$parent.genre.id;
-
-      ctrl.responsive = [
+      GridSliderCtrl.responsive = [
         {
           breakpoint: 1920,
           settings: {
@@ -144,7 +73,7 @@
         }
       ];
 
-      ctrl.icons = [
+      GridSliderCtrl.icons = [
         {
           id: 'content1',
           preview: 'http://placehold.it/225x112',
@@ -277,99 +206,96 @@
         }
       ];
 
-      ctrl.icons = [];
+      GridSliderCtrl.icons = [];
 
-      ctrl.getAssetsByGenre = function () {
-        GridService.getAssetsByGenre(ctrl.genreId)
+      GridSliderCtrl.getAssetsByGenre = function () {
+        gridResource.listAssetsByGenre(GridSliderCtrl.genreId)
           .then(function (assets) {
-            console.log(assets);
-            ctrl.icons = assets.length ? assets : [];
+            GridSliderCtrl.icons = assets;
           })
       };
 
-      ctrl.setFocus = function (elementId) {
-        if (ctrl.borderedElement && ctrl.showMoreInfo && elementId) {
-          ctrl.borderedElement = elementId;
-          ctrl.showMoreInfo = elementId;
+      GridSliderCtrl.setFocus = function (elementId) {
+        if (GridSliderCtrl.borderedElement && GridSliderCtrl.showMoreInfo && elementId) {
+          GridSliderCtrl.borderedElement = elementId;
+          GridSliderCtrl.showMoreInfo = elementId;
         }
         else {
-          ctrl.focusedElement = elementId;
+          GridSliderCtrl.focusedElement = elementId;
         }
-        if (!elementId) ctrl.firstAppear = null;
+        if (!elementId) GridSliderCtrl.firstAppear = null;
       };
 
-      ctrl.isFocused = function (elementId) {
-        return ctrl.focusedElement === elementId;
+      GridSliderCtrl.isFocused = function (elementId) {
+        return GridSliderCtrl.focusedElement === elementId;
       };
 
-      ctrl.isBordered = function (elementId) {
-        return ctrl.borderedElement === elementId;
+      GridSliderCtrl.isBordered = function (elementId) {
+        return GridSliderCtrl.borderedElement === elementId;
       };
 
-      ctrl.getNeedClassElement = function (iconId) {
-        var elementClass = ctrl.isFocused(iconId)
+      GridSliderCtrl.getNeedClassElement = function (iconId) {
+        var elementClass = GridSliderCtrl.isFocused(iconId)
           ? 'opened'
           : 'closed';
         elementClass += ' ';
 
-        elementClass += ctrl.isBordered(iconId)
+        elementClass += GridSliderCtrl.isBordered(iconId)
           ? 'bordered'
           : 'non-bordered';
 
         return elementClass;
       };
 
-      ctrl.getPanelClass = function (iconId) {
-        var panelClass = ctrl.firstAppear === iconId
+      GridSliderCtrl.getPanelClass = function (iconId) {
+        var panelClass = GridSliderCtrl.firstAppear === iconId
           ? 'first-appear'
           : 'fade-in-out';
 
-        if (ctrl.isCloseState()) {
+        if (GridSliderCtrl.isCloseState()) {
           panelClass = 'closing';
         }
 
         return panelClass;
       };
 
-      ctrl.showPanel = function (iconId) {
-        return ctrl.showMoreInfo === iconId;
+      GridSliderCtrl.showPanel = function (iconId) {
+        return GridSliderCtrl.showMoreInfo === iconId;
       };
 
-      ctrl.setActiveElement = function (iconId, $event) {
-        if (!ctrl.showMoreInfo) {
-          ctrl.firstAppear = iconId;
+      GridSliderCtrl.setActiveElement = function (iconId, $event) {
+        if (!GridSliderCtrl.showMoreInfo) {
+          GridSliderCtrl.firstAppear = iconId;
         }
-        ctrl.activeElement = iconId;
-        ctrl.focusedElement = null;
-        ctrl.borderedElement = iconId;
-        ctrl.showMoreInfo = iconId;
+        GridSliderCtrl.activeElement = iconId;
+        GridSliderCtrl.focusedElement = null;
+        GridSliderCtrl.borderedElement = iconId;
+        GridSliderCtrl.showMoreInfo = iconId;
       };
 
-      ctrl.closePanel = function () {
-        ctrl.activeElement = null;
-        ctrl.focusedElement = null;
-        ctrl.borderedElement = null;
-        ctrl.showMoreInfo = null;
-        ctrl.closeState = false;
+      GridSliderCtrl.closePanel = function () {
+        GridSliderCtrl.activeElement = null;
+        GridSliderCtrl.focusedElement = null;
+        GridSliderCtrl.borderedElement = null;
+        GridSliderCtrl.showMoreInfo = null;
+        GridSliderCtrl.closeState = false;
       };
 
-      ctrl.setCloseState = function (state) {
-        ctrl.closeState = state;
+      GridSliderCtrl.setCloseState = function (state) {
+        GridSliderCtrl.closeState = state;
       };
 
-      ctrl.isCloseState = function () {
-        return !!ctrl.closeState;
+      GridSliderCtrl.isCloseState = function () {
+        return !!GridSliderCtrl.closeState;
       };
 
-      ctrl.getActiveElement = function () {
-        return !!ctrl.activeElement;
+      GridSliderCtrl.getActiveElement = function () {
+        return !!GridSliderCtrl.activeElement;
       };
 
-      ctrl.init = function () {
-        ctrl.getAssetsByGenre();
+      GridSliderCtrl.init = function () {
+        GridSliderCtrl.getAssetsByGenre(GridSliderCtrl.genreId);
       };
-
-      ctrl.init();
     }])
 
 })(angular, window);
