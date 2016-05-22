@@ -49,7 +49,7 @@
             resolve: {
               delay: function ($q, $timeout) {
                 var delay = $q.defer();
-                $timeout(delay.resolve, 300);
+                $timeout(delay.resolve, 500);
                 return delay.promise;
               }
             }
@@ -57,9 +57,9 @@
           .otherwise({
             redirectTo: '/login'
           });
-        $locationProvider.html5Mode({
-          enabled: true,
-          requireBase: false
-        });
+        // $locationProvider.html5Mode({
+        //   enabled: false,
+        //   requireBase: false
+        // });
       }])
 })(angular, window);

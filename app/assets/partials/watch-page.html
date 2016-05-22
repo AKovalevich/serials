@@ -4,16 +4,19 @@
         <span class="button-back-image">Back</span>
     </a>
 
-    <div class="wrapper-video">
-        <videogular vg-theme="VSCtrl.config.theme" vg-update-time="VSCtrl.updateTime($currentTime, $duration)">
+    <div class="wrapper-video" ng-class="VSCtrl.countdown ? 'video-small-size' : 'video-full-size'">
+        <videogular
+                vg-theme="VSCtrl.config.theme"
+                vg-update-time="VSCtrl.updateTime($currentTime, $duration)"
+                vg-auto-play="true"
+                vg-player-ready="VSCtrl.onPlayerReady($API)">
             <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
             <vg-controls>
                 <vg-play-pause-button></vg-play-pause-button>
-                <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
                 <vg-scrub-bar>
                     <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
                 </vg-scrub-bar>
-                <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                <vg-time-display>{{ currentTime | date:'mm:ss' }}/{{ totalTime | date:'mm:ss' }}</vg-time-display>
                 <vg-volume>
                     <vg-mute-button></vg-mute-button>
                     <vg-volume-bar></vg-volume-bar>
@@ -21,7 +24,7 @@
                 <vg-fullscreen-button></vg-fullscreen-button>
             </vg-controls>
             <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
-            <vg-analytics vg-track-info="controller.config.plugins.analytics"></vg-analytics>
+            <!--<vg-analytics vg-track-info="VSCtrl.config.plugins.analytics"></vg-analytics>-->
             <vg-overlay-play></vg-overlay-play>
             <vg-buffering></vg-buffering>
         </videogular>
@@ -29,8 +32,8 @@
 
     <div id="next-video">
         <div ng-if="VSCtrl.countdown">
-            <timer countdown="{{ VSCtrl.countdown }}" interval="1000" finish-callback="VSCtrl.timerFinished()">
-                {{seconds}} second{{seconds}}
+            <timer countdown="VSCtrl.countdown" interval="1000" finish-callback="VSCtrl.timerFinished()">
+                <div class="timer-countdown">{{seconds}} second{{secondsS}}</div>
             </timer>
         </div>
     </div>

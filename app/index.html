@@ -19,10 +19,14 @@
         <script type="text/javascript" src="assets/js/vendor/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="assets/js/vendor/jquery-ui/jquery-ui.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/moment/moment.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/moment/min/locales.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/humanize-duration/humanize-duration.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-animate/angular-animate.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-aria/angular-aria.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-material/angular-material.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-messages/angular-messages.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-timer/dist/angular-timer.js"></script>
         <!--<script type="text/javascript" src="assets/js/vendor/angular-swipe/dist/angular-swipe.js"></script>-->
         <script type="text/javascript" src="assets/js/vendor/angular-sanitize/angular-sanitize.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-route/angular-route.js"></script>
@@ -74,10 +78,10 @@
         <div class="main-wrapper" ng-controller="MainController as MCtrl">
             <show-loader></show-loader>
             <div id="main-menu sticky">
-                <a href="/">Main</a> |
-                <a ng-if="!isLogged" href="/login">Login</a>
-                <a ng-if="isLogged" href="/logout">Logout</a> |
-                <a href="/browse">Browse</a> |
+                <a href="#/">Main</a> |
+                <a ng-if="!isLogged" href="#/login">Login</a>
+                <a ng-if="isLogged" href="#/logout">Logout</a> |
+                <a href="#/browse">Browse</a> |
             </div>
 
             <div class="view-animate-container">

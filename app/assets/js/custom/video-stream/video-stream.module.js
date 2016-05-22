@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('video-stream', [
+    'timer',
     'angulartics.google.analytics',
     'com.2fdevs.videogular',
     'com.2fdevs.videogular.plugins.controls',
