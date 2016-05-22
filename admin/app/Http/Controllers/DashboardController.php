@@ -956,18 +956,24 @@ class DashboardController extends Controller
     /**
      *  Routing for Image media.
      */
-    public function getPosterImage($filename) {
-        $file = Storage::disk('poster')->get($filename);
+    public function getPosterImage($file_id) {
+        $poster = Image::find($file_id);
+
+        $file = Storage::disk('poster')->get($poster->path);
         return new Response($file, 200);
     }
 
-    public function getPreviewImage($filename) {
-        $file = Storage::disk('preview')->get($filename);
+    public function getPreviewImage($file_id) {
+        $preview = Image::find($file_id);
+
+        $file = Storage::disk('preview')->get($preview->path);
         return new Response($file, 200);
     }
 
-    public function getSlideImage($filename) {
-        $file = Storage::disk('slide')->get($filename);
+    public function getSlideImage($file_id) {
+        $slide = Image::find($file_id);
+
+        $file = Storage::disk('slide')->get($slide->path);
         return new Response($file, 200);
     }
 

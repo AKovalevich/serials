@@ -329,19 +329,19 @@ Route::post('/admin/dashboard/sliders/create', [
  * Media
  *   Routes for images
  */
-Route::get('/poster/{filename}', [
+Route::get('/media/poster/{id}', [
   'uses' => 'DashboardController@getPosterImage',
   'as' => 'poster.image'
 ]);
-Route::get('/slide/{filename}', [
+Route::get('/media/slide/{id}', [
   'uses' => 'DashboardController@getSlideImage',
   'as' => 'slide.image'
 ]);
-Route::get('/preview/{filename}', [
+Route::get('/media/preview/{id}', [
   'uses' => 'DashboardController@getPreviewImage',
   'as' => 'preview.image'
 ]);
-Route::get('/video/{id}', [
+Route::get('/media/video/{id}', [
   'uses' => 'DashboardController@getVideoFile',
   'as' => 'video.file'
 ]);

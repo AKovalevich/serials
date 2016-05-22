@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="CinemaPortal">
+<html lang="en" ng-app="cinemaPortal">
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,14 +19,18 @@
         <script type="text/javascript" src="assets/js/vendor/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="assets/js/vendor/jquery-ui/jquery-ui.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/moment/moment.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/moment/min/locales.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/humanize-duration/humanize-duration.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-animate/angular-animate.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-aria/angular-aria.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-material/angular-material.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-messages/angular-messages.js"></script>
-        <script type="text/javascript" src="assets/js/vendor/angular-swipe/dist/angular-swipe.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular-timer/dist/angular-timer.js"></script>
+        <!--<script type="text/javascript" src="assets/js/vendor/angular-swipe/dist/angular-swipe.js"></script>-->
         <script type="text/javascript" src="assets/js/vendor/angular-sanitize/angular-sanitize.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-route/angular-route.js"></script>
-        <script type="text/javascript" src="assets/js/vendor/angular-touch/angular-touch.js"></script>
+        <!--<script type="text/javascript" src="assets/js/vendor/angular-touch/angular-touch.js"></script>-->
         <script type="text/javascript" src="assets/js/vendor/slick-carousel/slick/slick.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-slick/dist/slick.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-preload-image/angular-preload-image.min.js"></script>
@@ -38,16 +42,26 @@
         <script type="text/javascript" src="assets/js/vendor/videogular-poster/vg-poster.js"></script>
         <script type="text/javascript" src="assets/js/vendor/videogular-buffering/vg-buffering.js"></script>
         <script type="text/javascript" src="assets/js/vendor/videogular-angulartics/vg-analytics.js"></script>
-        <script type="text/javascript" src="assets/js/vendor/dash/dash.all.min.js"></script>
-        <script type="text/javascript" src="assets/js/vendor/videogular-dash/vg-dash.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/App.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/App.route.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/TopSliderController.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/GridController.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/WatchPageController.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/LandingPageController.js"></script>
-        <script type="text/javascript" src="assets/js/cinema_portal/LoginPageController.js"></script>
-        <!--<script type="text/javascript" src="assets/js/scripts.min.js"></script>-->
+
+        <script type="text/javascript" src="assets/js/custom/grid/grid.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/grid/grid.grid-resource.service.js"></script>
+        <script type="text/javascript" src="assets/js/custom/grid/grid.grid-slider.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/grid/grid.grid.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/landing/landing.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/landing/landing.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/login/login-form.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/login/login-form.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/slider/slider.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/slider/slider.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/video-stream/video-stream.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/video-stream/video-stream.service.js"></script>
+        <script type="text/javascript" src="assets/js/custom/video-stream/video-stream.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/app.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/app.route.js"></script>
+        <script type="text/javascript" src="assets/js/custom/app.controller.js"></script>
+
+        <!--<script type="text/javascript" src="assets/js/vendor.min.js"></script>-->
+        <!--<script type="text/javascript" src="assets/js/app.min.js"></script>-->
 
         <!-- Google Analitycs-->
         <script>

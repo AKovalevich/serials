@@ -38,7 +38,7 @@
                     </div>
                     <div class="control">
                         <div class="sub-title">Url</div>
-                        <img width="200" height="130" src="{{ route($image->type . '.image', ['filename' => $image->path ]) }}"/>
+                        <img width="200" height="130" src="{{ route($image->type . '.image', ['filename' => $image->id ]) }}"/>
                         {{ Form::file('path', ['class' => 'form-control']) }}
                     </div>
                     <div class="login-button text-center">

@@ -14,15 +14,11 @@
 .la-line-scale-pulse-out {
     display: block;
     font-size: 0;
-    color: #ffffff;
+    color: #fff;
 }
 
 .la-line-scale-pulse-out.la-dark {
-    color: #333333;
-}
-
-.la-line-scale-pulse-out.la-red {
-    color: #E50914;
+    color: #333;
 }
 
 .la-line-scale-pulse-out > div {

@@ -41,7 +41,7 @@
                         <tr>
                             <td>{{ $image->title }}</td>
                             <td>{{ $image->type }}</td>
-                            <td><img class="image image-preview" width="200" height="100" src="{{ route( $image->type . '.image', ['filename' => $image->path]) }}"/></td>
+                            <td><img class="image image-preview" width="200" height="100" src="{{ route( $image->type . '.image', ['filename' => $image->id]) }}"/></td>
                             <td>
                                 <a href="{{ route('image.edit', ['id' => $image->id]) }}">Edit</a>
                                 {{ Form::open([
