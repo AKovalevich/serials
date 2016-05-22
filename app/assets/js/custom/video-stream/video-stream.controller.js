@@ -66,7 +66,7 @@
 
         VSCtrl.updateTime = function (currentTime, duration) {
           if (!VSCtrl.isEnging) {
-            if (duration - currentTime <= 30) {
+            if (duration - currentTime <= 20) {
               if (!VSCtrl.countdown) {
                 VSCtrl.countdown = 10;
               }
