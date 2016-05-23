@@ -7,18 +7,8 @@
             <slick responsive="GridSliderCtrl.responsive">
                 <div ng-repeat="icon in GridSliderCtrl.icons track by icon.id"
                      ng-click="GridSliderCtrl.setActiveElement(icon.id, $event)"
-                     ng-mouseover="GridSliderCtrl.setFocus(icon.id)"
-                     ng-mouseleave="GridSliderCtrl.setFocus(null)"
                      ng-class="GridSliderCtrl.getNeedClassElement(icon.id)">
                     <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>
-                    <div class="focus-preview"
-                         ng-repeat="icon in GridSliderCtrl.icons"
-                         ng-if="GridSliderCtrl.isFocused(icon.id)">
-                        <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>
-                        <a href="#/watch/1/1" class="play-video"><span class="icon play-icon"></span></a>
-                        <a href=""><span class="icon icon-arrow-bottom"></span></a>
-                        <a href=""><span class="icon icon-add-list"></span></a>
-                    </div>
                 </div>
             </slick>
 

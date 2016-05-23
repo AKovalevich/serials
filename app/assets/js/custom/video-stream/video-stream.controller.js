@@ -75,11 +75,11 @@
         };
 
         VSCtrl.timerFinished = function () {
-          VSCtrl.isEnging = true;
-          VSCtrl.videoId = VSCtrl.nextVideo.videoId;
-          VSCtrl.seasonId = VSCtrl.nextVideo.seasonId;
-          VSCtrl.countdown = false;
-          VSCtrl.API.stop();
+          // VSCtrl.isEnging = true;
+          // VSCtrl.videoId = VSCtrl.nextVideo.videoId;
+          // VSCtrl.seasonId = VSCtrl.nextVideo.seasonId;
+          // VSCtrl.countdown = false;
+          // VSCtrl.API.stop();
           // If html5Mode is disabled
           $location.path("/watch/"+ VSCtrl.seasonId +"/" + VSCtrl.videoId);
         };

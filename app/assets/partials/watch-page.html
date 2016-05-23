@@ -1,36 +1,45 @@
 <div ng-controller="VideoStreamController as VSCtrl">
     <!-- We will put here Videogular tags... -->
-    <div class="wrapper-video" ng-class="VSCtrl.countdown ? 'video-small-size' : 'video-full-size'">
-        <videogular
-                vg-theme="VSCtrl.config.theme"
-                vg-update-time="VSCtrl.updateTime($currentTime, $duration)"
-                vg-auto-play="true"
-                vg-player-ready="VSCtrl.onPlayerReady($API)">
-            <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
-            <vg-controls>
-                <vg-play-pause-button></vg-play-pause-button>
-                <vg-scrub-bar>
-                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-                </vg-scrub-bar>
-                <vg-time-display>{{ currentTime | date:'mm:ss' }}/{{ totalTime | date:'mm:ss' }}</vg-time-display>
-                <vg-volume>
-                    <vg-mute-button></vg-mute-button>
-                    <vg-volume-bar></vg-volume-bar>
-                </vg-volume>
-                <vg-fullscreen-button></vg-fullscreen-button>
-            </vg-controls>
-            <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
-            <!--<vg-analytics vg-track-info="VSCtrl.config.plugins.analytics"></vg-analytics>-->
-            <vg-overlay-play></vg-overlay-play>
-            <vg-buffering></vg-buffering>
-        </videogular>
-    </div>
-
-    <div id="next-video">
+    <div id="main-wrapper">
+        <div class="wrapper-video" ng-class="VSCtrl.countdown ? 'video-small-size' : 'video-full-size'">
+            <videogular
+                    vg-theme="VSCtrl.config.theme"
+                    vg-update-time="VSCtrl.updateTime($currentTime, $duration)"
+                    vg-auto-play="true"
+                    vg-player-ready="VSCtrl.onPlayerReady($API)">
+                <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
+                <vg-controls>
+                    <vg-play-pause-button></vg-play-pause-button>
+                    <vg-scrub-bar>
+                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    </vg-scrub-bar>
+                    <vg-time-display>{{ currentTime | date:'mm:ss' }}/{{ totalTime | date:'mm:ss' }}</vg-time-display>
+                    <vg-volume>
+                        <vg-mute-button></vg-mute-button>
+                        <vg-volume-bar></vg-volume-bar>
+                    </vg-volume>
+                    <vg-fullscreen-button></vg-fullscreen-button>
+                </vg-controls>
+                <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
+                <!--<vg-analytics vg-track-info="VSCtrl.config.plugins.analytics"></vg-analytics>-->
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+            </videogular>
+        </div>
+        
         <div ng-if="VSCtrl.countdown">
-            <timer countdown="VSCtrl.countdown" interval="1000" finish-callback="VSCtrl.timerFinished()">
-                <div class="timer-countdown">{{seconds}} second{{secondsS}}</div>
-            </timer>
+            <div id="next-video" style="background-image: url({{ VSCtrl.currentVideo.background }});" class="next-video-preview">
+                <timer countdown="VSCtrl.countdown" interval="1000" finish-callback="VSCtrl.timerFinished()">
+                    <div class="timer-countdown">
+                        <span class="white">Next episode playing in</span> <span class="red">{{seconds}} second{{secondsS}}</span>
+                    </div>
+                </timer>
+                <img id="preview-image" ng-src="{{ VSCtrl.nextVideo.preview }}"
+                    height="258"
+                    width="450">
+                <a class="btn btn--watch-page btn-white btn-browser" href="#/browse">Browser</a>
+                <a class="btn btn--watch-page btn-white btn-episodes" href="#/browse">More Episodes</a>
+            </div>
         </div>
     </div>
 </div>

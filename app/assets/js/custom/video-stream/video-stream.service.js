@@ -11,11 +11,13 @@
             mimeType: "video/mp4",
             src: 'http://static.videogular.com/assets/videos/videogular.mp4',
             seasonId: seasonId,
-            videoId: videoId
+            videoId: videoId,
+            background: 'https://images7.alphacoders.com/418/418484.jpg'
           },
           nextVideo: {
             seasonId: seasonId,
-            videoId: ++videoId
+            videoId: ++videoId,
+            preview: 'https://i.guim.co.uk/img/media/dbabdfe812e8579350588bc59d7e095bf640ee06/0_262_5616_3372/master/5616.jpg?w=620&q=55&auto=format&usm=12&fit=max&s=3b5804c182812c7b5c79cbfc4de04622'
           }
         });
 

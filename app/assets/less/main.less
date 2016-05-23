@@ -1,5 +1,8 @@
-html, body {
+html, div, body {
   background-color: #141414;
+  margin: 0;
+  padding: 0;
+  font-family: exo, sans-serif;
 }
 
 .preview-full img {
@@ -649,15 +652,70 @@ a {
 }
 
 //Timer
+#next-video {
+  position: absolute;
+  height: 100%; 
+  width: 100%; 
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+}
+
+#preview-image {
+    right: 0;
+    position: absolute;
+    bottom: 50px;
+}
+
 .timer-countdown {
+  background-color: transparent;
+  position: absolute;
+  right: 10%;
+  bottom: 313px;
+}
+
+.timer-countdown .red {
   color: #E50914;
 }
 
-.video-full-size {
+.timer-countdown .white {
+  color: #eeeeee;
+}
+
+.btn {
+
+}
+
+.btn-browser {
+    right: 20%;
+}
+
+.btn-episodes {
+    right: 5%;
+}
+
+.btn--watch-page {
+    position: absolute;
+    bottom: 20px;
+}
+
+.btn-white {
+  color: #eeeeee;
+}
+
+.wrapper-video {
+  float: left;
+  position: absolute;
+  z-index: 10;
+}
+
+.wrapper-video.video-full-size {
   width: 100%;
 }
 
-.video-small-size {
+.wrapper-video.video-small-size {
   width: 33%;
   transition-delay: 4000ms;
   transition-duration: 900ms;
