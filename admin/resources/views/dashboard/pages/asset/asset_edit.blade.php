@@ -57,6 +57,10 @@
                         {{ Form::select('image_id', $previews_list, $selected_preview, ['name'=>'image_id']) }}
                     </div>
                     <div class="">
+                        <div class="sub-title">Backgound</div>
+                        {{ Form::select('background_id', $backgrounds_list, $selected_background, ['name'=>'background_id']) }}
+                    </div>
+                    <div class="">
                         <div class="sub-title">Slider</div>
                         {{ Form::select('slider_id', $slider_list, $selected_slider, ['name'=>'slider_id']) }}
                     </div>

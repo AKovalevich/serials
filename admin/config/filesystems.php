@@ -72,6 +72,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'background' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/backgrounds'),
+            'visibility' => 'public',
+        ],
+
         'videos' => [
             'driver' => 'local',
             'root' => storage_path('app/public/videos'),

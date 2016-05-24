@@ -102,6 +102,7 @@ class DashboardController extends Controller
           'plot' => 'required',
           'image_id' => 'required',
           'slider_id' => 'required',
+          'background_id' => 'required',
           'description' => 'required',
           'start_date' => 'required',
           'end_date' => 'required',
@@ -121,6 +122,7 @@ class DashboardController extends Controller
         $asset->plot = $input['plot'];
         $asset->image_id = $input['image_id'];
         $asset->slider_id = $input['slider_id'];
+        $asset->background_id = $input['background_id'];
         $asset->description = $input['description'];
         $asset->start_date = $input['start_date'];
         $asset->end_date = $input['end_date'];
@@ -139,6 +141,7 @@ class DashboardController extends Controller
         $tags = Tag::orderBy('id', 'desc')->get();
         $genres = Genre::orderBy('id', 'desc')->get();
         $previews = Image::where(['type' => 'preview'])->get();
+        $backgrounds = Image::where(['type' => 'background'])->get();
         $sliders = Slider::where(['type' => 'asset'])->get();
 
         $tags_options = [];
@@ -153,6 +156,10 @@ class DashboardController extends Controller
         foreach ($previews as $preview) {
             $previews_options[$preview->id] = $preview->title;
         }
+        $backgrounds_options = [];
+        foreach ($backgrounds as $background) {
+            $backgrounds_options[$background->id] = $background->title;
+        }
         $sliders_options = [];
         foreach ($sliders as $slider) {
             $sliders_options[$slider->id] = $slider->title;
@@ -163,6 +170,7 @@ class DashboardController extends Controller
             'tags' => $tags_options,
             'genres' => $genre_options,
             'previews' => $previews_options,
+            'backgrounds' => $backgrounds_options,
             'sliders' => $sliders_options,
           ]
         );
@@ -182,6 +190,9 @@ class DashboardController extends Controller
         $previews = Image::where(['type' => 'preview'])->get();
         $selected_preview = $asset->images()->get();
         $preview_list = [];
+        $backgrounds = Image::where(['type' => 'background'])->get();
+        $selected_background = $asset->images()->get();
+        $background_list = [];
         $sliders = Slider::where(['type' => 'asset'])->get();
         $selected_slider = $asset->slider()->get();
         $slider_list = [];
@@ -201,6 +212,9 @@ class DashboardController extends Controller
         foreach ($previews as $preview) {
             $preview_list[$preview->id] = $preview->title;
         }
+        foreach ($backgrounds as $background) {
+            $background_list[$background->id] = $background->title;
+        }
         foreach ($sliders as $slider) {
             $slider_list[$slider->id] = $slider->title;
         }
@@ -215,6 +229,8 @@ class DashboardController extends Controller
             'selected_preview' => $selected_preview,
             'slider_list' => $slider_list,
             'selected_slider' => $selected_slider,
+            'background_list' => $background_list,
+            '$selected_background' => $selected_background,
             'start_date' => new DateTime($asset->start_date),
             'end_date' => new DateTime($asset->end_date)
           ]
@@ -238,6 +254,7 @@ class DashboardController extends Controller
           'plot' => 'required',
           'image_id' => 'required',
           'slider_id' => 'required',
+          'background_id' => 'required',
           'description' => 'required',
           'start_date' => 'required',
           'end_date' => 'required',
@@ -258,6 +275,7 @@ class DashboardController extends Controller
         $asset->plot = $input['plot'];
         $asset->image_id = $input['image_id'];
         $asset->slider_id = $input['slider_id'];
+        $asset->slider_id = $input['background_id'];
         $asset->description = $input['description'];
         $asset->start_date = $input['start_date'];
         $asset->end_date = $input['end_date'];
@@ -487,7 +505,6 @@ class DashboardController extends Controller
 
         return view('dashboard.pages.genre.genre_edit', ['genre' => $genre]);
     }
-
 
     public function imageList()
     {
@@ -974,6 +991,13 @@ class DashboardController extends Controller
         $slide = Image::find($file_id);
 
         $file = Storage::disk('slide')->get($slide->path);
+        return new Response($file, 200);
+    }
+
+    public function getBackgroundImage($file_id) {
+        $slide = Image::find($file_id);
+
+        $file = Storage::disk('background')->get($slide->path);
         return new Response($file, 200);
     }
 

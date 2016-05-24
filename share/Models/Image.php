@@ -11,6 +11,7 @@ class Image extends Model
           'slide' => 'Slide',
           'preview' => 'Preview',
           'poster' => 'Poster',
+          'background' => 'Background',
         ];
     }
 }

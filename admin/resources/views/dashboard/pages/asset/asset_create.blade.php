@@ -69,6 +69,14 @@
                     @endif
                 </div>
                 <div class="">
+                    <div class="sub-title">Backgound</div>
+                    @if ($sliders)
+                        {{ Form::select('background_id', $sliders, null, ['name'=>'background_id']) }}
+                    @else
+                        <a href="/admin/dashboard/images/create">You need to create some backgrounds for TV Show</a>
+                    @endif
+                </div>
+                <div class="">
                     <div class="sub-title">Tags</div>
                     @if ($tags)
                         {{ Form::select('tags', $tags, null, ['multiple'=>'multiple', 'name'=>'tags[]']) }}
