@@ -40,53 +40,9 @@
       port: '8080',
       version: '1.0'
     })
-    .factory('apiConfig', ['apiConst', function (apiConst) {
-      return {
-        endpoint: [apiConst.host, apiConst.port].join(':') + '/api/' + apiConst.version
-        // ,
-        // CSRFToken: {
-        //   headerName: "X-CSRF-Token",
-        //   cookieName: "X-CSRF-Token",
-        //   allowedMethods: [
-        //     'GET'
-        //   ]
-        // }
-      }
-    }])
-    // .factory('auth', [
-    //   '$http',
-    //   '$cookies',
-    //   '$q',
-    //   'apiConfig',
-    //   function ($http, $cookies, $q, apiConfig) {
-    //     return {
-    //       logIn: function () {
-    //         var token = apiConfig.CSRFToken;
-    //
-    //         if ($cookies[token.cookieName]) {
-    //           return $q.when();
-    //         }
-    //
-    //         return $http.get('/rest/session/token').then(function (responce) {
-    //           $cookies[token.cookieName] = responce.data;
-    //         })
-    //       }
-    //     }
-    //   }
-    // ])
-    .factory('pageLock', function ($rootScope) {
-      var globalLocks = 0;
-
-      return {
-        setGlobalLock: function (promise) {
-          $rootScope.loading = !!(++globalLocks);
-
-          promise.finally(function () {
-            $rootScope.loading = !!(--globalLocks);
-          });
-        }
-      }
-    });
+    .config(['$compileProvider', function ($compileProvider) {
+      $compileProvider.debugInfoEnabled(false);
+    }]);
     // .run([
     //   'auth',
     //   function (auth) {
