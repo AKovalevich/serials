@@ -9,6 +9,7 @@ var fs = require('fs'),
 
 
 exports.videoStream = function (request, responce, next) {
+  request.params.video = request.params.video.replace(/%20/g, ' ');
   path = docroot + request.params.video;
 
   fs.access(path, fs.R_OK, function (err) {
