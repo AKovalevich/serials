@@ -24,8 +24,21 @@ if (cluster.isMaster) {
   });
 }
 else {
-  app.get('/watch/:video', function(req, res, next) {
-    vs.videoStream(req, res, next)
+  app.get('/watch/:show/:season/:episode/:quality/:filename', function(req, res, next) {
+    var show = request.params.show.replace(/%20/g, ' '),
+      season = request.params.season.replace(/%20/g, ' '),
+      episode = request.params.episode.replace(/%20/g, ' '),
+      quality = request.params.quality.replace(/%20/g, ' '),
+      filename = request.params.filename.replace(/%20/g, ' ');
+    var path = [
+      show,
+      season,
+      episode,
+      quality,
+      filename
+    ].join('/');
+    
+    vs.videoStream(req, res, path)
   });
 
   app.listen(1337);

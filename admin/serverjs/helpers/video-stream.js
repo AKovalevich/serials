@@ -2,15 +2,12 @@
 
 var fs = require('fs'),
     stat,
-    path,
-    regexp,
     total,
     docroot = '../storage/app/public/videos/';
 
 
-exports.videoStream = function (request, responce, next) {
-  request.params.video = request.params.video.replace(/%20/g, ' ');
-  path = docroot + request.params.video;
+exports.videoStream = function (request, responce, path) {
+  path = docroot + path;
 
   fs.access(path, fs.R_OK, function (err) {
     if (err) {
