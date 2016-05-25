@@ -6,9 +6,10 @@
       '$sce',
       '$routeParams',
       '$location',
+      'vgFullscreen',
       'videoStream',
       'pageLock',
-      function ($sce, $routeParams, $location, videoStream, pageLock) {
+      function ($sce, $routeParams, $location, vgFullscreen, videoStream, pageLock) {
         var VSCtrl = this;
 
         VSCtrl.videoId = $routeParams.videoId;
@@ -68,6 +69,9 @@
           if (!VSCtrl.isEnging) {
             if (duration - currentTime <= 25) {
               if (!VSCtrl.countdown) {
+                if (vgFullscreen.isFullScreen()) {
+                  vgFullscreen.exit();
+                }
                 VSCtrl.countdown = 20;
               }
             }
@@ -85,6 +89,19 @@
         };
 
         VSCtrl.getVideoInfo(VSCtrl.seasonId, VSCtrl.videoId);
-      }])
+      }
+    ])
+    .directive("tvShowPlaylist",
+      ["VG_STATES", function(VG_STATES) {
+        return {
+          restrict: "E",
+          require: "^videogular",
+          template: "<img src='http://www.videogular.com/img/videogular.png' ng-show='API.currentState != \"play\"'>",
+          link: function(scope, elem, attrs, API) {
+            scope.API = API;
+          }
+        }
+      }
+      ]);
 
 })(angular, window);

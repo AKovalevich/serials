@@ -8,7 +8,9 @@
                     vg-auto-play="true"
                     vg-player-ready="VSCtrl.onPlayerReady($API)">
                 <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
-                <vg-controls>
+                <vg-controls
+                        vg-autohide="VSCtrl.config.autoHide"
+                        vg-autohide-time="VSCtrl.config.autoHideTime">
                     <vg-play-pause-button></vg-play-pause-button>
                     <vg-scrub-bar>
                         <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
@@ -18,6 +20,7 @@
                         <vg-mute-button></vg-mute-button>
                         <vg-volume-bar></vg-volume-bar>
                     </vg-volume>
+                    <!--<tv-show-playlist></tv-show-playlist>-->
                     <vg-fullscreen-button></vg-fullscreen-button>
                 </vg-controls>
                 <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
