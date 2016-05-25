@@ -25,11 +25,11 @@ if (cluster.isMaster) {
 }
 else {
   app.get('/watch/:show/:season/:episode/:quality/:filename', function(req, res, next) {
-    var show = request.params.show.replace(/%20/g, ' '),
-      season = request.params.season.replace(/%20/g, ' '),
-      episode = request.params.episode.replace(/%20/g, ' '),
-      quality = request.params.quality.replace(/%20/g, ' '),
-      filename = request.params.filename.replace(/%20/g, ' ');
+    var show = req.params.show,
+      season = req.params.season,
+      episode = req.params.episode,
+      quality = req.params.quality,
+      filename = req.params.filename;
     var path = [
       show,
       season,
@@ -37,7 +37,7 @@ else {
       quality,
       filename
     ].join('/');
-    
+    path = path.replace(/%20/g, ' ');
     vs.videoStream(req, res, path)
   });
 
