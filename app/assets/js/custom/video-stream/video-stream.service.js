@@ -9,7 +9,7 @@
         return $q.when({
           currentVideo: {
             mimeType: "video/mp4",
-            src: 'http://static.videogular.com/assets/videos/videogular.mp4',
+            src: 'http://188.120.255.201:1337/watch/Winter%20is%20coming.mp4',
             seasonId: seasonId,
             videoId: videoId,
             background: 'https://images7.alphacoders.com/418/418484.jpg'
