@@ -17,7 +17,6 @@
 
           return $http.get(apiConfig.endpoint + '/genres', config).then(
             function (response) {
-              console.log(response.data.data.items);
               return response.data.data.items;
             },
             function (response) {
@@ -36,7 +35,6 @@
 
           return $http.get(apiConfig.endpoint + '/assets/genre/' + genreId, config).then(
             function (response) {
-              console.log(response.data.data.items);
               return response.data.data.items.length ? response.data.data.items : [];
             },
             function (response) {

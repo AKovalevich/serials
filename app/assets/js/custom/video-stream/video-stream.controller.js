@@ -33,7 +33,7 @@
             VSCtrl.nextVideo = response.nextVideo;
             VSCtrl.currentVideo = response.currentVideo;
             VSCtrl.config = {
-              autoHide: true,
+              autoHide: false,
               autoHideTime: 3000,
               loop: false,
               preload: "none",

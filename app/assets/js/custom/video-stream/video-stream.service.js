@@ -9,7 +9,7 @@
         return $q.when({
           currentVideo: {
             mimeType: "video/mp4",
-            src: 'http://188.120.255.201:1337/watch/Futurama/s1/e1/480/Space%20Pilot%203000.mp4',
+            src: 'http://188.120.255.201:1337/watch/Futurama/s1/e1/480/Space Pilot 3000.mp4',
             seasonId: seasonId,
             videoId: videoId,
             background: 'https://images7.alphacoders.com/418/418484.jpg'
