@@ -67,13 +67,11 @@
 
         VSCtrl.updateTime = function (currentTime, duration) {
           if (!VSCtrl.isEnging) {
-            if (duration - currentTime <= 25) {
-              if (!VSCtrl.countdown) {
-                if (vgFullscreen.isFullScreen()) {
-                  vgFullscreen.exit();
-                }
-                VSCtrl.countdown = 20;
-              }
+            if (duration - currentTime <= 26 && vgFullscreen.isFullScreen()) {
+              vgFullscreen.exit();
+            }
+            if (duration - currentTime <= 25 && !VSCtrl.countdown) {
+              VSCtrl.countdown = 20;
             }
           }
         };

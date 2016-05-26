@@ -8,7 +8,7 @@
                     vg-auto-play="true"
                     vg-player-ready="VSCtrl.onPlayerReady($API)">
                 <vg-media vg-src="VSCtrl.config.sources" vg-tracks="VSCtrl.config.tracks"></vg-media>
-                <vg-controls
+                <vg-controls ng-if="!VSCtrl.countdown"
                         vg-autohide="VSCtrl.config.autoHide"
                         vg-autohide-time="VSCtrl.config.autoHideTime">
                     <vg-play-pause-button></vg-play-pause-button>
@@ -25,7 +25,7 @@
                 </vg-controls>
                 <vg-poster vg-url='VSCtrl.config.plugins.poster'></vg-poster>
                 <!--<vg-analytics vg-track-info="VSCtrl.config.plugins.analytics"></vg-analytics>-->
-                <vg-overlay-play></vg-overlay-play>
+                <vg-overlay-play ng-if="!VSCtrl.countdown"></vg-overlay-play>
                 <vg-buffering></vg-buffering>
             </videogular>
         </div>
