@@ -74,7 +74,7 @@
                     </div>
                     <div class="control">
                         <div class="sub-title">Publish/Unpublish</div>
-                        {{ Form::checkbox('status', $asset->status, !!$asset->status, ['class' => 'form-control']) }}
+                        {{ Form::checkbox('status', true, $status, ['class' => 'form-control']) }}
                     </div>
                     <div class="login-button text-center">
                         {{ Form::submit('Create', ['class' => 'btn btn-primary']) }}

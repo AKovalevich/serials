@@ -94,7 +94,7 @@
                 </div>
                 <div class="control">
                     <div class="sub-title">Publish/Unpublish</div>
-                    {{ Form::checkbox('status', Input::old('status'), null, ['class' => 'form-control']) }}
+                    {{ Form::checkbox('status', true, false, ['class' => 'form-control']) }}
                 </div>
                 <div class="login-button text-center">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}

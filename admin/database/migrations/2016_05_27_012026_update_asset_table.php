@@ -14,8 +14,8 @@ class UpdateAssetTable extends Migration
     {
         Schema::table('assets', function($table)
         {
-            $table->integer('background_id');
-            $table->boolean('status');
+            $table->integer('background_id')->default(0);
+            $table->boolean('status')->default(false);
         });
     }
 
