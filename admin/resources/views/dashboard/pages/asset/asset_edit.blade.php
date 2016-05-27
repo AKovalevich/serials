@@ -58,7 +58,7 @@
                     </div>
                     <div class="">
                         <div class="sub-title">Backgound</div>
-                        {{ Form::select('background_id', $backgrounds_list, $selected_background, ['name'=>'background_id']) }}
+                        {{ Form::select('background_id', $background_list, $selected_background, ['name'=>'background_id']) }}
                     </div>
                     <div class="">
                         <div class="sub-title">Slider</div>
