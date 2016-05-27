@@ -8,7 +8,6 @@
 
       GridSliderCtrl.activeElement = null;
       GridSliderCtrl.focusClass = null;
-      GridSliderCtrl.focusedElement = false;
       GridSliderCtrl.borderedElement = null;
       GridSliderCtrl.showMoreInfo = null;
       GridSliderCtrl.firstAppear = null;
@@ -215,29 +214,12 @@
           })
       };
 
-      GridSliderCtrl.setFocus = function (elementId) {
-        if (GridSliderCtrl.borderedElement && GridSliderCtrl.showMoreInfo && elementId) {
-          GridSliderCtrl.borderedElement = elementId;
-          GridSliderCtrl.showMoreInfo = elementId;
-        }
-        else {
-          GridSliderCtrl.focusedElement = elementId;
-        }
-        if (!elementId) GridSliderCtrl.firstAppear = null;
-      };
-
-      GridSliderCtrl.isFocused = function (elementId) {
-        return GridSliderCtrl.focusedElement === elementId;
-      };
-
       GridSliderCtrl.isBordered = function (elementId) {
         return GridSliderCtrl.borderedElement === elementId;
       };
 
       GridSliderCtrl.getNeedClassElement = function (iconId) {
-        var elementClass = GridSliderCtrl.isFocused(iconId)
-          ? 'opened'
-          : 'closed';
+        var elementClass = 'closed';
         elementClass += ' ';
 
         elementClass += GridSliderCtrl.isBordered(iconId)
@@ -268,14 +250,12 @@
           GridSliderCtrl.firstAppear = iconId;
         }
         GridSliderCtrl.activeElement = iconId;
-        GridSliderCtrl.focusedElement = null;
         GridSliderCtrl.borderedElement = iconId;
         GridSliderCtrl.showMoreInfo = iconId;
       };
 
       GridSliderCtrl.closePanel = function () {
         GridSliderCtrl.activeElement = null;
-        GridSliderCtrl.focusedElement = null;
         GridSliderCtrl.borderedElement = null;
         GridSliderCtrl.showMoreInfo = null;
         GridSliderCtrl.closeState = false;

@@ -4,8 +4,8 @@
     <section ng-repeat="genre in GridCtrl.genres">
         <div><a href="#">{{ ::genre.name }}</a></div>
         <div class="grid-slider" ng-init="GridSliderCtrl.init()" ng-controller="GridSliderController as GridSliderCtrl">
-            <slick responsive="GridSliderCtrl.responsive">
-                <div ng-repeat="icon in GridSliderCtrl.icons track by icon.id"
+            <slick responsive="::GridSliderCtrl.responsive">
+                <div ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"
                      ng-click="GridSliderCtrl.setActiveElement(icon.id, $event)"
                      ng-class="GridSliderCtrl.getNeedClassElement(icon.id)">
                     <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>
@@ -13,7 +13,7 @@
             </slick>
 
             <div class="fade gridder-content"
-                 ng-repeat="icon in GridSliderCtrl.icons track by icon.id"
+                 ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"
                  ng-class="GridSliderCtrl.getPanelClass(icon.id)"
                  ng-if="GridSliderCtrl.showPanel(icon.id)">
                 <span class="description">
