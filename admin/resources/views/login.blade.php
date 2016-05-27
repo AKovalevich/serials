@@ -35,9 +35,9 @@
         </div>
     </div>
 
+    {{ Html::script('js/login-page.js') }}
     {{ Html::script('js/EasePack.min.js') }}
     {{ Html::script('js/TweenLite.min.js') }}
-    {{ Html::script('js/login-page.js') }}
     {{ Html::script('js/bg-canvas.js') }}
 
 @stop

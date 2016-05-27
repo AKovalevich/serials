@@ -706,12 +706,13 @@
         }</style>
 </head>
 
+{{ Html::script('js/jquery.min.js') }}
+
 <body class="flat-blue @yield('body-class', '')">
     @yield('content')
 </body>
 
 <!-- Javascript Libs -->
-{{ Html::script('js/jquery.min.js') }}
 {{ Html::script('js/bootstrap.min.js') }}
 {{ Html::script('js/Chart.min.js') }}
 {{ Html::script('js/bootstrap-switch.min.js') }}
