@@ -341,6 +341,11 @@ Route::get('/media/preview/{id}', [
   'uses' => 'DashboardController@getPreviewImage',
   'as' => 'preview.image'
 ]);
+Route::get('/media/background/{id}', [
+  'uses' => 'DashboardController@getBackgroundImage',
+  'as' => 'background.image'
+]);
+
 Route::get('/media/video/{id}', [
   'uses' => 'DashboardController@getVideoFile',
   'as' => 'video.file'

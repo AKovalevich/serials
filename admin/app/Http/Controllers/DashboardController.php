@@ -997,9 +997,9 @@ class DashboardController extends Controller
     }
 
     public function getBackgroundImage($file_id) {
-        $slide = Image::find($file_id);
+        $background = Image::find($file_id);
 
-        $file = Storage::disk('background')->get($slide->path);
+        $file = Storage::disk('background')->get($background->path);
         return new Response($file, 200);
     }
 
