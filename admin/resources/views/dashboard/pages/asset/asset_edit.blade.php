@@ -72,6 +72,10 @@
                         <div class="sub-title">Genres</div>
                         {{ Form::select('genres', $genres_list, $selected_genres, ['multiple'=>'multiple', 'name'=>'genres[]']) }}
                     </div>
+                    <div class="control">
+                        <div class="sub-title">Publish/Unpublish</div>
+                        {{ Form::checkbox('status', $asset->status, !!$asset->status, ['class' => 'form-control']) }}
+                    </div>
                     <div class="login-button text-center">
                         {{ Form::submit('Create', ['class' => 'btn btn-primary']) }}
                     </div>

@@ -123,6 +123,7 @@ class DashboardController extends Controller
         $asset->image_id = $input['image_id'];
         $asset->slider_id = $input['slider_id'];
         $asset->background_id = $input['background_id'];
+        $asset->status = $input['status'];
         $asset->description = $input['description'];
         $asset->start_date = $input['start_date'];
         $asset->end_date = $input['end_date'];
@@ -230,7 +231,7 @@ class DashboardController extends Controller
             'slider_list' => $slider_list,
             'selected_slider' => $selected_slider,
             'background_list' => $background_list,
-            '$selected_background' => $selected_background,
+            'selected_background' => $selected_background,
             'start_date' => new DateTime($asset->start_date),
             'end_date' => new DateTime($asset->end_date)
           ]
@@ -275,7 +276,8 @@ class DashboardController extends Controller
         $asset->plot = $input['plot'];
         $asset->image_id = $input['image_id'];
         $asset->slider_id = $input['slider_id'];
-        $asset->slider_id = $input['background_id'];
+        $asset->background_id = $input['background_id'];
+        $asset->status = $input['status'];
         $asset->description = $input['description'];
         $asset->start_date = $input['start_date'];
         $asset->end_date = $input['end_date'];

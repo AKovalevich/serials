@@ -18,7 +18,6 @@ class CreateAssetsTable extends Migration
             $table->string('original_title')->nullable();
             $table->integer('image_id');
             $table->integer('slider_id');
-            $table->integer('background_id');
             $table->text('description')->nullable();
             $table->text('plot')->nullable();
             $table->timestamp('start_date')->nullable();

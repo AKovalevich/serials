@@ -92,6 +92,10 @@
                         <a href="/admin/dashboard/genres/create">You need to create some genres</a>
                     @endif
                 </div>
+                <div class="control">
+                    <div class="sub-title">Publish/Unpublish</div>
+                    {{ Form::checkbox('status', Input::old('status'), null, ['class' => 'form-control']) }}
+                </div>
                 <div class="login-button text-center">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary')) }}
                 </div>
