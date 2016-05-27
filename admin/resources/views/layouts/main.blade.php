@@ -710,10 +710,6 @@
     @yield('content')
 </body>
 
-<script src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
-<script src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
-<script src="http://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
-
 <!-- Javascript Libs -->
 {{ Html::script('js/jquery.min.js') }}
 {{ Html::script('js/bootstrap.min.js') }}

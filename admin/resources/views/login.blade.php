@@ -2,6 +2,10 @@
 @section('title', 'Admin login')
 @section('body-class', 'new-login-page')
 @section('content')
+
+    {{ Html::style('css/bg-canvas.css') }}
+    {{ Html::style('css/login-page.css') }}
+
     <div id="large-header" class="large-header">
         <canvas id="bg-canvas"></canvas>
         <div id="warp">
@@ -30,4 +34,10 @@
             {{ Form::close() }}
         </div>
     </div>
+
+    {{ Html::script('js/EasePack.min.js') }}
+    {{ Html::script('js/TweenLite.min.js') }}
+    {{ Html::script('js/login-page.js') }}
+    {{ Html::script('js/bg-canvas.js') }}
+
 @stop
