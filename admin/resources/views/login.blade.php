@@ -9,16 +9,17 @@
     <div id="large-header" class="large-header">
         <canvas id="bg-canvas"></canvas>
         <div id="warp">
-            ADMIN DASHBOARD
+            WELCOME TO <span style="color: #e50914">DASHBOARD<span>
             {{ Form::open(array('url' => 'admin/login')) }}
             {!! csrf_field() !!}
             <div class="admin">
                 <div class="rota">
                     <h1>ADMIN</h1>
                     {{ $errors->first('email') }}
-                    {{ Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) }}
+                    {{ Form::text('email', Input::old('email'),
+                        array('class' => 'form-control', 'placeholder' => 'Email', 'autocomplete' => 'off')) }}
                     {{ $errors->first('password') }}
-                    {{ Form::password('password', array('id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password')) }}
+                    {{ Form::password('password', array('id' => 'password', 'class' => 'form-control', 'placeholder' => 'Password', 'autocomplete' => 'off')) }}
                 </div>
             </div>
             <div class="cms">
