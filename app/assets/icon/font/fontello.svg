@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="play-circled" unicode="&#xe800;" d="M0 350q0 207 147 354t353 146 354-146 146-354-146-354-354-146-353 146-147 354z m375-250l375 250-375 250 0-500z" horiz-adv-x="1000" />
+
+<glyph glyph-name="play-circle2" unicode="&#xe801;" d="M465 797q184 0 315-131t131-316-131-315-315-132-316 132-131 315 131 316 316 131z m-167-670l446 224-446 223 0-447z" horiz-adv-x="928" />
+
+<glyph glyph-name="star-empty" unicode="&#xe802;" d="M634 290l171 165-235 35-106 213-105-213-236-35 171-165-41-235 211 111 211-111z m295 199q0-12-15-27l-203-197 48-279q1-4 1-12 0-28-23-28-10 0-22 7l-251 132-250-132q-13-7-23-7-11 0-17 9t-6 19q0 4 1 12l48 279-203 197q-14 15-14 27 0 21 31 26l280 40 126 254q11 23 27 23t28-23l125-254 280-40q32-5 32-26z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="star-empty-1" unicode="&#xe803;" d="M3 436q-12 31 16 50t91 18h242l74 222v1q14 45 33 68t40 23q20 0 39-23t33-68l1-1 73-222h242q63 0 91-18t16-50-64-68l-5-4-190-135 74-221 1-3q19-60 11-91t-40-32q-37 0-88 38l-2 2-3 1-189 136-192-137-3-2q-52-39-88-39-31 0-40 32t11 92l1 3 74 221-190 135-2 3-3 1q-51 37-64 68z m165-26l203-145-21-65-57-173 206 147 205-147-57 173-21 65 203 145h-251l-21 65-58 175-80-240h-251z" horiz-adv-x="997.6" />
+
+<glyph glyph-name="star" unicode="&#xe804;" d="M4 457q14 41 57 47l262 39 113 235q19 41 64 41t65-41l113-235 262-39q43-6 56-47t-15-70l-192-191 43-264q8-43-29-68-18-14-41-14-18 0-35 8l-227 123-226-123q-18-8-35-8-24 0-41 14-38 25-30 68l43 264-189 191q-32 29-18 70z m69-21l191-191q25-26 19-61l-44-264 226 123q16 8 35 8t35-8l227-123-45 264q-6 35 20 61l191 191-260 37q-39 6-54 41l-114 234-113-234q-16-35-55-39z" horiz-adv-x="1001" />
+</font>
+</defs>
+</svg>
