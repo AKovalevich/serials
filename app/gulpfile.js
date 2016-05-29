@@ -41,7 +41,7 @@ gulp.task('sprite', function () {
 });
 
 gulp.task('less', function () {
-  gulp.src('./assets/less/main.less')
+  gulp.src('./assets/less/*.less')
     .pipe(less())
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],

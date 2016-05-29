@@ -18,43 +18,49 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-photo2 {
   background-image: url(sprite.png);
-  background-position: 0px 0px;
+  background-position: 0px -1080px;
   width: 480px;
   height: 360px;
 }
 .icon-photo3 {
   background-image: url(sprite.png);
-  background-position: -480px 0px;
+  background-position: -480px -1080px;
   width: 480px;
   height: 360px;
 }
 .icon-photo4 {
   background-image: url(sprite.png);
-  background-position: 0px -360px;
+  background-position: -960px -1080px;
   width: 480px;
   height: 360px;
 }
 .icon-photo5 {
   background-image: url(sprite.png);
-  background-position: -480px -360px;
+  background-position: -1440px -1080px;
   width: 480px;
   height: 360px;
 }
 .icon-photo6 {
   background-image: url(sprite.png);
-  background-position: -960px 0px;
+  background-position: 0px -1440px;
   width: 480px;
   height: 360px;
 }
 .icon-photo7 {
   background-image: url(sprite.png);
-  background-position: -960px -360px;
+  background-position: -480px -1440px;
   width: 480px;
   height: 360px;
 }
 .icon-photo8 {
   background-image: url(sprite.png);
-  background-position: 0px -720px;
+  background-position: -960px -1440px;
   width: 480px;
   height: 360px;
+}
+.icon-slide {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 1920px;
+  height: 1080px;
 }

@@ -1,43 +1,71 @@
 <div class="container" top-slider></div>
 
-<div ng-controller="GridController as GridCtrl">
-    <section ng-repeat="genre in GridCtrl.genres">
-        <div><a href="#">{{ ::genre.name }}</a></div>
-        <div class="grid-slider" ng-init="GridSliderCtrl.init()" ng-controller="GridSliderController as GridSliderCtrl">
-            <slick responsive="::GridSliderCtrl.responsive">
-                <div ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"
-                     ng-click="GridSliderCtrl.setActiveElement(icon.id, $event)"
-                     ng-class="GridSliderCtrl.getNeedClassElement(icon.id)">
-                    <img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>
+<div class="main-content" ng-controller="GridController as GridCtrl">
+    <div ng-repeat="genre in GridCtrl.genres">
+        <div class="carousel-title">
+            {{ ::genre.name }}
+        </div>
+        <div ng-init="GridSliderCtrl.init()"
+             ng-controller="GridSliderController as GridSliderCtrl">
+            <slick responsive="::GridSliderCtrl.responsive"
+                   class="grid-carousel">
+                <!--<div class="grid-carousel-image" ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"-->
+                     <!--ng-click="GridSliderCtrl.setActiveElement(icon.id, $event)"-->
+                     <!--ng-class="GridSliderCtrl.getNeedClassElement(icon.id)">-->
+                    <!--<img height="113" width="225" ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>-->
+                <!--</div>-->
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/vik.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/tt.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/dd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/100.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/wd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/ftd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/wd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/ftd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/dh.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/vik.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/tt.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/vik.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/tt.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/dd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/100.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/wd.jpg">
+                </div>
+                <div class="grid-carousel-image">
+                    <img src="/assets/images/placeholders/ftd.jpg">
                 </div>
             </slick>
-
-            <div class="fade gridder-content"
-                 ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"
-                 ng-class="GridSliderCtrl.getPanelClass(icon.id)"
-                 ng-if="GridSliderCtrl.showPanel(icon.id)">
-                <span class="description">
-                    <span class="preview-full">
-                        <img height="300" width="945"
-                             preload-image
-                             default-image="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"
-                             fallback-image="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"
-                             class="preview"
-                             ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>
-                        <a class="close-button icon-close"
-                           ng-click="GridSliderCtrl.closePanel(icon.id)"
-                           ng-mouseover="GridSliderCtrl.setCloseState(true)"
-                           ng-mouseleave="GridSliderCtrl.setCloseState(false)">x</a>
-                        <ul class="sub-menu">
-                            <li><a>OVERVIEW</a></li>
-                            <li><a>EPISODES</a></li>
-                            <li><a href="#/watch/1/1">PLAY</a></li>
-                            <li><a>DETAILS</a></li>
-                        </ul>
-                    </span>
-                    <p class="description">{{ ::icon.text }}</p>
-                </span>
-            </div>
         </div>
-    </section>
+    </div>
 </div>

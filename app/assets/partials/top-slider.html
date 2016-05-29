@@ -1,5 +1,30 @@
-<slick arrows="false" autoplay-speed="15000" speed="400" speed="860" autoplay="true" draggable="false" swipe="false" infinite="true" dots="false">
-    <div ng-repeat="slide in ::TSCtrl.slides track by $index">
-        <img ng-src="{{ ::slide.src }}"/>
+<slick class="main-carousel"
+       arrows="false"
+       autoplay-speed="15000"
+       speed="860"
+       autoplay="true"
+       draggable="false"
+       swipe="false"
+       infinite="true"
+       dots="false">
+    <div class="carousel-item" ng-repeat="slide in ::TSCtrl.slides track by $index">
+        <div class="main-carousel-gradient">
+            <img ng-src="{{ ::slide.src }}">
+            <div class="info-block">
+                <div class="info-title">
+                    A Game of Thrones
+                </div>
+                <div class="stars">
+                    <a class="reset-this" href="javascript:void(0)"><i class="icon icon-star selected-star">&#xe804;</i></a>
+                    <a class="reset-this" href="javascript:void(0)"><i class="icon icon-star selected-star">&#xe804;</i></a>
+                    <a class="reset-this" href="javascript:void(0)"><i class="icon icon-star selected-star">&#xe804;</i></a>
+                    <a class="reset-this" href="javascript:void(0)"><i class="icon icon-star">&#xe804;</i></a>
+                    <a class="reset-this" href="javascript:void(0)"><i class="icon icon-star">&#xe804;</i></a>
+                </div>
+                <div class="info-description">
+                    {{ ::slide.description }}
+                </div>
+            </div>
+        </div>
     </div>
 </slick>
