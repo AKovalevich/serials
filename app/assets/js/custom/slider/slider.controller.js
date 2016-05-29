@@ -19,7 +19,7 @@
     .directive('topSlider', function () {
       return {
         restrict: 'A',
-        templateUrl: 'assets/partials/top-slider.html',
+        templateUrl: 'assets/templates/top-slider.html',
         controller: 'sliderController',
         controllerAs: 'TSCtrl'
       }

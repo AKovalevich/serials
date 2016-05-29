@@ -3,8 +3,6 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Cinema Portal</title>
-
         <!--Contrib css-->
         <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick.css" type="text/css"/>
         <link rel="stylesheet" href="assets/js/vendor/slick-carousel/slick/slick-theme.css" type="text/css"/>
@@ -13,6 +11,8 @@
         <!--Custom css-->
         <link rel="stylesheet" href="assets/css/main.css" type="text/css"/>
         <link rel="stylesheet" href="assets/css/videogular.css" type="text/css"/>
+        <link rel="stylesheet" href="assets/css/bg-canvas.css" type="text/css"/>
+        <link rel="stylesheet" href="assets/css/login-page.css" type="text/css"/>
 
         <!--Contrib ibraries-->
         <script type="text/javascript" src="assets/js/vendor/jquery/dist/jquery.js"></script>
@@ -25,10 +25,8 @@
         <script type="text/javascript" src="assets/js/vendor/angular-aria/angular-aria.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-messages/angular-messages.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-timer/dist/angular-timer.js"></script>
-        <!--<script type="text/javascript" src="assets/js/vendor/angular-swipe/dist/angular-swipe.js"></script>-->
         <script type="text/javascript" src="assets/js/vendor/angular-sanitize/angular-sanitize.js"></script>
-        <script type="text/javascript" src="assets/js/vendor/angular-route/angular-route.js"></script>
-        <!--<script type="text/javascript" src="assets/js/vendor/angular-touch/angular-touch.js"></script>-->
+        <script type="text/javascript" src="assets/js/vendor/angular-ui-router/release/angular-ui-router.js"></script>
         <script type="text/javascript" src="assets/js/vendor/slick-carousel/slick/slick.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-slick/dist/slick.js"></script>
         <script type="text/javascript" src="assets/js/vendor/angular-preload-image/angular-preload-image.min.js"></script>
@@ -40,6 +38,9 @@
         <script type="text/javascript" src="assets/js/vendor/videogular-poster/vg-poster.js"></script>
         <script type="text/javascript" src="assets/js/vendor/videogular-buffering/vg-buffering.js"></script>
         <script type="text/javascript" src="assets/js/vendor/videogular-angulartics/vg-analytics.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/TweenLite.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/EasePack.min.js"></script>
+
 
         <script type="text/javascript" src="assets/js/custom/grid/grid.module.js"></script>
         <script type="text/javascript" src="assets/js/custom/grid/grid.grid-resource.service.js"></script>
@@ -47,8 +48,10 @@
         <script type="text/javascript" src="assets/js/custom/grid/grid.grid.controller.js"></script>
         <script type="text/javascript" src="assets/js/custom/landing/landing.module.js"></script>
         <script type="text/javascript" src="assets/js/custom/landing/landing.controller.js"></script>
-        <script type="text/javascript" src="assets/js/custom/login/login-form.module.js"></script>
-        <script type="text/javascript" src="assets/js/custom/login/login-form.controller.js"></script>
+        <script type="text/javascript" src="assets/js/custom/auth-form/auth-form.module.js"></script>
+        <script type="text/javascript" src="assets/js/custom/auth-form/auth-form.service.js"></script>
+        <script type="text/javascript" src="assets/js/custom/auth-form/auth-form.directive.js"></script>
+        <script type="text/javascript" src="assets/js/custom/auth-form/auth-form.controller.js"></script>
         <script type="text/javascript" src="assets/js/custom/slider/slider.module.js"></script>
         <script type="text/javascript" src="assets/js/custom/slider/slider.controller.js"></script>
         <script type="text/javascript" src="assets/js/custom/video-stream/video-stream.module.js"></script>
@@ -72,26 +75,29 @@
             ga('create', 'UA-77221614-1', 'auto');
         </script>
 
+        <title>BWB - Watch TV Shows Online, Watch Movies Online</title>
+        <meta charset="utf-8">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:280,700,100,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class="main-container" ng-controller="MainController as MCtrl">
+        <div class="ui-view-container main-container" ng-controller="MainController as MCtrl">
             <show-loader></show-loader>
             <div class="main-menu info-content">
                 <nav class="menu menu--sebastian">
                     <ul class="menu__list">
                         <li class="menu__item menu__item--current">
-                            <a href="#/browse" class="reset-this menu__link">Browse</a>
+                            <a ui-sref="browse" class="reset-this menu__link">Browse</a>
                         </li>
                         <li ng-if="!isLogged" class="menu__item">
-                            <a href="#/login" class="reset-this menu__link">Login</a>
+                            <a ui-sref="sign_in" class="reset-this menu__link">Sing In</a>
                         </li>
                         <li ng-if="isLogged" class="menu__item">
-                            <a href="#/logout" class="reset-this menu__link">Logout</a>
+                            <a ui-sref="sign_up" class="reset-this menu__link">Sing Up</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div ng-view class="view-animate content"></div>
+            <div ui-view class="view-animate content"></div>
         </div>
     </body>
 </html>

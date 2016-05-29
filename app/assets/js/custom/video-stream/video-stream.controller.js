@@ -4,16 +4,17 @@
   angular.module('video-stream')
     .controller('VideoStreamController', [
       '$sce',
-      '$routeParams',
+      '$stateParams',
       '$location',
       'vgFullscreen',
       'videoStream',
       'pageLock',
-      function ($sce, $routeParams, $location, vgFullscreen, videoStream, pageLock) {
+      function ($sce, $stateParams, $location, vgFullscreen, videoStream, pageLock) {
         var VSCtrl = this;
 
-        VSCtrl.videoId = $routeParams.videoId;
-        VSCtrl.seasonId = $routeParams.seasonId;
+        VSCtrl.videoId = $stateParams.videoId;
+        VSCtrl.seasonId = $stateParams.seasonId;
+        VSCtrl.assetId = $stateParams.assetId;
         VSCtrl.config = null;
         VSCtrl.isEnging = false;
         VSCtrl.nextVideo = false;
@@ -26,8 +27,8 @@
           VSCtrl.API = API;
         };
 
-        VSCtrl.getVideoInfo = function (seasonId, videoId) {
-          var promise = videoStream.getVideo(seasonId, videoId);
+        VSCtrl.getVideoInfo = function (assetId, seasonId, videoId) {
+          var promise = videoStream.getVideo(assetId, seasonId, videoId);
 
           promise.then(function (response) {
             VSCtrl.nextVideo = response.nextVideo;
@@ -80,13 +81,14 @@
           VSCtrl.isEnging = true;
           VSCtrl.videoId = VSCtrl.nextVideo.videoId;
           VSCtrl.seasonId = VSCtrl.nextVideo.seasonId;
+          VSCtrl.assetId = VSCtrl.nextVideo.assetId;
           VSCtrl.countdown = false;
           VSCtrl.API.stop();
           // If html5Mode is disabled
-          $location.path("/watch/"+ VSCtrl.seasonId +"/" + VSCtrl.videoId);
+          $location.path('/watch/' + VSCtrl.assetId + '/' + VSCtrl.seasonId + '/' + VSCtrl.videoId);
         };
 
-        VSCtrl.getVideoInfo(VSCtrl.seasonId, VSCtrl.videoId);
+        VSCtrl.getVideoInfo(VSCtrl.assetId, VSCtrl.seasonId, VSCtrl.videoId);
       }
     ])
     .directive("tvShowPlaylist",

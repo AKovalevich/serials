@@ -1,0 +1,31 @@
+
+<div id="large-header" class="large-header">
+    <canvas id="bg-canvas"></canvas>
+    <div id="warp">
+        WELCOME TO <span class="red-label">BAD WOLD BAY</span>
+        <form id="login-form" animate-form-submit ng-submit="AuthFormCtrl.submit()">
+            <div class="admin">
+                <div class="rota">
+                    <h1>{{ ::AuthFormCtrl.settings.title }}</h1>
+                    <input tabindex="-1" id="email" type="text" placeholder="Email" autocomplete="off" class="form-control"/>
+                    <input tabindex="-1" id="password" type="password" placeholder="Password" autocomplete="off" class="form-control"/>
+                </div>
+            </div>
+            <div class="cms">
+                <div class="roti">
+                    <h1>USER</h1>
+                    <input id="valid"
+                           type="submit"
+                           value="SUBMIT"
+                           tabindex="-1">
+                    <br />
+                </div>
+            </div>
+            <p class="links">
+                <a ng-if="!AuthFormCtrl.isSingUp()" tabindex="-1" ui-sref="sign_up">Sign Up</a>
+                <a ng-if="AuthFormCtrl.isSingUp()" tabindex="-1" ui-sref="sign_in">Sign In</a>
+                <a tabindex="-1" ui-sref="browse">Browse</a>
+            </p>
+        </form>
+    </div>
+</div>

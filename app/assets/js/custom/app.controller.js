@@ -20,13 +20,13 @@
         '</div></section>',
         link: function (scope, element) {
 
-          $rootScope.$on('$routeChangeStart', function (event, currentRoute, previousRoute) {
+          $rootScope.$on('$stateChangeStart', function (event, currentRoute, previousRoute) {
             $timeout(function () {
               element.removeClass('ng-hide');
             });
           });
 
-          $rootScope.$on('$routeChangeSuccess', function () {
+          $rootScope.$on('$stateChangeSuccess', function () {
             element.addClass('ng-hide');
           });
         }

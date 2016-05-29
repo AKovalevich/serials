@@ -1,5 +1,4 @@
 <div ng-controller="VideoStreamController as VSCtrl">
-    <!-- We will put here Videogular tags... -->
     <div id="main-wrapper">
         <div class="wrapper-video" ng-class="VSCtrl.countdown ? 'video-small-size' : 'video-full-size'">
             <videogular
@@ -29,7 +28,6 @@
                 <vg-buffering></vg-buffering>
             </videogular>
         </div>
-        
         <div ng-if="VSCtrl.countdown">
             <div id="next-video" style="background-image: url({{ VSCtrl.currentVideo.background }});" class="next-video-preview">
                 <timer countdown="VSCtrl.countdown" interval="1000" finish-callback="VSCtrl.timerFinished()">
@@ -40,8 +38,8 @@
                 <img id="preview-image" ng-src="{{ VSCtrl.nextVideo.preview }}"
                     height="258"
                     width="450">
-                <a class="btn btn--watch-page btn-white btn-browser" href="#/browse">Browser</a>
-                <a class="btn btn--watch-page btn-white btn-episodes" href="#/browse">More Episodes</a>
+                <a class="btn btn--watch-page btn-white btn-browser" ui-sref="browse">Browser</a>
+                <a class="btn btn--watch-page btn-white btn-episodes" ui-sref="browse">More Episodes</a>
             </div>
         </div>
     </div>
