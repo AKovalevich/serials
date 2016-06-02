@@ -72,140 +72,23 @@
         }
       ];
 
-      GridSliderCtrl.icons = [
-        {
-          id: 'content1',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content1'
-        },
-        {
-          id: 'content2',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content2'
-        },
-        {
-          id: 'content3',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content3'
-        },
-        {
-          id: 'content4',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content4'
-        },
-        {
-          id: 'content5',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content5'
-        },
-        {
-          id: 'content6',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content6'
-        },
-        {
-          id: 'content7',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content7'
-        },
-        {
-          id: 'content8',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content8'
-        },
-        {
-          id: 'content9',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content9'
-        },
-        {
-          id: 'content10',
-          preview: 'http://placehold.it/225x112',
-          slideShow: [
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113',
-            'http://placehold.it/225x113'
-          ],
-          full: 'http://placehold.it/945x300',
-          text: 'content10'
-        }
-      ];
+      GridSliderCtrl.icons = gridResource.buildGalleryByGenre();
 
-      GridSliderCtrl.icons = [];
+      GridSliderCtrl.buildGalleryByGenre = function (genreId) {
+        return GridSliderCtrl.icons;
+      };
+
+      GridSliderCtrl.showFullInfo = false;
+      GridSliderCtrl.currentElement = {};
+
+      GridSliderCtrl.setCurrentElementInfo = function (element) {
+        GridSliderCtrl.showFullInfo = true;
+        GridSliderCtrl.currentElement = element;
+      };
+
+      GridSliderCtrl.showFullElementInfo = function () {
+        return GridSliderCtrl.showFullInfo;
+      };
 
       GridSliderCtrl.getAssetsByGenre = function () {
         gridResource.listAssetsByGenre(GridSliderCtrl.genreId)
@@ -271,10 +154,6 @@
 
       GridSliderCtrl.getActiveElement = function () {
         return !!GridSliderCtrl.activeElement;
-      };
-
-      GridSliderCtrl.init = function () {
-        GridSliderCtrl.getAssetsByGenre(GridSliderCtrl.genreId);
       };
     }])
 

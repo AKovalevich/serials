@@ -1,71 +1,47 @@
 <div class="container" top-slider></div>
 
 <div class="main-content" ng-controller="GridController as GridCtrl">
-    <div class="" ng-repeat="genre in GridCtrl.genres">
+    <div class="" ng-repeat="genre in GridCtrl.genres track by genre.id">
         <div class="carousel-title">
             {{ ::genre.name }}
         </div>
-        <div ng-init="GridSliderCtrl.init()"
-             ng-controller="GridSliderController as GridSliderCtrl">
-            <slick responsive="::GridSliderCtrl.responsive"
-                   class="grid-carousel">
-                <!--<div class="grid-carousel-image" ng-repeat="icon in ::GridSliderCtrl.icons track by icon.id"-->
-                     <!--ng-click="GridSliderCtrl.setActiveElement(icon.id, $event)"-->
-                     <!--ng-class="GridSliderCtrl.getNeedClassElement(icon.id)">-->
-                    <!--<img height="113" width="225" ng-ng-src="http://188.120.255.201/media/preview/{{ ::icon.image_id }}"/>-->
-                <!--</div>-->
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/vik.jpg">
+        <div ng-controller="GridSliderController as GridSliderCtrl">
+            <div id="slider-wrapper">
+                <slick responsive="::GridSliderCtrl.responsive" class="grid-carousel">
+                    <div ng-repeat="icon in ::GridSliderCtrl.buildGalleryByGenre(genre.id) track by icon.id"
+                         ng-mouseenter="showIt()"
+                         ng-mouseleave="hideIt()"
+                         class="grid-carousel-image">
+                        <img ng-src="{{ ::icon.preview }}"/>
+                        <span class="icon icon-play-circle2" ng-click="GridSliderCtrl.setCurrentElementInfo(icon)">&#xe800;</span>
+                    </div>
+                </slick>
+            </div>
+
+            <!--<grid-item-info block-info="" ng-class=""></grid-item-info>-->
+            <div class="grid-block-info show" ng-if="GridSliderCtrl.showFullElementInfo()">
+                <div class="block-info-more">
+                    <div class="info-title">
+                        Ходячие мертвецы
+                    </div>
+                    <div class="stars">
+                        <a class="reset-this" href="#"><i class="icon icon-star selected-star"></i></a>
+                        <a class="reset-this" href="#"><i class="icon icon-star selected-star"></i></a>
+                        <a class="reset-this" href="#"><i class="icon icon-star selected-star"></i></a>
+                        <a class="reset-this" href="#"><i class="icon icon-star"></i></a>
+                        <a class="reset-this" href="#"><i class="icon icon-star"></i></a>
+                    </div>
+                    <div class="info-description">
+                        <p>
+                            Американский постапокалиптический телесериал, разработанный Фрэнком Дарабонтом, основанный на одноименной серии комиксов, созданной Робертом Киркманом, Тони Муром и Чарли Адлардом (англ.)русск.. В центре сюжета небольшая группа людей, пытающаяся выжить после зомби-апокалипсиса. Премьера состоялась 31 октября 2010 года на кабельном телевизионном канале AMC[1]. Первый сезон содержит 6 эпизодов, второй — 13, третий, четвёртый, пятый и шестой — по 16. Первый сезон был хорошо встречен критиками и был номинирован на несколько наград, в том числе и на премию «Золотой глобус» в категории Лучший драматический телесериал[2]. 25 октября 2011 года AMC продлил сериал на третий сезон, выход которого состоялся 14 октября 2012 года[3]. В декабре 2012 года канал продлил шоу на четвёртый сезон, который стартовал 13 октября 2013 года, и также как третий сезон, состоял из 16 эпизодов[4]. 29 октября 2013 AMC продлил шоу на пятый сезон[5]. 7 октября 2014 года, до старта пятого сезона, AMC продлил сериал на шестой[6]. 30 октября 2015 года сериал продлен на 7 сезон.
+                        </p>
+                    </div>
                 </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/tt.jpg">
+                <img ng-src="{{ GridSliderCtrl.currentElement.preview }}">
+                <div class="block-info-menu">
+
                 </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/dd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/100.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/wd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/ftd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/wd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/ftd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/dh.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/vik.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/tt.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/vik.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/tt.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/dd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/100.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/wd.jpg">
-                </div>
-                <div class="grid-carousel-image">
-                    <img ng-src="/assets/images/placeholders/ftd.jpg">
-                </div>
-            </slick>
+            </div>
         </div>
     </div>
 </div>
