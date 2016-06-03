@@ -9,19 +9,21 @@
             <div id="slider-wrapper">
                 <slick responsive="::GridSliderCtrl.responsive" class="grid-carousel">
                     <div ng-repeat="icon in ::GridSliderCtrl.buildGalleryByGenre(genre.id) track by icon.id"
-                         ng-mouseenter="showIt()"
-                         ng-mouseleave="hideIt()"
+                         ng-mouseenter="GridSliderCtrl.showHoverElement(icon)"
+                         ng-mouseleave="GridSliderCtrl.hideHoverElement()"
+                         grid-focus-item
                          class="grid-carousel-image">
                         <img ng-src="{{ ::icon.preview }}"/>
-                        <span class="icon icon-play-circle2" ng-click="GridSliderCtrl.setCurrentElementInfo(icon)">&#xe800;</span>
+                        <span class="icon icon-play-circle2" ng-click="GridSliderCtrl.openPanel(icon)">&#xe800;</span>
                     </div>
                 </slick>
             </div>
 
-            <!--<grid-item-info block-info="" ng-class=""></grid-item-info>-->
-            <div class="grid-block-info show" ng-if="GridSliderCtrl.showFullElementInfo()">
+            <div class="grid-block-info"
+                 ng-if="GridSliderCtrl.showFullElementInfo()"
+                 ng-class="GridSliderCtrl.showFullElementInfo() ? 'show' : 'hide'">
                 <div class="block-info-more">
-                    <div class="info-title">
+                    <div ng-click="GridSliderCtrl.closePanel()" class="info-title">
                         {{ GridSliderCtrl.currentElement.title }}
                     </div>
                     <div class="stars">

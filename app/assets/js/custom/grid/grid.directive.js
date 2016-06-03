@@ -5,13 +5,23 @@
     .directive('gridFocusItem', function () {
       return {
         link: function (scope, element, attrs) {
-          $( ".grid-carousel-image" ).hover(
+          angular.element(element).hover(
             function() {
-              $(this).closest('.main-content').find('.grid-carousel-image img').addClass('img-blocked');
-              $(this).find('img').addClass('img-show');
+              angular.element(this)
+                .closest('.main-content')
+                .find('.grid-carousel-image img')
+                .addClass('img-blocked');
+              angular.element(this)
+                .find('img')
+                .addClass('img-show');
             }, function() {
-              $(this).closest('.main-content').find('.grid-carousel-image img').removeClass('img-blocked');
-              $(this).find('img').removeClass('img-show');
+              angular.element(this)
+                .closest('.main-content')
+                .find('.grid-carousel-image img')
+                .removeClass('img-blocked');
+              angular.element(this)
+                .find('img')
+                .removeClass('img-show');
             }
           );
         }

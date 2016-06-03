@@ -3,158 +3,177 @@
 
   angular
     .module('grid')
-    .controller('GridSliderController', ['$scope', 'gridResource', function ($scope, gridResource) {
-      var GridSliderCtrl = this;
+    .controller('GridSliderController', [
+      '$rootScope',
+      '$scope',
+      '$timeout',
+      'gridResource',
+      function ($rootScope, $scope, $timeout, gridResource) {
+        var GridSliderCtrl = this;
 
-      GridSliderCtrl.activeElement = null;
-      GridSliderCtrl.focusClass = null;
-      GridSliderCtrl.borderedElement = null;
-      GridSliderCtrl.showMoreInfo = null;
-      GridSliderCtrl.firstAppear = null;
-      GridSliderCtrl.closeState = null;
-      GridSliderCtrl.genreId = $scope.$parent.genre.id;
-
-      GridSliderCtrl.responsive = [
-        {
-          breakpoint: 1920,
-          settings: {
-            slidesToShow: 7,
-            slidesToScroll: 7,
-            speed: "860",
-            draggable: false,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 1368,
-          settings: {
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            speed: "860",
-            draggable: false,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            speed: "860",
-            draggable: false,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            speed: "860",
-            draggable: false,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: "860",
-            draggable: false,
-            infinite: true,
-            dots: false
-          }
-        }
-      ];
-
-      GridSliderCtrl.icons = gridResource.buildGalleryByGenre();
-
-      GridSliderCtrl.buildGalleryByGenre = function (genreId) {
-        return GridSliderCtrl.icons;
-      };
-
-      GridSliderCtrl.showFullInfo = false;
-      GridSliderCtrl.currentElement = {};
-
-      GridSliderCtrl.setCurrentElementInfo = function (element) {
-        GridSliderCtrl.showFullInfo = true;
-        GridSliderCtrl.currentElement = element;
-      };
-
-      GridSliderCtrl.showFullElementInfo = function () {
-        return GridSliderCtrl.showFullInfo;
-      };
-
-      GridSliderCtrl.getAssetsByGenre = function () {
-        gridResource.listAssetsByGenre(GridSliderCtrl.genreId)
-          .then(function (assets) {
-            GridSliderCtrl.icons = assets;
-          })
-      };
-
-      GridSliderCtrl.isBordered = function (elementId) {
-        return GridSliderCtrl.borderedElement === elementId;
-      };
-
-      GridSliderCtrl.getNeedClassElement = function (iconId) {
-        var elementClass = 'closed';
-        elementClass += ' ';
-
-        elementClass += GridSliderCtrl.isBordered(iconId)
-          ? 'bordered'
-          : 'non-bordered';
-
-        return elementClass;
-      };
-
-      GridSliderCtrl.getPanelClass = function (iconId) {
-        var panelClass = GridSliderCtrl.firstAppear === iconId
-          ? 'first-appear'
-          : 'fade-in-out';
-
-        if (GridSliderCtrl.isCloseState()) {
-          panelClass = 'closing';
-        }
-
-        return panelClass;
-      };
-
-      GridSliderCtrl.showPanel = function (iconId) {
-        return GridSliderCtrl.showMoreInfo === iconId;
-      };
-
-      GridSliderCtrl.setActiveElement = function (iconId, $event) {
-        if (!GridSliderCtrl.showMoreInfo) {
-          GridSliderCtrl.firstAppear = iconId;
-        }
-        GridSliderCtrl.activeElement = iconId;
-        GridSliderCtrl.borderedElement = iconId;
-        GridSliderCtrl.showMoreInfo = iconId;
-      };
-
-      GridSliderCtrl.closePanel = function () {
-        GridSliderCtrl.activeElement = null;
         GridSliderCtrl.borderedElement = null;
-        GridSliderCtrl.showMoreInfo = null;
-        GridSliderCtrl.closeState = false;
-      };
+        GridSliderCtrl.firstAppear = null;
+        GridSliderCtrl.closeState = null;
+        GridSliderCtrl.openState = false;
+        GridSliderCtrl.hoverTimer = null;
+        GridSliderCtrl.currentElement = {};
+        GridSliderCtrl.genreId = $scope.$parent.genre.id;
+        GridSliderCtrl.responsive = [
+          {
+            breakpoint: 1920,
+            settings: {
+              slidesToShow: 7,
+              slidesToScroll: 7,
+              speed: "860",
+              draggable: false,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1368,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 5,
+              speed: "860",
+              draggable: false,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              speed: "860",
+              draggable: false,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              speed: "860",
+              draggable: false,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              speed: "860",
+              draggable: false,
+              infinite: true,
+              dots: false
+            }
+          }
+        ];
+        GridSliderCtrl.icons = gridResource.buildGalleryByGenre();
 
-      GridSliderCtrl.setCloseState = function (state) {
-        GridSliderCtrl.closeState = state;
-      };
+        GridSliderCtrl.buildGalleryByGenre = function (genreId) {
+          return this.icons;
+        };
 
-      GridSliderCtrl.isCloseState = function () {
-        return !!GridSliderCtrl.closeState;
-      };
+        GridSliderCtrl.openPanel = function (element) {
+          $rootScope.$emit('slider.openPanel');
+          this.openState = true;
+          this.currentElement = element;
+        };
 
-      GridSliderCtrl.getActiveElement = function () {
-        return !!GridSliderCtrl.activeElement;
-      };
-    }])
+        GridSliderCtrl.showFullElementInfo = function () {
+          return this.openState;
+        };
+
+        GridSliderCtrl.closePanel = function () {
+          this.openState = false;
+          this.currentElement = {};
+        };
+
+        GridSliderCtrl.showHoverElement = function (element) {
+          if (this.openState) {
+            this.hoverTimer = $timeout(function () {
+              GridSliderCtrl.currentElement = element;
+            }, 500);
+          }
+        };
+
+        GridSliderCtrl.hideHoverElement = function () {
+          $timeout.cancel(this.hoverTimer);
+        };
+
+        GridSliderCtrl.getAssetsByGenre = function () {
+          gridResource.listAssetsByGenre(this.genreId)
+            .then(function (assets) {
+              GridSliderCtrl.icons = assets;
+            })
+        };
+
+        $rootScope.$on('slider.openPanel', function () {
+          GridSliderCtrl.closePanel();
+        });
+
+
+
+        // Helpers for future
+        GridSliderCtrl.isBordered = function (elementId) {
+          return this.borderedElement === elementId;
+        };
+
+        GridSliderCtrl.getNeedClassElement = function (iconId) {
+          var elementClass = 'closed';
+          elementClass += ' ';
+
+          elementClass += this.isBordered(iconId)
+            ? 'bordered'
+            : 'non-bordered';
+
+          return elementClass;
+        };
+
+        GridSliderCtrl.getPanelClass = function (iconId) {
+          var panelClass = this.firstAppear === iconId
+            ? 'first-appear'
+            : 'fade-in-out';
+
+          if (this.isCloseState()) {
+            panelClass = 'closing';
+          }
+
+          return panelClass;
+        };
+
+        GridSliderCtrl.showPanel = function (iconId) {
+          return this.showMoreInfo === iconId;
+        };
+
+        GridSliderCtrl.setActiveElement = function (iconId) {
+          if (!this.showMoreInfo) {
+            this.firstAppear = iconId;
+          }
+          this.activeElement = iconId;
+          this.borderedElement = iconId;
+          this.showMoreInfo = iconId;
+        };
+
+        GridSliderCtrl.setCloseState = function (state) {
+          this.closeState = state;
+        };
+
+        GridSliderCtrl.isCloseState = function () {
+          return !!this.closeState;
+        };
+
+        GridSliderCtrl.getActiveElement = function () {
+          return !!this.activeElement;
+        };
+      }
+    ])
 
 })(angular, window);
